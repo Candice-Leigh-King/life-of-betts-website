@@ -19,10 +19,10 @@ border-radius:
 fonts:
   link-font: Shrikhand, cursive;
 social-link-colors:
-  icon-color: '#859f9f'
+  icon-color: '#2f3031'
   background-color: '#ffffff'
-  border-color: '#d2966d'
-  icon-hover-color: '#d2966d'
+  border-color: '#2f3031'
+  icon-hover-color: '#dcd3cc'
 icons-border-radius:
   top-left-corner: 100px
   top-right-corner: 0px
