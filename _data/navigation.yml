@@ -24,7 +24,7 @@ social-link-colors:
   border-color: '#2f3031'
   icon-hover-color: '#dcd3cc'
 icons-border-radius:
-  top-left-corner: 100%
+  top-left-corner: 0%
   top-right-corner: 0px
   bottom-left-corner: 0px
-  bottom-right-corner: 100%
+  bottom-right-corner: 0%
