@@ -24,7 +24,8 @@ font-family: 'Quicksand', sans-serif;
 font-family: 'Raleway', sans-serif;
 font-family: 'Roboto', sans-serif; 
 font-family: 'Open Sans', sans-serif;
-font-family: 'Shrikhand', cursive;*/
+font-family: 'Shrikhand', cursive;
+font-family: 'Cardo', serif;*/
 
   
 * 
@@ -75,6 +76,12 @@ font-family: 'Shrikhand', cursive;*/
   {
   font-family: Mak;
   src: url(/fonts/mak.otf);
+  }
+
+@font-face 
+  {
+  font-family: lovelace;
+  src: url(/fonts/lovelace.ttf);
   }
 
 @font-face 
