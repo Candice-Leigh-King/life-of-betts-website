@@ -19,6 +19,8 @@ _inputs:
     comment: This subheading color is for the mobile version only. To change the subheading color on the laptop and desktop version, change the "hover text color". This will also change the color of the text.
   colors.on-mobile-text-color: 
     comment: This is to change the color of the text on mobile only.
+  frist-script-to-go-in-the-head:
+   comment: You can add up to 3 different scripts like Google Ananlytics, scripts for newsletter sign ups, Facebook Pixel, etc.
 
 page_blocks: []
 _array_structures:
@@ -338,7 +340,12 @@ _array_structures:
             statistic-data-font: 
             statistic-title-font: 
             subheading-font: 
-            textarea-font: 
+            textarea-font:
+      - label: Newsletter Script
+        icon: forum
+        value:
+          _section-type: newsletter-script
+          insert-script-here:  
 fonts:
 _select_data:
   fonts:
