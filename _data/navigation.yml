@@ -4,9 +4,9 @@ textarea_html: >-
   href="/#contact">contact</a></p>
 colors:
   hamburger-color: '#ffffff'
-  background-color: '#859f9f'
-  textarea-background-color: '#bccaca'
-  border-color: '#ffffff'
+  background-color: '#dcd3cc'
+  textarea-background-color: '#ede6e0'
+  border-color: '#353535'
   link-color: '#2f3031'
   hover-link-color: '#ffffff'
   exit-color: '#2f3031'
