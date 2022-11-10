@@ -335,6 +335,20 @@ font-family: 'Cardo', serif;*/
 
   /*------------- HOVER GRID--------------- */
 
+  .bg-image-in-hover
+    {
+    background-size: cover;
+    background-position: center;
+    background-color: #EFEBE6;
+    }
+
+  .bg-image-in-hover .hover-image 
+    {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    }
+
   .hover-container 
     {
     background-size: cover;

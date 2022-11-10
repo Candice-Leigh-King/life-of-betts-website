@@ -21,7 +21,7 @@
 
 
   #content-blocks-{{forloop.index0}} .hover-container 
-   {background-color: {{item.colors.background-color}};}
+  {background: linear-gradient(270deg, {{item.colors.right-background-color}} 50%,{{item.colors.left-background-color}} 0%);}
 
    #content-blocks-{{forloop.index0}} .hover-container hover 
    {background-color:{{item.colors.hover-overlay-color}};}
@@ -132,7 +132,7 @@
       </div>
       
         <div class="col-6_sm-12 mob-hide ">
-          <div style="background-image:url('{{item.right.background-image}}')" class="hover-container">
+          <div style="background-image:url('{{item.right.background-image}}')" class="bg-image-in-hover">
             <div class="hover-image" style="background-color: {{item.colors.overlay-color}}; border: none">
               <div class="hover-overlay hover-text-color ">
                 <div class="hover-inner">

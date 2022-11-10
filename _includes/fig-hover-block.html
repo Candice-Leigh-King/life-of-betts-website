@@ -19,9 +19,7 @@
     {border: 4px solid {{item.colors.border-color}};}
 
   #content-blocks-{{forloop.index0}} .hover-container 
-   {  background-size: cover ;
-    background: linear-gradient(90deg, {{item.colors.right-background-color}} 50%,{{item.colors.left-background-color}} 0%);
-    }
+   {background: linear-gradient(90deg, {{item.colors.right-background-color}} 50%,{{item.colors.left-background-color}} 0%);}
 
   #content-blocks-{{forloop.index0}} .hover-container-mobile 
    {background-color: {{item.colors.background-color}};}
@@ -96,7 +94,7 @@
 <section id="content-blocks-{{forloop.index0}}" class="center fig-and-zuko">
   <div id="{{item.content-block-link}}" class="grid">
     <div class="col-6_sm-12">
-      <div class="hover-container" style="background-image:url('{{item.left.background-image}}')">
+      <div class="bg-image-in-hover" style="background-image:url('{{item.left.background-image}}')">
         <div class="top-hover-overlay">
           <div class="hover-inner">
             <h2 class="heading-color heading-font"> {{item.left.heading}} </h2>
