@@ -111,8 +111,8 @@ _array_structures:
             button: 
             button-link:
           colors:
-            top-background-color: 
-            bottom-background-color: 
+            left-background-color: 
+            right-background-color: 
             overlay-color: 
             background-color:
             border-color: 
