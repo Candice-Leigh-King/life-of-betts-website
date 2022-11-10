@@ -21,7 +21,7 @@ fonts:
 social-link-colors:
   icon-color: '#2f3031'
   background-color: '#efeae7'
-  border-color: '#2f3031'
+  border-color: rgba(0, 0, 0, 0)
   icon-hover-color: '#dcd3cc'
 icons-border-radius:
   top-left-corner: 100px
