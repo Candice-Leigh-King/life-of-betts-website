@@ -475,10 +475,9 @@ font-family: 'Cardo', serif;*/
   {
   padding-bottom: 100%; 
   display: block; 
-  border: 4px solid white;
+  border: 4px solid transparent;
   background-size: cover;
   background-position: center;
-  background-color: #BCCACA;
   background-repeat: no-repeat;
   }
 

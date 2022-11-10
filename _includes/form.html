@@ -1,7 +1,7 @@
 <style>
 
   #content-block-{{forloop.index0}} .form-background-color
-   {background-color: {{item.colors.background-color}};}
+   {background: linear-gradient(90deg, {{item.colors.right-background-color}} 50%,{{item.colors.left-background-color}} 0%);}
  
   #content-block-{{forloop.index0}} .form-heading-color
    {color: {{item.colors.heading-color}};}
@@ -153,7 +153,7 @@
  </style>
  
  <section id="content-block-{{forloop.index0}}"> 
-   <section id="{{item.content-block-link}}" class="padded grid-center form-background-color banner" style="background-image: url('{{item.background_image}}');">
+   <section id="{{item.content-block-link}}" class="padded grid-center form-background-color banner">
      <h2 class="reveal form-heading-color form-heading-font  fade-up">{{item.heading}}</h2>
      <form method="post" action="/success.html" class="enquiry col-12 grid-center capped-width">
        <div class=" form-border-color textarea-background-color col-8_md-9_sm-12 padded radius-quarter" >

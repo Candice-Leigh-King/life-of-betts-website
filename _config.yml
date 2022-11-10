@@ -258,7 +258,6 @@ _array_structures:
               option-3:
               option-4: 
           button: 
-          background_image:        
           colors:
             background-color:
             textarea-background-color: 
