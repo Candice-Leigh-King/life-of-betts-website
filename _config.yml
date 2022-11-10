@@ -44,8 +44,8 @@ _array_structures:
         icon: article
         value:
           _section-type: textarea
-          textarea_html:
           subheading:
+          textarea_html:
           colors:
             background-color: 
             text-color: 
