@@ -21,10 +21,10 @@ fonts:
 social-link-colors:
   icon-color: '#2f3031'
   background-color: '#ede6e0'
-  border-color: rgba(0, 0, 0, 0)
+  border-color: '#2f3031'
   icon-hover-color: '#dcd3cc'
 icons-border-radius:
-  top-left-corner: 100px
+  top-left-corner: 0px
   top-right-corner: 0px
   bottom-left-corner: 0px
-  bottom-right-corner: 100px
+  bottom-right-corner: 0px
