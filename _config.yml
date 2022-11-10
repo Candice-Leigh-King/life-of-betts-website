@@ -45,7 +45,7 @@ _array_structures:
         value:
           _section-type: textarea
           textarea_html:
-          subheading_html:
+          subheading:
           colors:
             background-color: 
             text-color: 
