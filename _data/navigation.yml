@@ -1,0 +1,30 @@
+textarea_html: >-
+  <p><a href="/#services">services</a></p><p><a
+  href="/#reviews">review</a></p><p><a href="/#gallery">gallery</a></p><p><a
+  href="/#contact">contact</a></p>
+colors:
+  hamburger-color: '#ffffff'
+  background-color: '#859f9f'
+  textarea-background-color: '#bccaca'
+  border-color: '#ffffff'
+  link-color: '#2f3031'
+  hover-link-color: '#ffffff'
+  exit-color: '#2f3031'
+  exit-hover-color: '#ffffff'
+border-radius:
+  top-left-corner: 100%
+  top-right-corner: 100%
+  bottom-left-corner: 0%
+  bottom-right-corner: 0%
+fonts:
+  link-font: Shrikhand, cursive;
+social-link-colors:
+  icon-color: '#859f9f'
+  background-color: '#ffffff'
+  border-color: '#d2966d'
+  icon-hover-color: '#d2966d'
+icons-border-radius:
+  top-left-corner: 100px
+  top-right-corner: 0px
+  bottom-left-corner: 0px
+  bottom-right-corner: 100px

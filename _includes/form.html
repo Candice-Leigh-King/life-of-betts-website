@@ -1,0 +1,216 @@
+<style>
+
+  #content-block-{{forloop.index0}} .form-background-color
+   {background-color: {{item.colors.background-color}};}
+ 
+  #content-block-{{forloop.index0}} .form-heading-color
+   {color: {{item.colors.heading-color}};}
+ 
+  #content-block-{{forloop.index0}} .form-heading-font
+   {font-family: {{item.fonts.heading-font}};}
+ 
+   #content-block-{{forloop.index0}} .form-border-color
+   {
+   border: solid 4px {{item.colors.border-color}};
+   border-top-left-radius: {{item.border-radius.laptop.top-left-corner}};
+   border-top-right-radius: {{item.border-radius.laptop.top-right-corner}};
+   border-bottom-left-radius: {{item.border-radius.laptop.bottom-left-corner}};
+   border-bottom-right-radius: {{item.border-radius.laptop.bottom-right-corner}};
+   }
+ 
+   @media(max-width:768px) 
+   {
+     #content-block-{{forloop.index0}} .form-border-color
+       {
+       border-top-left-radius: {{item.border-radius.tablet.top-left-corner}};
+       border-top-right-radius: {{item.border-radius.tablet.top-right-corner}};
+       border-bottom-left-radius: {{item.border-radius.tablet.bottom-left-corner}};
+       border-bottom-right-radius: {{item.border-radius.tablet.bottom-right-corner}};
+       }  
+   }
+ 
+ @media(max-width:576px) 
+   {
+     #content-block-{{forloop.index0}} .carousel-border-color
+     {
+     border-top-left-radius: {{item.border-radius.mobile.top-left-corner}};
+     border-top-right-radius: {{item.border-radius.mobile.top-right-corner}};
+     border-bottom-left-radius: {{item.border-radius.mobile.bottom-left-corner}};
+     border-bottom-right-radius: {{item.border-radius.mobile.bottom-right-corner}};
+     } 
+   }
+ 
+  #content-block-{{forloop.index0}} .textarea-background-color
+   {background-color: {{item.colors.textarea-background-color}};}
+ 
+  #content-block-{{forloop.index0}} .form-subheading-font
+   {font-family: {{item.fonts.subheading-font}};}
+ 
+  #content-block-{{forloop.index0}} .form-subheading-color
+   {color: {{item.colors.subheading-color}};}
+ 
+ 
+  #content-block-{{forloop.index0}} .input-text 
+   {border-bottom: solid 2px {{item.colors.text-color}}; 
+   }
+  
+  #content-block-{{forloop.index0}} .dropdown
+  {background-color: {{item.colors.textarea-background-color}};} ;}
+ 
+   #content-block-{{forloop.index0}} .input-text:focus 
+   {border-bottom: solid 2px {{item.colors.subheading-color}}; }
+
+
+  
+   /* Chrome/Opera/Safari */
+  #content-block-{{forloop.index0}} input::-webkit-input-placeholder 
+   { 
+   color: {{item.colors.text-color}};
+   font-family: {{item.fonts.text-font}};
+   }
+ 
+   /* Chrome/Opera/Safari */
+  #content-block-{{forloop.index0}} input::-webkit-input-placeholder:focus 
+   {border-bottom: solid 2px {{item.colors.subheading-color}}; }
+ 
+   /* Firefox 19+ */
+  #content-block-{{forloop.index0}} input::-moz-placeholder 
+     {color: {{item.colors.text-color}};}
+ 
+  #content-block-{{forloop.index0}} input::-moz-placeholder:focus
+   {border-bottom: solid 2px {{item.colors.subheading-color}}; }
+ 
+   /* IE 10+ */
+  #content-block-{{forloop.index0}} input::-ms-input-placeholder 
+     {
+     color: {{item.colors.text-color}};
+     font-family: {{item.fonts.text-font}};
+     }
+ 
+  #content-block-{{forloop.index0}} input::-ms-input-placeholder:focus
+   {border-bottom: solid 2px {{item.colors.subheading-color}}; }  
+ 
+   /* Firefox 18- */
+  #content-block-{{forloop.index0}} input::-moz-placeholder 
+     {
+     color: {{item.colors.text-color}};
+     font-family: {{item.fonts.text-font}};
+     }
+   
+   #content-block-{{forloop.index0}} input::-moz-placeholder:focus 
+     {border-bottom: solid 2px {{item.colors.subheading-color}}; }
+ 
+  #content-block-{{forloop.index0}} input::-moz-placeholder
+   {
+   color: {{item.colors.text-color}};
+   font-family: {{item.fonts.text-font}};
+   }
+  
+  #content-block-{{forloop.index0}} input::placeholder:focus
+     {border-bottom: solid 2px {{item.colors.subheading-color}}; }
+ 
+  #content-block-{{forloop.index0}} input::placeholder 
+     {
+     color: {{item.colors.text-color}};
+     font-family: {{item.fonts.text-font}};
+     }
+ 
+  #content-block-{{forloop.index0}} input, textarea, select, option
+     {
+     color: {{item.colors.text-color}};
+     font-family: {{item.fonts.text-font}};
+     }
+   
+  #content-block-{{forloop.index0}}  input:focus, textarea:focus,
+     {border-bottom: 2px solid {{item.colors.subheading-color}};}
+ 
+  #content-block-{{forloop.index0}} textarea::placeholder 
+   {
+   color: {{item.colors.text-color}};
+   font-family: {{item.fonts.text-font}};
+   }
+ 
+  #content-block-{{forloop.index0}} .button-text-color
+   {
+   color: {{item.colors.button-text-color}};
+   font-family: {{item.fonts.text-font}};
+   }
+ 
+  #content-block-{{forloop.index0}} .button-font 
+   {font-family: {{item.fonts.button-font}};} 
+ 
+  #content-block-{{forloop.index0}} .button-text-color:hover
+   {color: {{item.colors.button-color}};}
+ 
+  #content-block-{{forloop.index0}} .button-color
+   {
+   background-color: {{item.colors.button-color}};
+   border: 1px solid {{item.colors.button-color}};
+   }
+ 
+  #content-block-{{forloop.index0}} .button-color:hover
+   {background-color: transparent;}
+ </style>
+ 
+ <section id="content-block-{{forloop.index0}}"> 
+   <section id="{{item.content-block-link}}" class="padded grid-center form-background-color banner" style="background-image: url('{{item.background_image}}');">
+     <h2 class="reveal form-heading-color form-heading-font  fade-up">{{item.heading}}</h2>
+     <form method="post" action="/success.html" class="enquiry col-12 grid-center capped-width">
+       <div class=" form-border-color textarea-background-color col-8_md-9_sm-12 padded radius-quarter" >
+         <div class="grid padded-sides">
+           <div class="col-1_sm-12 relative reveal fade-left">
+             <h3 class="sm-bold form-subheading-color form-subheading-font vertical-form-text "> {{item.top.subheading}}</h3>
+           </div>
+ 
+         <div class="col-10_sm-12 form-padded">
+           <div class="floating-input ">
+             <input type="text" name="{{item.top.text-option-1}}" placeholder="{{item.top.text-option-1}}" class=" input-text form-text-color" required="" />
+             <label class="input-label">{{item.top.text-option-1}}</label>
+           </div>
+ 
+           <div class="floating-input ">
+             <input type="text" name="{{item.top.text-option-2}}" placeholder="{{item.top.text-option-2}}" class="input-text form-text-color" required="" />
+             <label class="input-label">{{item.top.text-option-2}}</label>
+           </div>
+ 
+           <div class="floating-input ">
+             <input type="text" name="{{item.top.text-option-3}}" placeholder="{{item.top.text-option-3}}" class="input-text form-text-color" />
+             <label class="input-label">{{item.top.text-option-3}}</label>
+           </div>
+ 
+         </div>
+       </div>
+       <div class="grid padded-sides">
+ 
+         <div class="col-1_sm-12 relative reveal fade-left">
+           <h3 class="sm-bold form-subheading-color form-subheading-font vertical-form-text">{{item.bottom.subheading}} </h3>
+         </div>
+ 
+         <div class="col-10_sm-12 form-padded form-text-color">
+           <div class="floating-input ">
+             <textarea name="{{item.bottom.message}}" placeholder="{{item.bottom.message}}" class="input-text form-text-color"></textarea>
+             <label class="input-label">{{item.bottom.message}}</label>
+           </div>
+ 
+           <div class="floating-input  ">
+             <select class="input-text" name="services " id="services" required="">
+               <option class="input-text form-text-color dropdown">{{item.bottom.option-box.subject}}</option>
+               <option class="input-text form-text-color dropdown" value="{{item.bottom.option-box.option-1}}">{{item.bottom.option-box.option-1}}</option>
+               <option class="input-text form-text-color dropdown" value="{{item.bottom.option-box.option-2}}">{{item.bottom.option-box.option-2}}</option>
+               <option class="input-text form-text-color dropdown" value="{{item.bottom.option-box.option-3}}">{{item.bottom.option-box.option-3}}</option>
+               <option class="input-text form-text-color dropdown" value="{{item.bottom.option-box.option-4}}">{{item.bottom.option-box.option-4}}</option>
+             </select>
+           </div>
+           </div>
+         </div>
+         <div class="padded grid-center">
+           <input type="hidden" name="inbox_key" value="{{site.data.general.basics.email-address}}">
+           <input type="text" name="_gotcha" style="display: none;" />
+           <input type="submit" value="{{item.button}}" class="center button-solid button-font button-color button-text-color" />
+         </div>
+       </div>
+     </form>
+   </section>
+ </section>
+
+ 

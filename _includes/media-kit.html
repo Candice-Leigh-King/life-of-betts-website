@@ -1,0 +1,144 @@
+<style>
+  #content-blocks-{{forloop.index0}} .background-color 
+    {background: linear-gradient(0deg,{{item.colors.bottom-background-color}} 50%,{{item.colors.top-background-color}} 0%);}
+  #content-blocks-{{forloop.index0}} .border {border: solid 4px {{item.colors.image-border-color}};}
+
+  #content-blocks-{{forloop.index0}} .title-1
+    {color: {{item.colors.title-1-color}};}
+
+  #content-blocks-{{forloop.index0}} .title-1
+    {font-family: {{item.fonts.title-1-font}};}
+
+  #content-blocks-{{forloop.index0}} .title-2
+    {font-family: {{item.fonts.title-2-font}};}
+
+  #content-blocks-{{forloop.index0}} .title-2
+    {color: {{item.colors.title-2-color}};}
+
+  #content-blocks-{{forloop.index0}} .media-kit-line-color
+    {border-top: 1px solid {{item.colors.line-color}};}
+
+  #content-blocks-{{forloop.index0}} .title-3
+    {font-family: {{item.fonts.title-3-font}};}
+    
+  #content-blocks-{{forloop.index0}} .title-3
+    {color: {{item.colors.title-3-color}};}
+
+  #content-blocks-{{forloop.index0}} .title-4
+    {font-family: {{item.fonts.title-4-font}};}
+
+  #content-blocks-{{forloop.index0}} .title-4
+    {color: {{item.colors.title-4-color}};}
+
+  #content-blocks-{{forloop.index0}} .title-5
+    {font-family: {{item.fonts.title-5-font}};}
+
+  #content-blocks-{{forloop.index0}} .title-5
+    {color: {{item.colors.title-5-color}};}
+
+  #content-blocks-{{forloop.index0}} .statistic-data-color
+    {color: {{item.colors.statistic-data-color}};}
+
+  #content-blocks-{{forloop.index0}} .statistic-data-font
+    {font-family: {{item.fonts.statistic-data-font}};}
+
+  #content-blocks-{{forloop.index0}} .media-kit-border
+    { border: 2px solid {{item.colors.statistic-data-color}};}
+
+  #content-blocks-{{forloop.index0}} .statistic-title-color
+    {color: {{item.colors.statistic-title-color}};}
+  
+  #content-blocks-{{forloop.index0}} .statistic-title-font
+    {font-family: {{item.fonts.statistic-title-font}};}
+
+  #content-blocks-{{forloop.index0}} .subheading-color
+    {color: {{item.colors.subheading-color}};}
+
+  #content-blocks-{{forloop.index0}} .subheading-font
+    {font-family: {{item.fonts.subheading-font}};}
+
+  #content-blocks-{{forloop.index0}} .textarea-color p
+    {color: {{item.colors.textarea-color}};}
+
+  #content-blocks-{{forloop.index0}} .textarea-font p
+    {font-family: {{item.fonts.textarea-font}};}
+
+  #content-blocks-{{forloop.index0}} .textarea-font h1
+    {font-family: {{item.fonts.subheading-font}};}
+
+  #content-blocks-{{forloop.index0}} .textarea-color h1
+    {color: {{item.colors.subheading-color}};}
+
+  #content-blocks-{{forloop.index0}} .textarea-font h2
+    {font-family: {{item.fonts.subheading-font}};}
+
+  #content-blocks-{{forloop.index0}} .textarea-color h2
+    {color: {{item.colors.subheading-color}};}
+
+  #content-blocks-{{forloop.index0}} .textarea-font h3
+    {font-family: {{item.fonts.subheading-font}};}
+
+  #content-blocks-{{forloop.index0}} .textarea-color h3
+    {color: {{item.colors.subheading-color}};}
+
+  #content-blocks-{{forloop.index0}} .textarea-font h4
+    {font-family: {{item.fonts.subheading-font}};}
+
+  #content-blocks-{{forloop.index0}} .textarea-color h4
+    {color: {{item.colors.subheading-color}};}
+
+  #content-blocks-{{forloop.index0}} .textarea-font h5
+    {font-family: {{item.fonts.subheading-font}};}
+
+  #content-blocks-{{forloop.index0}} .textarea-color h5
+    {color: {{item.colors.subheading-color}};}
+
+  #content-blocks-{{forloop.index0}} .textarea-font h6
+    {font-family: {{item.fonts.subheading-font}};}
+    
+  #content-blocks-{{forloop.index0}} .textarea-color h6
+    {color: {{item.colors.subheading-color}};}
+
+  #content-blocks-{{forloop.index0}} .textarea-color a
+    {color: {{item.colors.subheading-color}};}
+
+  #content-blocks-{{forloop.index0}} .textarea-color a:hover
+    {color: {{item.colors.textarea-color}};}
+
+</style>
+    
+<section id="content-blocks-{{forloop.index0}}" class="center media-kit">
+  <section data-cms-bind class="padded grid-center background-color">
+    <div class="col-4_xs-12 media-kit padded border" style="background-image:url('{{item.image}}')"></div>
+      <div class="col-8_xs-12 grid-center padded">
+        <h3 class="col-12 center  title-1">{{item.info.title-1}}</h3>
+        <h4 class="col-12 center title-2 no-margin media-kit-padded-bottom ">{{item.info.title-2}}</h4>
+        <div class="col-6 media-kit-line-color"> </div>
+        <p class="col-12 center title-3 no-margin follower-number">{{item.info.title-3}}</p>
+        <p class="col-12 center title-4 media-kit-line-height"> {{item.info.title-4}}</p>
+        <p class="col-12 center no-margin username title-5 padded-top">{{item.info.title-5}}</p>
+        <div class="grid-center center col-9_sm-12">
+          <div class="grid-center center col-3_xs-5 padded ">
+            <p class="col-12-middle number center radius media-kit-border statistic-data-font statistic-data-color"> {{item.statistics.bubble-1.data}}</p>
+            <p class="col-12 center statistic-title-color statistic-title-font ">{{item.statistics.bubble-1.title}}</p>
+          </div>
+          <div class="grid-center center col-3_xs-5 padded ">
+            <p class="col-12-middle number center radius media-kit-border statistic-data-font statistic-data-color"> {{item.statistics.bubble-2.data}}</p>
+            <p class="col-12 center statistic-title-color statistic-title-font">{{item.statistics.bubble-2.title}}</p>
+          </div>
+          <div class="grid-center center col-3_xs-5 padded ">
+            <p class="col-12-middle number center radius media-kit-border statistic-data-font statistic-data-color"> {{item.statistics.bubble-3.data}}</p>
+            <p class="col-12 center statistic-title-color statistic-title-font">{{item.statistics.bubble-3.title}}</p>
+          </div>
+          <div class="grid-center center col-3_xs-5 padded ">
+            <p class="col-12-middle  number center radius media-kit-border statistic-data-font statistic-data-color"> {{item.statistics.bubble-4.data}}</p>
+            <p class="col-12 center statistic-title-color statistic-title-font">{{item.statistics.bubble-4.title}}</p>
+          </div>
+        </div>
+        <h4 class="col-12 center subheading-color subheading-font ">{{item.text-area.subheading}}</h4>
+        <div class="col-12 center textarea-color textarea-font">
+         <p>{{item.text-area.textarea_html}}</p>
+        </div>
+      </div>  
+  </section>
+</section>

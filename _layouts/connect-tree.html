@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Meta Data -->
+      <meta charset="utf-8" />
+      <!-- Viewport meta tag -->
+      <meta name="viewport" content="width=device-width" />
+
+      <!-- Meta data for SEO purposes. -->
+      <title> {{page.seo.title}} </title>
+
+      <meta name="description" content="{{page.seo.description}}" />
+      <meta name="keywords" content="{{page.seo.keywords}}" />
+
+      <!-- meta data to tell the browser that your devide is responsive -->
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="robots" content="index, follow" />
+      <meta name="mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+      <!--  Social media sharing META Tags -->
+      <meta property="og:title" content="{{page.seo.title}}" />
+      <meta property="og:description" content="{{page.seo.description}}" />
+      <meta property="og:image" content="{{ page.seo.social-share_image }}" />
+      <meta property="og:url" content="{{page.seo.url}}" />
+      <meta name="twitter:card" content="{{page.seo.description}}" />
+      <meta name="og:site_name" content="{{page.seo.title}}" />
+
+      <!-- twitter card -->
+      <meta name="twitter:card" content="{{page.seo.description}}" />
+      <meta name="twitter:description" content="{{page.seo.description}}" />
+      <meta name="twitter:title" content="{{page.seo.title}}" />
+      <meta name="twitter:site" content="{{page.seo.url}}" />
+      <meta name="twitter:creator" content="{{page.seo.social-alt}}" />
+      <meta name="twitter:image:alt" content="{{ page.seo.social-share_image }}" />
+
+      <!-- link to browser icon tag -->
+      <link rel="icon" href="{{site.data.general.basics.browser-tag_image}}" type="image/x-icon" />
+      <link rel="apple-touch-icon" sizes="180x180" href="{{site.data.general.basics.browser-tag_image}}" />
+      <link rel="icon" type="image/x-icon" sizes="32x32" href="{{site.data.general.basics.browser-tag_image}}" />
+      <link rel="icon" type="image/x-icon" sizes="16x16" href="{{site.data.general.basics.browser-tag_image}}" />
+      <link rel="manifest" href="/site.webmanifest" />
+
+      <!-- GOOGLE FONTS -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Barlow+Condensed:wght@300&family=Belleza&family=Kaushan+Script&family=Montserrat:wght@300;400&family=Oooh+Baby&family=Playfair+Display&family=Quicksand&family=Raleway&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Raleway:ital,wght@1,300;1,400;1,500;1,600&family=Shrikhand&display=swap" rel="stylesheet" />
+
+    <!-- iconify icons -->
+   <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+   
+
+    
+
+      <!-- Gridlex -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.7.1/gridlex.min.css" />
+
+      <!-- fanceybox gallery -->
+      <link rel="stylesheet" href="/css/jquery.fancybox.min.css" />
+
+
+
+      <link rel="stylesheet" href="/slick/slick.css" />
+      <link rel="stylesheet" href="/slick/slick-theme.css" />
+
+      <!-- styles -->
+      <link rel="stylesheet" href="/styles.css" />
+      <style>
+        :root {
+
+          /* --------------NAVIGATION------------ */
+        
+          --hamburgerColor: {{site.data.navigation.colors.hamburger-color}};
+          --backgroundColor: {{site.data.navigation.colors.background-color}};
+          --textareaBackgroundColor: {{site.data.navigation.colors.textarea-background-color}};
+          --BorderColor: {{site.data.navigation.colors.border-color}};
+          --topLeftCorner: {{site.data.navigation.border-radius.top-left-corner}};
+          --topRightCorner: {{site.data.navigation.border-radius.top-right-corner}};
+          --bottomLeftCorner: {{site.data.navigation.border-radius.bottom-left-corner}};
+          --bottomRightCorner: {{site.data.navigation.border-radius.bottom-right-corner}};
+          --linkColor: {{site.data.navigation.colors.link-color}};
+          --linkFont: {{site.data.navigation.fonts.link-font}};
+          --HoverLinkColor: {{site.data.navigation.colors.hover-link-color}};
+          --iconColor: {{site.data.navigation.social-link-colors.icon-color}};
+          --navSocialsBorderTopRight: {{site.data.navigation.icons-border-radius.top-right-corner}};
+          --navSocialsBorderTopLeft: {{site.data.navigation.icons-border-radius.top-left-corner}};
+          --navSocialsBorderBottomRight: {{site.data.navigation.icons-border-radius.bottom-right-corner}};
+          --navSocialsBorderBottomLeft: {{site.data.navigation.icons-border-radius.bottom-left-corner}};
+          --iconBackgroundColor: {{site.data.navigation.social-link-colors.background-color}};
+          --iconBorderColor: {{site.data.navigation.social-link-colors.border-color}};
+          --iconHoverColor: {{site.data.navigation.social-link-colors.icon-hover-color}};
+          --exitColor: {{site.data.navigation.colors.exit-color}};
+          --exitHoverColor: {{site.data.navigation.colors.exit-hover-color}};
+
+          /* -------------FOOTER----------- */
+          --footerBackgroundColor: {{site.data.footer.colors.background-color}};
+          --footerBorderColor: {{site.data.footer.colors.border-color}};
+          --socialIconsBackgroundColor: {{site.data.footer.colors.social-icons-background-color}};
+          --subfooterHoverColor: {{site.data.footer.colors.subfooter-hover-color}};
+          --subfooterFont: {{site.data.footer.fonts.subfooter-font}};
+
+          --editor-panel-zindex: 90;
+      
+          
+        }
+
+        /* --------NAVIGTION--------- */
+
+        .hamburger-color {color: var(--hamburgerColor);}
+        .navigation-background-color {background-color: var(--backgroundColor);}
+        .textarea-background-color 
+          {
+          background-color: var(--textareaBackgroundColor);
+          border: 4px solid var(--BorderColor);
+          border-top-left-radius: var(--topLeftCorner);
+          border-top-right-radius: var(--topRightCorner);
+          border-bottom-left-radius: var(--bottomLeftCorner);
+          border-bottom-right-radius: var(--bottomRightCorner);
+          }
+          
+        .navigation-links a
+          {
+          color: var(--linkColor);
+          font-family: var(--linkFont);
+          } 
+
+        .navigation-links a:hover {color: var(--HoverLinkColor);} 
+
+        .navigation-socials  
+          {
+          background-color: var(--iconBackgroundColor);
+          border: 1px solid var(--iconBorderColor);
+          }
+          
+        .navigation-socials a { color: var(--iconColor);} 
+        .navigation-socials a:hover   {color:var(--iconHoverColor);}
+        .navigation-socials
+          {
+          border-top-right-radius: var(--navSocialsBorderTopRight);
+          border-top-left-radius:  var(--navSocialsBorderTopLeft);
+          border-bottom-left-radius:  var(--navSocialsBorderBottomLeft);
+          border-bottom-right-radius:  var(--navSocialsBorderBottomRight);
+          }  
+
+        .exit {color: var(--exitColor);}
+
+        .exit:hover {color: var(--exitHoverColor);}
+        
+        .fixed-socials 
+          {
+          background-color: var(--iconBackgroundColor);
+          border-top: 1px solid var(--iconBorderColor);
+          border-left: 1px solid var(--iconBorderColor);
+          border-bottom: 1px solid var(--iconBorderColor);
+          }
+
+        .fixed-socials a {color: var(--iconColor);}  
+
+        .fixed-socials a:hover 
+          {color:var(--iconHoverColor);}
+
+        /* ----------FOOTER---------- */
+
+        .footer-background-color 
+          {
+          background-color: var(--footerBackgroundColor);
+          border-top: 1px solid var(--footerBorderColor);
+          }
+
+        .social-icons-color a 
+          {
+          color: var(--footerBackgroundColor);
+          background-color: var(--socialIconsBackgroundColor);
+          border: solid var(--socialIconsBackgroundColor);
+          }
+        
+        .social-icons-color a:hover
+          {
+          color: var(--socialIconsBackgroundColor);
+          background-color: transparent;
+          border: solid var(--socialIconsBackgroundColor);
+          }
+
+        .built {background-color: var(--footerBackgroundColor);}
+
+        .built a 
+          {
+          color: var(--socialIconsBackgroundColor);
+          font-family: var(--subfooterFont);
+          }
+
+        .built p 
+          {
+          color: var(--socialIconsBackgroundColor);
+          font-family: var(--subfooterFont);
+          }
+
+        .built a:hover {color: var(--subfooterHoverColor);}
+
+        </style>
+  </head>
+
+  <style>
+
+    .connect-tree {background-color: {{page.background-color}};}
+  
+    .top-image-border {border: 2.5px solid {{page.top-image.border-color}};}
+  
+    .bottom-image-border {border: 2.5px solid {{page.bottom-image.border-color}};}
+  
+    .padded {padding: 5%;}
+  
+    .connect-tree 
+      {
+      background-size: cover;
+      background-position: center;
+      }
+  
+    .connect-tree .connect-tree-image 
+      {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      padding-bottom: 100%;
+      }
+  
+    .connect-tree-links p
+      {padding: 3%;  }
+  
+    .connect-tree-links a:hover
+      {background-color: transparent;}
+  
+  
+    .connect-tree-links a 
+      {
+      padding: .8rem 2rem .6rem;
+      border-radius: 100px;
+      border: 2.5px solid {{page.links.border-color}};
+      background-color: {{page.links.background-color}};
+      color: {{page.links.text-color}};
+      font-family: {{page.links.font}};
+      }
+  
+    .connect-tree-links a:hover 
+      {
+      color: {{page.links.background-color}};
+      border: 2.5px solid {{page.links.background-color}};
+      }
+  
+  </style>
+
+{{content}}
+
+</html>

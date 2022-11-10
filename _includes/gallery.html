@@ -1,0 +1,33 @@
+<style>
+  #content-blocks-{{forloop.index0}} .gallery 
+    {background-color:{{item.colors.background-color}};}
+
+  #content-blocks-{{forloop.index0}} .heading-color
+    {color: {{item.colors.heading-color}};}
+
+  #content-blocks-{{forloop.index0}} .heading-font
+    {font-family: {{item.fonts.heading-font}};} 
+  
+  #content-blocks-{{forloop.index0}} .square 
+    {border: 4px solid {{item.colors.background-color}};}
+
+</style>
+
+<section id="content-blocks-{{forloop.index0}}" class="center">
+  <section id="{{item.content-block-link}}" class="padded-gallery grid-center gallery ">
+      <h2 class="col-12_sm-12 heading-color heading-font centered padded-top"> {{item.heading}} </h2>
+    
+      <div class="col-4_xs-12 grid">
+        <a href="{{item.left.top-image}}" data-fancybox="content" class="square col-12_xs-6" style="background-image:url({{item.left.top-image}}); "> </a>
+        <a href="{{item.left.bottom-image}}" data-fancybox="content" class="square col-12_xs-6" style="background-image:url({{item.left.bottom-image}});"> </a>
+      </div>
+      <div class="col-4_xs-12 grid">
+        <a href="{{item.middle.top-image}}" data-fancybox="content" class="square col-12_xs-6" style="background-image:url({{item.middle.top-image}});"> </a>
+        <a href="{{item.middle.bottom-image}}" data-fancybox="content" class="square col-12_xs-6" style="background-image:url({{item.middle.bottom-image}});"> </a>
+      </div>
+      <div class="col-4_xs-12 grid">
+        <a href="{{item.right.top-image}}" data-fancybox="content" class="square col-12_xs-6" style="background-image:url({{item.right.top-image}});"> </a>
+        <a href="{{item.right.bottom-image}}" data-fancybox="content" class="square col-12_xs-6" style="background-image:url({{item.right.bottom-image}});"> </a>
+      </div>
+    </section>
+  </section>  

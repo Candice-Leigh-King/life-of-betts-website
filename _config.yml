@@ -1,0 +1,371 @@
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  -
+    scope:
+      path: "linking"
+      type: "pages" 
+    values:
+      layout: "connect-tree" # overrides previous default layout
+
+_inputs:
+  content-block-link:
+    comment: If you would like this section to be linked through the navigation, then you'll need to add an ID. The ID can be added in the below box. Your ID is 1 word describing the section it is leading to. For example - about. For more detailed instructions on how to link your pages and content blocks to the navigation, please visit our YouTube tutorial here - https://www.youtube.com/watch?v=odzPwMfEaxU. If you don't want this section to link from the navigation, you can simply leave it out.
+  colors.subheading-mobile-color:
+    comment: This subheading color is for the mobile version only. To change the subheading color on the laptop and desktop version, change the "hover text color". This will also change the color of the text.
+  colors.on-mobile-text-color: 
+    comment: This is to change the color of the text on mobile only.
+
+page_blocks: []
+_array_structures:
+  content-blocks:
+    values:
+      - label: Floating Socials
+        icon: groups
+        value: 
+          _section-type: floating-socials
+          description: To change the links, go to data → general → social links. To change the colors, go to data → navigation → social link colors. This will change the links and colors of these floating social media icons and the ones in your navigation. 😊 For brand consistency, the colors will be the same.
+      - label: Hero
+        icon: star
+        value:
+          _section-type: hero
+          hero:
+          hero-image:
+          hero-color:
+          hero-font: 
+          content-block-link:
+      - label: Text Area
+        icon: article
+        value:
+          _section-type: textarea
+          textarea_html:
+          subheading_html:
+          colors:
+            background-color: 
+            text-color: 
+            subheading-color: 
+            top-line-color: 
+            left-line-color:
+            link-color:
+            link-hover-color:
+          fonts:
+            subheading-font: 
+            text-font:  
+          content-block-link: 
+      - label: Carousel
+        icon: view_carousel
+        value:
+          _section-type: carousel
+          heading:
+          carousel:
+            - textarea_html:
+              symbols: 
+              ending:
+          background_image:          
+          colors:
+            background-color: 
+            heading-color:
+            textarea-background-color: 
+            border-color: 
+            subheading-color:
+            text-color: 
+            symbols-color: 
+            link-color: 
+            link-hover-color: 
+          border-radius:
+            laptop:
+              top-left-corner: 
+              top-right-corner: 
+              bottom-left-corner: 
+              bottom-right-corner:
+            tablet: 
+              top-left-corner: 
+              top-right-corner: 
+              bottom-left-corner: 
+              bottom-right-corner: 
+            mobile:
+              top-left-corner: 
+              top-right-corner: 
+              bottom-left-corner: 
+              bottom-right-corner:    
+          fonts:
+            heading-font:
+            subheading-font:
+            text-font: 
+          content-block-link: reviews
+      - label: Fig Hover Block
+        icon: emoji_nature
+        value: 
+          _section-type: fig-hover-block
+          left:
+            heading:
+            background-image:
+          right:
+            subheading:
+            textarea:
+            background-image: 
+            button: 
+            button-link:
+          colors:
+            overlay-color: 
+            background-color:
+            border-color: 
+            heading-color:
+            hover-text-color:
+            hover-overlay-color:
+            button-background-color:
+            button-text-color:
+            subheading-mobile-color: 
+            on-mobile-text-color:
+          border-radius:
+            laptop:  
+              top-left-corner:
+              top-right-corner:
+              bottom-left-corner:
+              bottom-right-corner:
+            tablet: 
+              top-left-corner:
+              top-right-corner: 
+              bottom-left-corner: 
+              bottom-right-corner: 
+            mobile:
+              top-left-corner:
+              top-right-corner: 
+              bottom-left-corner: 
+              bottom-right-corner:  
+          fonts:
+            heading-font:
+            subheading-font:
+            textarea-font: 
+          content-block-link:
+      - label: Zuko Hover Block
+        icon: pets
+        value: 
+          _section-type: zuko-hover-block
+          left:
+            subheading:
+            textarea:
+            background-image: 
+            button:
+            button-link: 
+          right:
+            subheading: 
+            textarea:
+            background-image:
+            button: 
+            button-link: 
+          colors:
+            overlay-color: 
+            background-color:
+            hover-overlay-color:
+            border-color: 
+            heading-color:
+            hover-text-color:   
+            button-background-color:
+            button-text-color:
+            subheading-mobile-color:
+            on-mobile-text-color:
+          border-radius:
+            laptop:  
+              top-left-corner: 
+              top-right-corner:
+              bottom-left-corner:
+              bottom-right-corner:
+            tablet: 
+              top-left-corner:
+              top-right-corner: 
+              bottom-left-corner: 
+              bottom-right-corner: 
+            mobile:
+              top-left-corner: 
+              top-right-corner: 
+              bottom-left-corner: 
+              bottom-right-corner:    
+          fonts:
+            heading-font:
+            subheading-font:
+            textarea-font:
+          content-block-link:          
+      - label: Gallery
+        icon: photo_camera
+        value:
+          _section-type: gallery
+          heading: Gallery
+          left:
+            top-image:  
+            bottom-image:  
+          middle:
+            top-image:
+            bottom-image: 
+          right:
+            top-image:
+            bottom-image: 
+          colors:
+            background-color:
+            heading-color:
+          fonts:
+            heading-font:
+          content-block-link:
+      - label: Gallery with Links
+        icon: link
+        value:
+          _section-type: gallery-with-links 
+          subheading:
+          images: 
+            first-image: 
+            second-image: 
+            third-image:  
+            fourth-image:
+          links:
+            first-link:
+            second-link: 
+            third-link:  
+            fourth-link:
+          colors:
+            background-color: 
+            subheading-color: 
+            text-color: 
+            text-background-color: 
+          fonts:
+            subheading-font:
+            text-font:
+          content-block-link:
+      - label: Form
+        icon: email
+        value:
+          _section-type: form
+          heading:
+          top:
+            subheading:
+            text-option-1:
+            text-option-2:
+            text-option-3:
+          bottom:
+            subheading: 
+            message:
+            option-box:
+              subject:
+              option-1: 
+              option-2: 
+              option-3:
+              option-4: 
+          button: 
+          background_image:        
+          colors:
+            background-color:
+            textarea-background-color: 
+            border-color: 
+            heading-color:
+            subheading-color:
+            text-color:
+            button-color: 
+            button-text-color:
+          border-radius:
+            laptop:  
+              top-left-corner:
+              top-right-corner: 
+              bottom-left-corner: 
+              bottom-right-corner: 
+            tablet: 
+              top-left-corner: 
+              top-right-corner: 
+              bottom-left-corner: 
+              bottom-right-corner: 
+            mobile:
+              top-left-corner: 
+              top-right-corner: 
+              bottom-left-corner: 
+              bottom-right-corner: 
+          fonts:
+            heading-font:
+            subheading-font:
+            text-font:
+            button-font:
+          content-block-link:
+      - label: Media Kit
+        icon: business_center
+        value:
+          _section-type: media-kit 
+          info:
+            title-1: 
+            title-2: 
+            title-3: 
+            title-4:
+            title-5: 
+          statistics:
+            bubble-1: 
+              data:
+              title:
+            bubble-2:
+              data: 
+              title: 
+            bubble-3:
+              data: 
+              title:
+            bubble-4:
+              data: 
+              title:
+          text-area:
+            subheading: 
+            textarea_html: 
+          image:
+          colors:
+            top-background-color: 
+            bottom-background-color: 
+            image-border-color: 
+            line-color: 
+            title-1-color: 
+            title-2-color: 
+            title-3-color: 
+            title-4-color: 
+            title-5-color:
+            statistic-data-color: 
+            statistic-title-color: 
+            subheading-color: 
+            textarea-color: 
+          fonts:
+            title-1-font:
+            title-2-font: 
+            title-3-font:
+            title-4-font: 
+            title-5-font:
+            statistic-data-font: 
+            statistic-title-font: 
+            subheading-font: 
+            textarea-font: 
+fonts:
+_select_data:
+  fonts:
+      - Cyrene
+      - La Obrige
+      - Lineal Simples
+      - Maglony
+      - Mak
+      - Misto
+      - Brushwell
+      - Open Sans, sans-serif
+      - Shrikhand, cursive
+      - Dream Avenue
+      - Amatic SC, cursive
+      - Barlow Condensed, sans-serif
+      - Belleza, sans-serif
+      - Kaushan Script, cursive
+      - Montserrat, sans-serif
+      - Oooh Baby, cursive
+      - Playfair Display, serif
+      - Poppins, sans-serif
+      - Quicksand, sans-serif
+      - Raleway, sans-serif
+      - Roboto, sans-serif
+
+      #  description: >-
+      #   If you would like that awesome scroll feature that happens when someone
+      #   clicks on a link in the navigation, then you'll need to add a page id.
+      #   The page id can be added in the below box labeled "link". Your id is a
+      #   short word describing the section it is leading to. For example- about.
+      #   If you don't want this section to link from the navigation, you can
+      #   simply leave it out.

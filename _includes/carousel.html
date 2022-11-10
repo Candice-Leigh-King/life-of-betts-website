@@ -1,0 +1,149 @@
+<style>
+  #content-blocks-{{forloop.index0}} .carousel-background-color 
+    {background-color: {{item.colors.background-color}};}
+
+  #content-blocks-{{forloop.index0}} .heading-color 
+    {color: {{item.colors.heading-color}};}
+
+  #content-blocks-{{forloop.index0}} .heading-font 
+    {font-family: {{item.fonts.heading-font}};}
+    
+
+  #content-blocks-{{forloop.index0}} .textarea-background-color 
+    {background-color: {{item.colors.textarea-background-color}};}
+
+  #content-blocks-{{forloop.index0}} .carousel-border-color
+    {
+    border: 4px solid {{item.colors.border-color}};
+    border-top-left-radius: {{item.border-radius.laptop.top-left-corner}};
+    border-top-right-radius: {{item.border-radius.laptop.top-right-corner}};
+    border-bottom-left-radius: {{item.border-radius.laptop.bottom-left-corner}};
+    border-bottom-right-radius: {{item.border-radius.laptop.bottom-right-corner}};
+    }
+
+  #content-blocks-{{forloop.index0}} .text-color 
+    {color: {{item.colors.text-color}};}
+
+  #content-blocks-{{forloop.index0}} .text-color a {color: {{item.colors.link-color}};}
+
+  #content-blocks-{{forloop.index0}} .text-color a:hover {color: {{item.colors.link-hover-color}};}
+
+  #content-blocks-{{forloop.index0}} .text-font
+    {font-family: {{item.fonts.text-font}};}
+
+  #content-blocks-{{forloop.index0}} .carousel-symbols-color
+    {color: {{item.colors.symbols-color}};}
+
+  #content-blocks-{{forloop.index0}} .carousel-subheading-color 
+    {color: {{item.colors.subheading-color}};}
+
+  #content-blocks-{{forloop.index0}} .carousel-subheading-font 
+    {font-family: {{item.fonts.subheading-font}};}
+
+  #content-blocks-{{forloop.index0}} h1 
+   {
+   font-size: 3.5rem;
+   font-family: {{item.fonts.heading-font}};
+   color: {{item.colors.heading-color}};
+   }
+
+  #content-blocks-{{forloop.index0}} h2 
+   {
+   font-size: 3rem;
+   font-family: {{item.fonts.heading-font}};
+   color: {{item.colors.heading-color}};
+   }
+
+  #content-blocks-{{forloop.index0}} h3 
+   {
+   font-size: 2.5rem;
+   font-family: {{item.fonts.heading-font}};
+   color: {{item.colors.heading-color}};
+   }
+
+  #content-blocks-{{forloop.index0}} h4 
+   {
+   font-size: 2rem;
+   font-family: {{item.fonts.heading-font}};
+   color: {{item.colors.heading-color}};
+   }
+
+  #content-blocks-{{forloop.index0}} h5 
+   {
+   font-size: 1.5rem;
+   font-family: {{item.fonts.heading-font}};
+   color: {{item.colors.heading-color}};
+   }
+
+  #content-blocks-{{forloop.index0}} h6 
+   {
+   font-size: 1rem;
+   font-family: {{item.fonts.heading-font}};
+   color: {{item.colors.heading-color}};
+   }
+
+@media(max-width:768px) 
+  {
+    #content-blocks-{{forloop.index0}} .carousel-border-color
+    {
+    border: 4px solid {{item.colors.border-color}};
+    border-top-left-radius: {{item.border-radius.tablet.top-left-corner}};
+    border-top-right-radius: {{item.border-radius.tablet.top-right-corner}};
+    border-bottom-left-radius: {{item.border-radius.tablet.bottom-left-corner}};
+    border-bottom-right-radius: {{item.border-radius.tablet.bottom-right-corner}};
+    } 
+  }
+
+@media(max-width:576px) 
+  {
+  #content-blocks-{{forloop.index0}} .carousel-border-color
+    {
+    border-top-left-radius: {{item.border-radius.mobile.top-left-corner}};
+    border-top-right-radius: {{item.border-radius.mobile.top-right-corner}};
+    border-bottom-left-radius: {{item.border-radius.mobile.bottom-left-corner}};
+    border-bottom-right-radius: {{item.border-radius.mobile.bottom-right-corner}};
+    } 
+
+  #content-blocks-{{forloop.index0}} h1 
+    {font-size: 3rem;}
+
+  #content-blocks-{{forloop.index0}} h2 
+    {font-size: 2.5rem;}
+
+  #content-blocks-{{forloop.index0}} h3 
+    {font-size: 2rem;}
+
+  #content-blocks-{{forloop.index0}} h4 
+    {font-size: 1.5rem;}
+
+  #content-blocks-{{forloop.index0}} h5 
+    {font-size: 1rem;}
+
+  #content-blocks-{{forloop.index0}} h6 
+    {font-size: 0.9rem;}
+  }
+
+ 
+</style>
+
+<section id="content-blocks-{{forloop.index0}}">
+  <section class="grid-center padded carousel-background-color banner" style="background-image: url('{{item.background_image}}');">
+    <div class="col-12 padded-bottom" id="{{item.content-block-link}}">
+      <h2 class="heading-color heading-font">{{item.heading}}</h2>
+    </div>
+    <div class=" grid col-9_sm-11 padded-sides one-time">
+      {% for carousel in item.carousel %}
+      <div class="grid-center col-12 radius-leaf carousel-border-color textarea-background-color centered">
+        <div class="grid-center padded ">
+          <div class = "col-9_xs-12 padded text-color text-font ">
+            <p class="text-color text-font">{{carousel.textarea_html}} <br />
+              <span class="carousel-symbols-color"> {{carousel.symbols}} </span>
+            </p>
+            <p class="centered carousel-subheading-font carousel-subheading-color"> {{carousel.ending}} </p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+</section>

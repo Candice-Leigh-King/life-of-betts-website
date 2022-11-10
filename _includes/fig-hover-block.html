@@ -1,0 +1,139 @@
+<style>
+  #content-blocks-{{forloop.index0}} .hover-container .hover-image:hover 
+  {
+  box-shadow: inset 0px 0px 0px 4px {{item.colors.background-color}};
+  box-sizing: border-box;
+  } 
+    
+  #content-blocks-{{forloop.index0}} .border-hover-image 
+   { 
+   box-shadow: inset 0px 0px 0px 4px {{item.colors.border-color}};
+   box-sizing: border-box;
+   border-top-left-radius: {{item.border-radius.laptop.top-left-corner}};
+   border-top-right-radius: {{item.border-radius.laptop.top-right-corner}};
+   border-bottom-left-radius: {{item.border-radius.laptop.bottom-left-corner}};
+   border-bottom-right-radius: {{item.border-radius.laptop.bottom-right-corner}};
+   }
+
+  #content-blocks-{{forloop.index0}} .border-mob 
+    {border: 4px solid {{item.colors.border-color}};}
+
+  #content-blocks-{{forloop.index0}} .hover-container 
+   {background-color: {{item.colors.background-color}};}
+
+  #content-blocks-{{forloop.index0}} .hover-container-mobile 
+   {background-color: {{item.colors.background-color}};}
+  
+  #content-blocks-{{forloop.index0}} .hover-container-mobile p 
+   {font-family: {{item.fonts.textarea-font}};}
+
+  #content-blocks-{{forloop.index0}} .top-hover-overlay 
+   {background-color: {{item.colors.overlay-color}};}
+  
+  #content-blocks-{{forloop.index0}} .hover-text-color:hover {color: {{item.colors.hover-text-color}};}
+
+  #content-blocks-{{forloop.index0}} .on-mobile-text-color {color: {{item.colors.on-mobile-text-color}};} 
+
+  #content-blocks-{{forloop.index0}} .hover-overlay:hover {background-color: {{item.colors.hover-overlay-color}};}
+
+  #content-blocks-{{forloop.index0}} .heading-color 
+   {color: {{item.colors.heading-color}};}
+
+  #content-blocks-{{forloop.index0}} .heading-font 
+   {font-family: {{item.fonts.heading-font}};}
+
+  #content-blocks-{{forloop.index0}} .textarea-color 
+   {colors: {{item.colors.textarea-color}};}
+
+  #content-blocks-{{forloop.index0}} .textarea-font 
+   {font-family: {{item.fonts.textarea-font}};}
+  
+  #content-blocks-{{forloop.index0}} .subheading-color
+   {color: {{item.colors.subheading-mobile-color}};}
+
+  #content-blocks-{{forloop.index0}} .subheading-font
+   {font-family: {{item.fonts.subheading-font}};}
+   
+  #content-blocks-{{forloop.index0}} .button-color:hover
+   {
+   background-color: {{item.colors.button-background-color}};
+   color: {{item.colors.button-text-color}};
+   } 
+
+  #content-blocks-{{forloop.index0}} .link-background-color   
+    {
+    background-color: {{item.colors.button-background-color}};
+    color: {{item.colors.button-text-color}};
+    }
+
+@media(max-width:768px) 
+  {
+    #content-blocks-{{forloop.index0}} .border-hover-image 
+      {
+      border-top-left-radius: {{item.border-radius.tablet.top-left-corner}};
+      border-top-right-radius: {{item.border-radius.tablet.top-right-corner}};
+      border-bottom-left-radius: {{item.border-radius.tablet.bottom-left-corner}};
+      border-bottom-right-radius: {{item.border-radius.tablet.bottom-right-corner}};
+      }  
+  }
+
+@media(max-width:576px) 
+  {
+    #content-blocks-{{forloop.index0}} .border-hover-image 
+      {
+      border-top-left-radius: {{item.border-radius.mobile.top-left-corner}};
+      border-top-right-radius: {{item.border-radius.mobile.top-right-corner}};
+      border-bottom-left-radius: {{item.border-radius.mobile.bottom-left-corner}};
+      border-bottom-right-radius: {{item.border-radius.mobile.bottom-right-corner}};
+      } 
+  }
+  
+  
+</style>
+
+<section id="content-blocks-{{forloop.index0}}" class="center fig-and-zuko">
+  <div id="{{item.content-block-link}}" class="grid">
+    <div class="col-6_sm-12">
+      <div class="hover-container" style="background-image:url('{{item.left.background-image}}')">
+        <div class="top-hover-overlay">
+          <div class="hover-inner">
+            <h2 class="heading-color heading-font"> {{item.left.heading}} </h2>
+            <p class="textarea-color textarea-font padded"> {{item.left.textarea}}</p> 
+              <a href="{{item.left.button-link}}" class=" button-color"> <b>{{item.left.button}}</b></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-6_sm-12 mob-hide ">
+      <div class="hover-container padded">
+        <div class="hover-image radius inner-border border-hover-image " style="background-image:url('{{item.right.background-image}}'); ">
+          <div class="hover-overlay  hover-text-color ">
+            <div class="hover-inner">
+              <h3 class="subheading-font"> {{item.right.subheading}} </h3>
+              <p class="textarea-font padded"> {{item.right.textarea}}</p> 
+                <a href="{{item.right.button-link}}" class="button-color"> <b>{{item.right.button}}</b></a>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </div>
+    <div class="col-6_sm-12-middle desktop-hide">
+      <div class="hover-container-mobile padded">
+        <div class="hover-image radius border-mob" style="background-image:url('{{item.right.background-image}}'); ">
+          <div class="container-color radius grid-middle">
+            <h3 class="col-12 subheading-font subheading-color padded"> {{item.right.subheading}}  
+              <p class="col-12 padded textarea-font centered read-more-button" data-target="read-more-section-2-{{forloop.index0}}"> Read <span></span>
+              </p>
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="read-more" class=" col-12 hover-container-mobile padded desktop-hide" >
+      <p class="hidden on-mobile-text-color  read-more-section" id="read-more-section-2-{{forloop.index0}}" data-section="read-more-section-2-{{forloop.index0}}">{{item.right.textarea}}<br>
+        <a href="{{item.right.button-link}}" class="button-color link-background-color"> <b>{{item.right.button}}</b></a>
+      </p>
+    </div>
+  </div>    
+</section>
+

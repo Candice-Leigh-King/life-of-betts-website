@@ -1,0 +1,54 @@
+<style>
+  #content-blocks-{{forloop.index0}} .background-color
+  {background-color: {{item.colors.background-color}};}
+
+  #content-blocks-{{forloop.index0}} .square-media
+    {border: 4px solid {{item.colors.background-color}};}
+
+  #content-blocks-{{forloop.index0}} .subheading-color 
+    {color: {{item.colors.subheading-color}};}
+
+  #content-blocks-{{forloop.index0}} .subheading-font 
+    {font-family: {{item.fonts.subheading-font}};}
+  
+  #content-blocks-{{forloop.index0}} .text-background-color 
+    {background-color: {{item.colors.text-background-color}};}
+
+  #content-blocks-{{forloop.index0}} .text-font 
+    {
+    font-family: {{item.fonts.text-font}};
+    font-size: 1.3rem;
+    } 
+
+  #content-blocks-{{forloop.index0}} .text-color 
+    {color: {{item.colors.text-color}};}
+
+@media(max-width:576px) 
+ {
+  #content-blocks-{{forloop.index0}} .text-font 
+    {font-size: 1rem;} 
+ }
+</style>
+
+<section id="content-blocks-{{forloop.index0}}">
+  <section data-cms-bind class="padded-sides  media-kit background-color">
+    <div id="{{item.content-block-link}}" class="grid background-color media-kit-gallery-with-link">
+      <h4 class="col-12 subheading-font subheading-color padded-top">{{item.subheading}}</h4>
+      <a href="{{item.links.first-link}}" target="_blank" class="square-media col-3_sm-6" style="background-image:url({{item.images.first-image}}); ">
+        <p class="text-background-color text-font text-color">{{item.images.first-text}}</p>
+      </a>  
+    
+      <a href="{{item.links.second-link}}" target="_blank" class="square-media col-3_sm-6" style="background-image:url({{item.images.second-image}}); ">
+        <p class="text-background-color text-font text-color">{{item.images.second-text}}</p>
+      </a>
+
+      <a href="{{item.links.third-link}}" target="_blank"  class="square-media col-3_sm-6" style="background-image:url({{item.images.third-image}}); ">
+        <p class="text-background-color text-font text-color">{{item.images.third-text}}</p>
+      </a>
+
+      <a href="{{item.links.fourth-link}}" target="_blank"  class="square-media col-3_sm-6" style="background-image:url({{item.images.fourth-image}}); ">
+        <p class="text-background-color text-font text-color">{{item.images.fourth-text}}</p>
+      </a>
+    </div>
+  </section>  
+</section>

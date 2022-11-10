@@ -1,0 +1,112 @@
+<style>
+  #content-blocks-{{forloop.index0}} .background-color {background-color: {{item.colors.background-color}};}
+
+  #content-blocks-{{forloop.index0}} .textarea-color a {color: {{item.colors.link-color}};}
+
+  #content-blocks-{{forloop.index0}} .textarea-color a:hover {color: {{item.colors.link-hover-color}};}
+
+  #content-blocks-{{forloop.index0}} .textarea-color {color: {{item.colors.textarea-color}};}
+
+  #content-blocks-{{forloop.index0}} .textarea-font {font-family: {{item.fonts.textarea-font}};}
+
+  #content-blocks-{{forloop.index0}} .top-line-color 
+    {
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    border-top: 4px solid {{item.colors.top-line-color}};
+    }
+
+  #content-blocks-{{forloop.index0}} .left-line-color 
+    {
+    border-bottom: none;
+    border-right: none;
+    border-top: none;
+    border-left: solid 4px {{item.colors.left-line-color}};
+    } 
+  
+  #content-blocks-{{forloop.index0}} .subheading-color 
+    {color: {{item.colors.subheading-color}};}
+
+  #content-blocks-{{forloop.index0}} .subheading-font {font-family: {{item.fonts.subheading-font}};}
+
+  #content-blocks-{{forloop.index0}} h1 
+  {
+  font-size: 3.5rem;
+  color: {{item.colors.subheading-color}};
+  font-family: {{item.fonts.subheading-font}};
+  }
+
+  #content-blocks-{{forloop.index0}} h2 
+  {
+  font-size: 3rem;
+  color: {{item.colors.subheading-color}};
+  font-family: {{item.fonts.subheading-font}};
+  }
+
+  #content-blocks-{{forloop.index0}} h3 
+  {
+  font-size: 2.5rem;
+  color: {{item.colors.subheading-color}};
+  font-family: {{item.fonts.subheading-font}};
+  }
+
+  #content-blocks-{{forloop.index0}} h4 
+  {
+  font-size: 2rem;
+  color: {{item.colors.subheading-color}};
+  font-family: {{item.fonts.subheading-font}};
+  }
+
+  #content-blocks-{{forloop.index0}} h5 
+  {
+  font-size: 1.5rem;
+  color: {{item.colors.subheading-color}};
+  font-family: {{item.fonts.subheading-font}};
+  }
+
+  #content-blocks-{{forloop.index0}} h6 
+  {
+  font-size: 1rem;
+  color: {{item.colors.subheading-color}};
+  font-family: {{item.fonts.subheading-font}};
+  }
+
+  @media(max-width:576px) 
+  {
+    #content-blocks-{{forloop.index0}} h1 
+    {font-size: 3rem;}
+
+    #content-blocks-{{forloop.index0}} h2 
+    {font-size: 2.5rem;}
+
+    #content-blocks-{{forloop.index0}} h3 
+    {font-size: 2rem;}
+
+    #content-blocks-{{forloop.index0}} h4 
+    {font-size: 1.5rem;}
+
+    #content-blocks-{{forloop.index0}} h5 
+    {font-size: 1rem;}
+
+    #content-blocks-{{forloop.index0}} h6 
+    {font-size: 0.9rem;}
+  }
+
+  
+</style>
+
+<section id="content-blocks-{{forloop.index0}}">
+  <section id="{{item.content-block-link}}" class="grid-middle textarea-content-block padded background-color">
+    <div class="col-8_sm-12 left textarea-color textarea-font reveal padded-sides fade-left">
+      <p class=" ">{{item.textarea_html}}</p>
+    </div>
+    <div class="col-4_sm-12 grid center top padded-sides reveal fade-right">
+      <div class="col-12 grid-center" >
+        <hr class="top-line col-8 top-line-color ">
+      </div>
+      <hr class="col-1 left-line left-line-color">
+      <div class="col-11 subheading-color padded-top textarea-subheading-font subheading-font">{{item.subheading_html}}</dic>
+    </div>
+  </section>
+</section>
