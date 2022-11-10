@@ -19,7 +19,9 @@
     {border: 4px solid {{item.colors.border-color}};}
 
   #content-blocks-{{forloop.index0}} .hover-container 
-   {background: linear-gradient(90deg,{{item.colors.right-background-color}} 50%,{{item.colors.left-background-color}} 0%);}}
+   {  background-size: cover ;
+    background: linear-gradient(90deg, {{item.colors.right-background-color}} 50%,{{item.colors.left-background-color}} 0%);
+    }
 
   #content-blocks-{{forloop.index0}} .hover-container-mobile 
    {background-color: {{item.colors.background-color}};}
