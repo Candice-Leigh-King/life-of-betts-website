@@ -546,13 +546,15 @@ font-family: 'Cardo', serif;*/
 /*------------------ HEADER ----------------*/
 header 
   {
-  margin-bottom: -7rem !important;
+  margin-bottom: -10.5rem !important;
   }
 
 .logo-home img
   { 
-  max-width: 5rem;
-  padding-top: 20px;
+  max-width: 7rem;
+  padding: 20px;
+  border-radius: 100%;
+  
   }
 
 .hamburger 
@@ -596,7 +598,10 @@ header
   {display: none;}
 
 .logo img 
-  {max-width: 7rem;}
+  {
+  border-radius: 100%;  
+  max-width: 7rem;
+  }
 
 .fixed-socials
   {
