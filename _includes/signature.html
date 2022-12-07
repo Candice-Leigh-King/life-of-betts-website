@@ -1,0 +1,31 @@
+<style>
+
+
+  #content-block-{{forloop.index0}} h4
+    {
+    font-size: 2.3rem;
+    font-family: {{item.signature-font}};
+    color: {{item.signature-color}};
+    }
+  
+  #content-block-{{forloop.index0}} .background-color
+    {background-color: {{item.background-color}};}
+  
+  @media(max-width:576px) 
+  {
+    #content-block-{{forloop.index0}} h4
+    {
+    font-size: 2rem;
+    font-family: {{item.signature-font}};
+    color: {{item.signature-color}};
+    }
+  }
+  
+  </style>
+  
+  
+  <section class="grid-right padded-sides" id="content-block-{{forloop.index0}}"> 
+    <section class="col-12 right background-color">
+     <h4 class="padded-xs">{{item.signature}}</h4>
+    </section>
+  </section>

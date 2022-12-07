@@ -1,0 +1,119 @@
+---
+layout: default
+seo:
+  title: Ultimate Template for Creators
+  description: >-
+    Website templates for content creators and influencers. This website comes
+    with a hidden media kit so creators can easily send media kits to prospect
+    brands.
+  keywords: websites for content creators, websites for influencers,
+  social-alt: >-
+    Website templates for content creators and influencers. This website comes
+    with a hidden media kit so creators can easily send media kits to prospect
+    brands.
+  url: https://kingcode.uk/templates
+  social-share_image: /images/website-for-creators-template-ultimate.png
+heading: All Blogs
+cta: Read now →
+colors:
+  background-color:
+  blog-title-card-color: '#BCCACA'
+  blog-title-card-border-color: 'white'
+  blog-hover-overlay: 'rgba(210, 150, 109, 0.5)'
+  text-color: 'white'
+  heading-color: '#859f9f'
+  subheading-color: 'white'
+  cta-color: 'white'
+fonts:
+  text-font: Raleway, sans-serif
+  heading-font: Shrikhand, cursive
+  subheading-font: Shrikhand, cursive
+  cta-font: Brushwell
+content-blocks:
+---
+<style>
+    .blog-background-color
+      {background-color: {{page.colors.background-color}};}
+
+    .blog-hover-overlay:hover 
+     {background-color: {{page.colors.blog-hover-overlay}};}
+
+    .bump 
+     {
+     background-color: {{page.colors.blog-title-card-color}};
+     border-top: solid 4px {{page.colors.blog-title-card-border-color}};
+     border-left: solid 4px {{page.colors.blog-title-card-border-color}};
+     }
+    
+    p
+    {
+    font-family: {{page.fonts.text-font}};
+    color: {{page.colors.text-color}};
+    }
+  
+        
+    h2 
+    {
+    font-size: 3rem;
+    font-family: {{page.fonts.heading-font}};
+    color: {{page.colors.heading-color}};
+    }
+  
+    h3 
+    {
+    font-size: 2rem;
+    font-family: {{page.fonts.subheading-font}};
+    color: {{page.colors.subheading-color}};
+    }
+    
+    h5
+    {
+    font-size: 2rem;
+    font-family: {{page.fonts.cta-font}};
+    }
+
+    .blog-hover-overlay:hover
+    {
+    color: {{page.colors.cta-color}};
+    }
+
+    
+    @media(max-width:576px) 
+    {
+    
+      h3
+      {
+      font-size: 1.9rem;
+      }
+    }
+
+  </style> 
+<section class="blog-background-color">
+  <section class="grid padded-top">
+    <h2 class="brown-text col-12 centered padded">{{page.heading}}</h2>
+  </section>
+    
+  <section class="padded-sides grid-center">
+    <div class="blog-loop blog-masonry padded-1">
+      {% for post in site.posts%}
+      <div class="masonry-item ">
+        <a class="padded "href="{{post.url}}">
+          <div class="hover-container" style="background-image:url('{{post.blog_image}}')">
+            <div class="blog-hover-overlay">
+              <div class="hover-inner center">
+                <h5 class=""> {{post.cta}} </h5>
+              </div>
+            </div>
+          </div>
+          <div class="bump left">
+            <h3 class="no-margin"> {{post.title}} </h3>
+            <p>{{post.blog-summary}}</p>
+            <p class="">{{post.symbols}}</p>
+            <p class="date">{{post.author}}</p>
+        </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+</section> 

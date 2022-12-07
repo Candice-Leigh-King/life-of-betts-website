@@ -130,6 +130,7 @@ font-family: 'Cardo', serif;*/
   .padded-2 {  padding: 2rem;  }
   .padded-sides {padding: 0% 5%;}
   .padded-right {padding-right: 5%;}
+  .padded-left {padding-left: 5%;}
   .padded-top-botton-left {padding: 5% 0% 5% 5%;}
   .padded-bottom {padding-bottom: 5%; }
   .padded-top {padding-top: 3%;}
@@ -480,6 +481,98 @@ font-family: 'Cardo', serif;*/
   background-position: center;
   background-repeat: no-repeat;
   }
+
+  /* ---------BLOG------- */
+.blog-hero  
+{
+background-size: cover;
+background-position: center;
+min-height: 80vh;
+}
+
+.bg-image 
+{
+background-size: cover;
+background-position: center;
+min-height: 10rem;
+}
+
+.space-block {padding-top: 5%;}
+
+.social-share
+{
+position: fixed;
+left: 2rem;
+top: 35vh;
+z-index: 2;
+}
+
+.social-share h4
+{
+transform: rotate(270deg);
+position: relative;
+top: 1.8rem;
+font-size: .9rem;
+letter-spacing: 1px;
+}
+
+.date {font-size: 0.7rem;}
+
+.blog-loop .blog-item
+{
+color: inherit;
+text-decoration: none;
+width: 100%;
+margin: 0;
+display: block;
+}
+
+.blog-masonry .masonry-item 
+{
+-webkit-column-break-inside: avoid;
+page-break-inside: avoid;
+break-inside: avoid-column;
+}
+
+.blog-masonry 
+{
+columns: 3;
+column-gap: 1rem;
+}
+
+.blog-hover-overlay
+{
+padding-bottom: 100%;
+color: rgba(255,255,255,0);
+position: relative;
+transition: all .3s;
+}
+
+.blog-hover-overlay:hover 
+{
+background-color: #6b8c9ea3;
+color: white;
+}
+
+.bump
+{
+margin-left: 2rem;
+margin-top: -4rem;
+background-color: #BCCACA;
+z-index: 3;
+position: relative;
+padding: 5%;
+}
+
+.mob-bump
+{
+margin-top: -4rem;
+z-index: 3;
+position: relative;
+padding: 5%;
+}
+
+.bump .date {font-size: 0.7rem;}
 
   /* ----------MEDIA KIT---------- */
 
@@ -913,13 +1006,36 @@ footer {
   .tt {padding: 8px 15px;}
   .yt {padding: 8px 15px;}
   .padded-top-botton-left {padding: 5% 0%;}
+
+   /* --------BLOG-------- */
+
+   .blog-masonry 
+   {
+   columns: 1;
+   column-gap: 1rem;
+   }
+   
+  .social-share h4
+   {
+   transform: rotate(270deg);
+   position: relative;
+   left: -.5rem;
+   top: 1.8rem;
+   }
+ 
+  .date {font-size: 0.7rem;}
+ 
+  .blog-banner-mobile h1 {font-size: 1.7rem;}
   
-  }
+
+
 
 /* -------MEDIA KIT---------   */
 
 .number 
   {font-size: 1.5rem;}
+
+}
 
   
 @media(max-width:576px) {

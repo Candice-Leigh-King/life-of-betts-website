@@ -1,0 +1,85 @@
+<style>
+
+    #content-blocks-{{forloop.index0}} .recent-blog-background-color
+      {background-color: {{item.colors.background-color}};}
+
+    #content-blocks-{{forloop.index0}} .blog-hover-overlay-color:hover 
+     {background-color: {{item.colors.blog-hover-overlay-color}};}
+
+     #content-blocks-{{forloop.index0}} .bump 
+     {
+     background-color: {{item.colors.blog-title-card-color}};
+     border-top: solid 4px {{item.colors.blog-title-card-border-color}};
+     border-left: solid 4px {{item.colors.blog-title-card-border-color}};
+     }
+    
+    #content-blocks-{{forloop.index0}} p
+    {
+    font-family: {{item.fonts.text-font}};
+    color: {{item.colors.text-color}};
+    }
+  
+        
+    #content-blocks-{{forloop.index0}} h2
+    {
+    font-size: 3rem;
+    font-family: {{item.fonts.heading-font}};
+    color: {{item.colors.heading-color}};
+    }
+  
+    #content-blocks-{{forloop.index0}} h3 
+    {
+    font-size: 2rem;
+    font-family: {{item.fonts.subheading-font}};
+    color: {{item.colors.subheading-color}};
+    }
+    
+    #content-blocks-{{forloop.index0}}  h5
+    {
+    font-size: 2rem;
+    font-family: {{item.fonts.cta-font}};
+    }
+
+    #content-blocks-{{forloop.index0}} .blog-hover-overlay-color:hover
+    {
+    color: {{item.colors.cta-color}};
+    }
+
+    
+    @media(max-width:576px) 
+    {
+    
+    #content-blocks-{{forloop.index0}} h3
+      {
+      font-size: 1.9rem;
+      }
+    }
+ </style>   
+
+<section id="content-blocks-{{forloop.index0}}">
+  <section class="grid-center padded-sides recent-blog-background-color">
+    <h2 class="col-12 centered recent-blog-background-color">{{item.heading}}</h2>
+    <div class="blog-loop blog-masonry">
+        {% for post in site.posts limit:3 %}
+        <div class="masonry-item ">
+            <a class="padded "href="{{post.url}}">
+              <div class="hover-container" style="background-image:url('{{post.blog_image}}')">
+                <div class="blog-hover-overlay blog-hover-overlay-color">
+                  <div class="hover-inner center">
+                    <h5 class="">{{post.cta}} </h5>
+                  </div>
+                </div>
+              </div>
+              <div class="bump left">
+                <h3 class="no-margin"> {{post.title}} </h3>
+                <p>{{post.blog-summary}}</p>
+                <p class="">{{post.symbols}}</p>
+                <p class="date">{{post.author}}</p>
+            </div>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+  </section>    
+</section>
+  

@@ -1,0 +1,60 @@
+<style>
+
+  #content-blocks-{{forloop.index0}} .blog-artical-background-color 
+    {background-color: {{item.colors.background-color}};}
+
+  #content-blocks-{{forloop.index0}} p
+    {
+    font-family: {{item.fonts.text-font}};
+    color: {{item.colors.text-color}};
+    }
+
+      
+  #content-blocks-{{forloop.index0}} h1 
+    {
+    font-size: 3rem;
+    font-family: {{item.fonts.heading-font}};
+    color: {{item.colors.heading-color}};
+    }
+
+  #content-blocks-{{forloop.index0}} h2 
+    {
+    font-size: 2.5rem;
+    font-family: {{item.fonts.subheading-font}};
+    color: {{item.colors.subheading-color}};
+    }
+
+  #content-blocks-{{forloop.index0}} h3 
+    {
+    font-size: 2rem;
+    font-family: {{item.fonts.subheading-font}};
+    color: {{item.colors.subheading-color}};
+    }
+
+  #content-blocks-{{forloop.index0}} h4 
+    {
+    font-size: 1.5rem;
+    font-family: {{item.fonts.subheading-font}};
+    color: {{item.colors.subheading-color}};
+    }
+
+  #content-blocks-{{forloop.index0}} h5 
+    {
+    font-size: 1rem;
+    font-family: {{item.fonts.subheading-font}};
+    color: {{item.colors.subheading-color}};
+    }
+
+  #content-blocks-{{forloop.index0}} h6 
+    {
+    font-size: 0.9rem;
+    font-family: {{item.fonts.subheading-font}};
+    color: {{item.colors.subheading-color}};
+    }
+
+</style>    
+<section id="content-blocks-{{forloop.index0}}" class="padded-sides grid">
+    <div class="col-12 padded blog-artical-background-color">
+       {{item.textarea_html}}
+    </div>
+</section>

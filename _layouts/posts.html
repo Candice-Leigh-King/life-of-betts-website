@@ -1,0 +1,117 @@
+---
+layout: default
+---
+
+<style>
+    .blog-title-card-color
+     {
+     background-color: {{page.colors.blog-title-card-color}};
+     border-top: solid 4px {{page.colors.blog-title-card-border-color}};
+     border-right: solid 4px {{page.colors.blog-title-card-border-color}};
+     border-left: solid 4px {{page.colors.blog-title-card-border-color}};
+     }
+    
+    p
+    {
+    font-family: {{page.fonts.text-font}};
+    color: {{page.colors.text-color}};
+    }
+  
+    h1
+    {
+    font-size: 2.3rem;
+    font-family: {{page.fonts.heading-font}};
+    color: {{page.colors.heading-color}};
+    }
+
+    .social-share-icons-color p, h4
+    {
+    color: {{page.colors.social-share-icons-color}};
+    }
+
+    .social-share-icons-color p:hover 
+    {color: {{page.colors.social-share-icons-hover-color}};}
+
+    .social-share-icons-color a:hover 
+    {color: {{page.colors.social-share-icons-hover-color}};}
+
+    .social-share-icons-color h4:hover 
+    {color: {{page.colors.social-share-icons-hover-color}};}
+
+    .social-share-text
+    {
+    color: {{page.colors.social-share-text-color}};
+    font-family: {{page.fonts.social-share-text-font}};
+    }
+
+</style>
+
+<section class="grid-right blog-hero padded-top padded-sides bg-image-blog tall-100 grid center" style="background-image: url('{{page.blog_image}}');">
+    <div class="social-share mob-hide">
+  
+      <nav class="social-share-icons-color">
+        <p class="">
+          <a href="https://twitter.com/intent/tweet?{{site.data.general.basics.your-url}}{page.url}}" rel="nofollow" target="_blank" title="Share on Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </p>
+        <p>
+        <a href="https://facebook.com/sharer.php?u={{site.data.general.basics.your-url}}{{page.url}}" rel="nofollow" target="_blank" title="Share on Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        </p>
+        <p>
+          <a href="http://pinterest.com/pin/create/link/?{{site.data.general.basics.your-url}}{{page.url}}" rel="nofollow" target="_blank" title="Share on Pinterest">
+            <i class="fab fa-pinterest-p"></i>
+        </a>
+        </p>
+    </nav>
+  
+    <h4 class="social-share-text"> Share </h4>
+  </div>
+    <div class="col-5_sm-7_xs-10-bottom mob-hide">
+      <div class="banner-inner padded-xs  blog-title-card-color grid margin-bottom-2">
+        <div class="col-4 left mob-hide">
+            <p class="margin-top-1 margin-bottom-1"> ↟↟↟ </p>
+        </div>
+      <div class="col-8 right">
+        <p class="date"> {{page.author}} </p>
+      </div>
+      <div class="col-12">
+        <h1 class="centered blog-title"> {{page.title}} </h1>
+        <p class="date left"> {{page.date | date_to_long_string }} </p>
+       </div>
+     </div>
+   </div>
+  </section>
+  
+  <section class="grid padded mob-bump desktop-hide blog-banner-mobile">
+    <div class="grid padded-1 blog-title-card-color">
+      <h1 class="col-12"> {{page.title}} </h1>
+      <div class="col-12 grid">
+        <p class="date col-5 left">  {{page.author}}</p>  <p class="col-2 center">|</p>  <p class="date col-5  right"> {{page.date | date_to_long_string }}</p>
+        <p class="col-12"> ↟↟↟ </p>
+      <div class="mob-social-share col-12">
+        <h4 class="share-on-mob"> Share
+  
+  
+        <a class="padded" href="https://twitter.com/intent/tweet?{{site.data.general.basics.your-url}}{{page.url}}" rel="nofollow" target="_blank" title="Share on Twitter">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a class="padded" href="https://facebook.com/sharer.php?u={{site.data.general.basics.your-url}}{{page.url}}" rel="nofollow" target="_blank" title="Share on Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a class="padded" href="http://pinterest.com/pin/create/link/?{{site.data.general.basics.your-url}}/{{page.url}}" rel="nofollow" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest-p"></i>
+        </a>
+  
+      </h4>
+      </div>
+    </div>
+  </section>
+
+  {% for item in posts.content-blocks %}
+  <div class="cms-editor-link" data-cms-editor-link="cloudcannon:#content-blocks[{{ forloop.index0 }}]">
+      <span class="cms-editor-button"></span>
+    {% include {{item._section-type}}.html %}
+  {% endfor %}

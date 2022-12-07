@@ -11,6 +11,23 @@ defaults:
       type: "pages" 
     values:
       layout: "connect-tree" # overrides previous default layout
+  -
+    scope:
+      path: "/products"
+      type: "pages"
+    values:
+      layout: "product-pages"
+  -
+    scope:
+      path: "affiliates"
+      type: "pages" 
+    values:
+      layout: "affiliates" # overrides previous default layout
+
+collections:
+ products:
+   enabled: true
+   output: true
 
 _inputs:
   content-block-link:
@@ -19,8 +36,8 @@ _inputs:
     comment: This subheading color is for the mobile version only. To change the subheading color on the laptop and desktop version, change the "hover text color". This will also change the color of the text.
   colors.on-mobile-text-color: 
     comment: This is to change the color of the text on mobile only.
-  frist-script-to-go-in-the-head:
-   comment: You can add up to 3 different scripts like Google Ananlytics, scripts for newsletter sign ups, Facebook Pixel, etc.
+  insert-script-here:
+    comment: To change the styles here, change them in your email marketing settings then copy and paste the script here again. 
 
 page_blocks: []
 _array_structures:
@@ -44,8 +61,8 @@ _array_structures:
         icon: article
         value:
           _section-type: textarea
-          subheading:
           textarea_html:
+          subheading_html:
           colors:
             background-color: 
             text-color: 
@@ -113,8 +130,6 @@ _array_structures:
             button: 
             button-link:
           colors:
-            left-background-color: 
-            right-background-color: 
             overlay-color: 
             background-color:
             border-color: 
@@ -256,7 +271,9 @@ _array_structures:
               option-1: 
               option-2: 
               option-3:
+              option-4: 
           button: 
+          background_image:        
           colors:
             background-color:
             textarea-background-color: 
@@ -338,12 +355,101 @@ _array_structures:
             statistic-data-font: 
             statistic-title-font: 
             subheading-font: 
-            textarea-font:
+            textarea-font: 
+      - label: Blog Article
+        icon: view_headline
+        value:
+          _section-type: blog-article
+          textarea_html:
+          colors:
+            background-color:
+            text-color: 
+            heading-color: 
+            subheading-color: 
+          fonts:
+            heading-font: 
+            subheading-font: 
+            text-font:
+      - label: Text and Image
+        icon: art_track
+        value:
+          _section-type: text-and-image 
+          image: 
+          textarea_html: 
+          colors:
+            background-color: 
+            text-color:
+            heading-color: 
+            subheading-color: 
+          fonts:
+            heading-font: 
+            subheading-font: 
+            text-font:
+      - label: Space
+        icon: block
+        value:
+          _section-type: space-block
+          background-color:
       - label: Newsletter Script
         icon: forum
         value:
           _section-type: newsletter-script
-          insert-script-here:  
+          insert-script-here: 
+      - label: Signature
+        icon: draw
+        value:
+          _section-type: signature
+          signature:
+          signature-color:
+          signature-font:
+          background-color:
+      - label: 3 Recent Blogs
+        icon: view_column
+        value:
+          _section-type: recent-blogs
+          heading:
+          colors:
+            background-color:
+            heading-color: 
+            blog-title-card-color:
+            blog-title-card-border-color: 
+            blog-hover-overlay-color: 
+            text-color:
+            subheading-color:
+            cta-color:
+          fonts:
+            text-font: 
+            heading-font: 
+            subheading-font: 
+            cta-font:
+      - label: Google Map
+        icon: place
+        value:
+          _section-type: google-map
+          heading:
+          insert-google-map-script-here:
+          border-radius:
+            laptop:  
+              top-left-corner:
+              top-right-corner: 
+              bottom-left-corner: 
+              bottom-right-corner: 
+            tablet: 
+              top-left-corner: 
+              top-right-corner: 
+              bottom-left-corner: 
+              bottom-right-corner: 
+            mobile:
+              top-left-corner: 
+              top-right-corner: 
+              bottom-left-corner: 
+              bottom-right-corner: 
+          fonts:
+            heading-font:
+          colors:
+            heading-color:
+            border-color:
+            background-color:  
 fonts:
 _select_data:
   fonts:
@@ -357,7 +463,6 @@ _select_data:
       - Open Sans, sans-serif
       - Shrikhand, cursive
       - Dream Avenue
-      - Lovelace
       - Amatic SC, cursive
       - Barlow Condensed, sans-serif
       - Belleza, sans-serif
@@ -369,7 +474,6 @@ _select_data:
       - Quicksand, sans-serif
       - Raleway, sans-serif
       - Roboto, sans-serif
-      - Cardo, serif
 
       #  description: >-
       #   If you would like that awesome scroll feature that happens when someone
