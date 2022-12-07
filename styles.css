@@ -978,6 +978,8 @@ footer {
 
 .desktop-hide {display: inline;}
 
+
+
   
 .hamburger 
     {
@@ -1052,6 +1054,12 @@ footer {
 
   
 @media(max-width:576px) {
+
+  /* -----CATEGORIES---- */
+.tab-show 
+{
+display: none;
+}
 
   header {margin-bottom: 0rem !important ;}
   .hamburger 
