@@ -454,6 +454,7 @@ fonts:
 _select_data:
   fonts:
       - Cyrene
+      - Cardo, serif
       - La Obrige
       - Lineal Simples
       - Lovelace
