@@ -24,6 +24,11 @@ defaults:
     values:
       layout: "affiliates" # overrides previous default layout
 
+categories:
+- life-hacks
+- van-life
+- travel
+
 collections:
  products:
    enabled: true

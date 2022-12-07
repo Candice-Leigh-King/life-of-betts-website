@@ -1,7 +1,7 @@
 ---
 layout: default
 seo:
-  title: All Blogs
+  title: Life Hacks
   description: >-
     Website templates for content creators and influencers. This website comes
     with a hidden media kit so creators can easily send media kits to prospect
@@ -13,7 +13,7 @@ seo:
     brands.
   url: https://kingcode.uk/templates
   social-share_image: /images/website-for-creators-template-ultimate.png
-heading: All Blogs
+heading: Life Hacks
 cta: Read now →
 colors:
   background-color:
@@ -95,7 +95,7 @@ content-blocks:
     
   <section class="padded-sides grid-center">
     <div class="blog-loop blog-masonry padded-1">
-      {% for post in site.posts%}
+      {% for post in site.categories.life-hacks%}
       <div class="masonry-item ">
         <a class="padded " href="{{post.url}}">
           <div class="hover-container" style="background-image:url('{{post.blog_image}}')">
