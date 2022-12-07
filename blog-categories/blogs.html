@@ -17,13 +17,13 @@ heading: All Blogs
 cta: Read now →
 colors:
   background-color:
-  blog-title-card-color: '#BCCACA'
-  blog-title-card-border-color: 'white'
-  blog-hover-overlay: 'rgba(210, 150, 109, 0.5)'
-  text-color: 'white'
-  heading-color: '#859f9f'
-  subheading-color: 'white'
-  cta-color: 'white'
+  blog-title-card-color: '#dcd3cc'
+  blog-title-card-border-color: '#ffffff'
+  blog-hover-overlay: 'rgba (220, 211, 204, 0.5) '
+  text-color: '#ffffff'
+  heading-color: '#353535'
+  subheading-color: '#ffffff'
+  cta-color: '#ffffff'
 fonts:
   text-font: Raleway, sans-serif
   heading-font: Shrikhand, cursive
@@ -97,18 +97,18 @@ content-blocks:
     <div class="blog-loop blog-masonry padded-1">
       {% for post in site.posts%}
       <div class="masonry-item ">
-        <a class="padded "href="{{post.url}}">
+        <a class="padded " href="{{post.url}}">
           <div class="hover-container" style="background-image:url('{{post.blog_image}}')">
             <div class="blog-hover-overlay">
               <div class="hover-inner center">
-                <h5 class=""> {{post.cta}} </h5>
+                <h5> {{post.cta}} </h5>
               </div>
             </div>
           </div>
           <div class="bump left">
             <h3 class="no-margin"> {{post.title}} </h3>
             <p>{{post.blog-summary}}</p>
-            <p class="">{{post.symbols}}</p>
+            <p>{{post.symbols}}</p>
             <p class="date">{{post.author}}</p>
         </div>
         </a>
