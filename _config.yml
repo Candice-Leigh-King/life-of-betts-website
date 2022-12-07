@@ -224,7 +224,8 @@ _array_structures:
             top-image:
             bottom-image: 
           colors:
-            background-color:
+            left-background-color:
+            right-background-color:
             heading-color:
           fonts:
             heading-font:
