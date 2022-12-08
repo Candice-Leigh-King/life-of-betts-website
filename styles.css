@@ -915,6 +915,7 @@ option
   font-family: 'Poppins', sans-serif;
   background-color: transparent;
   border: none;
+  border-radius: 0px;
   color: rgb(120,120,125);
   }
 select {padding: 0.7rem 0 0.5rem}
