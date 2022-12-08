@@ -22,12 +22,15 @@ colors:
   blog-hover-overlay-color: rgba(220, 211, 204, 0.5)
   text-color: '#353535'
   heading-color: '#353535'
+  categories-color: '#dcd3cc'
+  categories-hover-color: '#353535'
   subheading-color: '#ffffff'
   cta-color: '#ffffff'
 fonts:
-  text-font: Poppins, sans-serif
   heading-font: Lovelace
   subheading-font: Cardo, serif
+  text-font: Poppins, sans-serif
+  categories-font: Lovelace
   cta-font: Cardo, serif
 content-blocks:
 ---
@@ -44,6 +47,16 @@ content-blocks:
      border-top: solid 4px {{page.colors.blog-title-card-border-color}};
      border-left: solid 4px {{page.colors.blog-title-card-border-color}};
      }
+    
+    .border-top
+    {
+    border-top: 1px solid {{page.colors.categories-color}};  
+    }
+
+    .border-bottom
+    {
+    border-bottom: 1px solid {{page.colors.categories-color}};  
+    }
     
     p
     {
@@ -77,6 +90,17 @@ content-blocks:
     color: {{page.colors.cta-color}};
     }
 
+    .categories p
+    {
+    font-size: 1.3rem;
+    font-family: {{page.fonts.categories-font}};
+    color: {{page.colors.categories-color}};
+    }
+
+    .categories a:hover 
+    {color: {{page.colors.categories-hover-color}}}
+
+
 
 
     
@@ -95,38 +119,37 @@ content-blocks:
     <h2 class="brown-text col-12 centered padded">{{page.heading}}</h2>
   </section>
 
-  <section class="grid-center border-top border-bottom lighter-bg centered padded-2">
-    <div class="col-2_xs-5">
-        <p class="categories editable ">
+  <section class="grid-center border-top border-bottom centered padded-2">
+    <div class="col-2_xs-5 categories">
+        <p class=" editable ">
             <a href="/categories/blogs">All</a>
         </p> 
     </div>
-    <div class="col-2 dot ">
-        <p class="categories editable ">●</p>
+    <div class="col-2 categories dot ">
+        <p class=" editable ">●</p>
     </div>
-    <div class="col-2_xs-5"> 
-        <p class="categories editable ">
+    <div class="col-2_xs-5 categories"> 
+        <p class=" editable ">
           <a href="/blog-categories/travel">Travel</a>
         </p> 
     </div>
-    <div class="col-1 dot tab-show  ">
-        <p class="categories editable ">●</p>
+    <div class="col-1 dot categories tab-show  ">
+        <p class=" editable ">●</p>
     </div>
-    <div class="col-2_xs-5">
-        <p class=" categories editable">
+    <div class="col-2_xs-5 categories">
+        <p class=" editable">
             <a href="/blog-categories/van-life"> Van Life</a>
         </p>
     </div>
-    <div class="col-1_xs-2 dot ">
-      <p class="categories editable ">●</p>
+    <div class="col-1_xs-2 dot categories ">
+      <p class=" editable ">●</p>
   </div>
-    <div class="col-2_xs-5">
-      <p class=" categories editable">
+    <div class="col-2_xs-5 categories">
+      <p class=" editable">
           <a href="/blog-categories/van-life"> Life Hacks</a>
       </p>
   </div>
   <div class="col-1 dot ">
-    <p class="categories editable "></p>
 </div>
 </section>
     
