@@ -1,7 +1,7 @@
 colors:
-  background-color: '#bccaca'
-  heading-color: '#FFFFFF'
+  background-color: '#dcd3cc'
+  heading-color: '#ffffff'
   text-color: '#2f3031'
 fonts:
-  heading-font: Shrikhand, cursive
-  text-font:  Raleway, sans-serif
+  heading-font: Lovelace
+  text-font: Poppins, sans-serif
