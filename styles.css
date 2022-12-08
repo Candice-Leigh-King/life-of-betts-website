@@ -462,7 +462,8 @@ font-family: 'Cardo', serif;*/
   {font-family: 'Poppins', sans-serif;}
 
 .form-border-color 
-  {border: solid 4px  #859F9F;}
+  {border: solid 4px  #859F9F;
+  border-radius: 0px;}
 
 .form-button-font 
   {font-family: 'Poppins', sans-serif;}
