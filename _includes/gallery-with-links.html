@@ -3,7 +3,9 @@
   {background-color: {{item.colors.background-color}};}
 
   #content-blocks-{{forloop.index0}} .square-media
-    {border: 4px solid {{item.colors.background-color}};}
+    {
+    background-color: {{item.colors.png-background-color}};  
+    border: 4px solid {{item.colors.background-color}};}
 
   #content-blocks-{{forloop.index0}} .subheading-color 
     {color: {{item.colors.subheading-color}};}

@@ -252,6 +252,7 @@ _array_structures:
             fourth-link:
           colors:
             background-color: 
+            png-background-color:
             subheading-color: 
             text-color: 
             text-background-color: 
