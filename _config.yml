@@ -282,7 +282,8 @@ _array_structures:
           button: 
           background_image:        
           colors:
-            background-color:
+            left-background-color:
+            right-background-color: 
             textarea-background-color: 
             border-color: 
             heading-color:
