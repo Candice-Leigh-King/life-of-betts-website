@@ -51,9 +51,9 @@ _inputs:
       redo: true
       removeformat: true
       styles: /css/editor.css
-      left: text-alight: left
-      center: text-align: center
-      right: text-align: right
+      left: true
+      center: true
+      right: align-right
       justify: align-justify
       
   content-block-link:
