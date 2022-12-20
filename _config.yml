@@ -50,7 +50,6 @@ _inputs:
       undo: true
       redo: true
       removeformat: true
-      style: /css/editor.css
       left: align-left
       center: align-center
       right: align-right
