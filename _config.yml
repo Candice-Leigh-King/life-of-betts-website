@@ -42,7 +42,6 @@ _inputs:
       format: p h1 h2 h3 h4 h5 h6
       italic: true
       strike: true
-      subscript: true
       underline: true 
       bulletedlist: true
       numberedlist: true
