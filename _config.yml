@@ -33,6 +33,14 @@ collections:
  products:
    enabled: true
    output: true
+   
+_inputs:
+  textarea_html:
+    type: html
+    options:
+      bold: true
+      italic: true
+      image: true
 
 _inputs:
   content-block-link:
