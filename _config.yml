@@ -50,10 +50,10 @@ _inputs:
       undo: true
       redo: true
       removeformat: true
-      styles: /data-cms-options/editor.css
-      left: align-left
-      center: align-center
-      right: align-right
+      styles: /css/editor.css
+      left: text-alight: left
+      center: text-align: center
+      right: text-align: right
       justify: align-justify
       
   content-block-link:
