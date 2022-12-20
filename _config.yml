@@ -43,11 +43,9 @@ _inputs:
       italic: true
       strike: true
       subscript: true
-      superscript: true
       underline: true 
       bulletedlist: true
       numberedlist: true
-      outdent: true 
       horizontalrule: true
       image: true
       undo: true
