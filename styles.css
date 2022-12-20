@@ -109,6 +109,7 @@ font-family: 'Cardo', serif;*/
   font-style: normal;
   font-weight: 400;
   color: #4c4c4c;
+  text-align: center; 
   line-height: 2;
   overflow-x: hidden;
   margin: 0;
@@ -212,6 +213,7 @@ font-family: 'Cardo', serif;*/
     font-style: normal;
     font-weight: 400;
     font-size: 3.8rem;
+    text-align: center; 
     font-family: 'Shrikhand', cursive;
     }
   
