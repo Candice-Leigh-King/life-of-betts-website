@@ -37,7 +37,7 @@ collections:
 main_content:
 _inputs:
   main_content:
-    type: markdown
+    type: html
     options:
       blockquote: true
       bold: true
