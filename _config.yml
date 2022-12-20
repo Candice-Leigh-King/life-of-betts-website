@@ -50,7 +50,7 @@ _inputs:
       undo: true
       redo: true
       removeformat: true
-      styles: /css/editor.css
+      styles: /data-cms-options/editor.css
       left: align-left
       center: align-center
       right: align-right
