@@ -43,6 +43,7 @@ _inputs:
       italic: true
       strike: true
       underline: true 
+      link: true
       bulletedlist: true
       numberedlist: true
       horizontalrule: true
