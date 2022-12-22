@@ -9,26 +9,25 @@ seo:
  social-share_image: /images/products/hotel-collab-guide.jpg
 heading: Shop All
 colors:
- heading-color: '#859f9f'
- product-title-color: 'white'
- product-price-color: 'white'
+ heading-color: '#353535'
+ product-title-color: '#ffffff'
+ product-price-color: '#ffffff'
  discounted-price-color: '#9b4851'
  product-description-color: '#2f3031'
- rating-color: '#859f9f'
- cta-color: 'white'
- shop-background-color: 'white' 
- product-hover-overlay: '#859f9f5c' 
- border-color: 'white'
- product-description-background-color: '#BCCACA'
+ rating-color: '#ffffff'
+ cta-color: '#ffffff'
+ shop-background-color: '#ffffff'
+ product-hover-overlay: '#859f9f5c'
+ border-color: '#ffffff'
+ product-description-background-color: '#dcd3cc'
  price-background-color: '#9b4851'
- discounted-price-background-color: 'transparent'
+ discounted-price-background-color: rgba(0, 0, 0, 0)
 fonts:
  heading-font: Shrikhand, cursive
  product-title-font: Shrikhand, cursive
  product-description-font: Raleway, sans-serif
  cta-font: brushwell
 ---
-
 <style>
 
   #content-blocks-{{forloop.index0}} h2 
@@ -101,17 +100,17 @@ fonts:
       {% assign all_products = site.products | where: 'all_products', true %}
       {% for shop in all_products %}
       <div class="masonry-item ">
-        <a class="padded"href="{{shop.url}}">
+        <a class="padded" href="{{shop.url}}">
           <div class="hover-container" style="background-image:url('{{shop.shop-hero.product-image}}')">
             <div class="blog-hover-overlay">
               <div class="hover-inner center">
-                <h5 class=""> {{shop.shop-hero.cta}} </h5>
+                <h5> {{shop.shop-hero.cta}} </h5>
               </div>
             </div>
           </div>
           <div class="shop-bump left grid">
             <h3>{{shop.shop-hero.product-name}}</h3>
-            <p class=""><span class="product-price"> {{shop.shop-hero.price}}</span> <span class="compare-at-price">{{shop.shop-hero.discounted-price}} </span></p>
+            <p><span class="product-price"> {{shop.shop-hero.price}}</span> <span class="compare-at-price">{{shop.shop-hero.discounted-price}} </span></p>
             <p>{{shop.shop-hero.product-description-summery}}</p>
             <div class="stars">
               <p>{{shop.shop-hero.product-rating}}</p>
