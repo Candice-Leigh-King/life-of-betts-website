@@ -33,6 +33,7 @@ collections:
  products:
    enabled: true
    output: true
+   icon: shopping_cart
 
 _inputs:
   textarea_html:
