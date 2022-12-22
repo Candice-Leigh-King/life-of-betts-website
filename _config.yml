@@ -52,6 +52,7 @@ _inputs:
       left: left
       center: center
       right: right
+      justify: justify
       image: true
       undo: true
       redo: true
