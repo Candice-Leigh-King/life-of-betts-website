@@ -68,7 +68,7 @@ _array_structures:
         icon: groups
         value: 
           _section-type: floating-socials
-          description: To change the links, go to data → general → social links. To change the colors, go to data → navigation → social link colors. This will change the links and colors of these floating social media icons and the ones in your navigation. 😊 For brand consistency, the colors will be the same.
+          description: To change the links, go to data â†’ general â†’ social links. To change the colors, go to data â†’ navigation â†’ social link colors. This will change the links and colors of these floating social media icons and the ones in your navigation. ðŸ˜Š For brand consistency, the colors will be the same.
       - label: Hero
         icon: star
         value:
@@ -394,10 +394,25 @@ _array_structures:
             heading-font: 
             subheading-font: 
             text-font:
-      - label: Text and Image
-        icon: art_track
+      - label: Text and Image (left) 
+        icon: west
         value:
-          _section-type: text-and-image 
+          _section-type: text-and-image
+          image: 
+          textarea_html: 
+          colors:
+            background-color: 
+            text-color:
+            heading-color: 
+            subheading-color: 
+          fonts:
+            heading-font: 
+            subheading-font: 
+            text-font:
+      - label: Text and Image (right)
+        icon: east
+        value:
+          _section-type: right-text-and-image 
           image: 
           textarea_html: 
           colors:
@@ -473,7 +488,55 @@ _array_structures:
           colors:
             heading-color:
             border-color:
-            background-color:  
+            background-color:
+      - label: The Divine Fade
+        icon: auto_awesome
+        value:
+          _section-type: the-divine-fade
+          right-image: 
+            image: 
+            border-color: 
+            border-radius:
+            top-left-corner: 
+            top-right-corner: 
+            bottom-left-corner:
+            bottom-right-corner: 
+          left-image: 
+            image: 
+            border-color: 
+            border-radius:
+            top-left-corner: 
+            top-right-corner:
+            bottom-left-corner: 
+            bottom-right-corner:  
+          bottom-image: 
+            image: 
+            border-color:
+            border-radius:
+            top-left-corner:
+            top-right-corner: 
+            bottom-left-corner:
+            bottom-right-corner: 
+          text:
+            first-textarea_html: 
+            second-textarea_html:
+          button:
+            button-link: 
+            button-name:  
+          colors:  
+            background-color: 
+            heading-color: 
+            subheading-color: 
+            text-color:
+            button-color: 
+            button-hover-color:
+            button-text-color: 
+            button-text-hover-color: 
+          fonts:
+            heading-font: 
+            subheading-font: 
+            text-font: 
+            button-font:  
 fonts:
 _select_data:
   fonts:
@@ -500,11 +563,3 @@ _select_data:
       - Quicksand, sans-serif
       - Raleway, sans-serif
       - Roboto, sans-serif
-
-      #  description: >-
-      #   If you would like that awesome scroll feature that happens when someone
-      #   clicks on a link in the navigation, then you'll need to add a page id.
-      #   The page id can be added in the below box labeled "link". Your id is a
-      #   short word describing the section it is leading to. For example- about.
-      #   If you don't want this section to link from the navigation, you can
-      #   simply leave it out.

@@ -1,0 +1,125 @@
+---
+layout: default
+seo:
+ title: Shop
+ description: Everything a content creator needs to grow their career in this epic industry!
+ keywords: content creator, influencer, shop, content creator shops
+ social-alt: Everything a content creator needs to grow their career in this epic industry!
+ url: https://kingcode.uk/ultimate-shop-for-content-creators/shop-categories/shop
+ social-share_image: /images/products/hotel-collab-guide.jpg
+heading: Shop All
+colors:
+ heading-color: '#859f9f'
+ product-title-color: 'white'
+ product-price-color: 'white'
+ discounted-price-color: '#9b4851'
+ product-description-color: '#2f3031'
+ rating-color: '#859f9f'
+ cta-color: 'white'
+ shop-background-color: 'white' 
+ product-hover-overlay: '#859f9f5c' 
+ border-color: 'white'
+ product-description-background-color: '#BCCACA'
+ price-background-color: '#9b4851'
+ discounted-price-background-color: 'transparent'
+fonts:
+ heading-font: Shrikhand, cursive
+ product-title-font: Shrikhand, cursive
+ product-description-font: Raleway, sans-serif
+ cta-font: brushwell
+---
+
+<style>
+
+  #content-blocks-{{forloop.index0}} h2 
+    {
+    color: {{page.colors.heading-color}};
+    font-family: {{page.fonts.heading-font}};
+    }
+
+  #content-blocks-{{forloop.index0}} .shop-background-color 
+    {background-color: {{page.colors.shop-background-color}};}
+
+  #content-blocks-{{forloop.index0}}  .blog-hover-overlay:hover 
+    {
+    background-color: {{page.colors.product-hover-overlay}};
+    color: {{page.colors.cta-color}};
+    }
+
+  #content-blocks-{{forloop.index0}} .shop-bump
+    {
+    border-top: 4px solid {{page.colors.border-color}};
+    border-left: 4px solid {{page.colors.border-color}};
+    background-color: {{page.colors.product-description-background-color}};
+    }
+  
+  #content-blocks-{{forloop.index0}} .all-products h3
+    {
+    font-family: {{page.fonts.product-title-font}};
+    color: {{page.colors.product-title-color}};
+    }
+
+  #content-blocks-{{forloop.index0}} .all-products h5
+    {
+    font-family: {{page.fonts.cta-font}};
+    }
+
+
+  #content-blocks-{{forloop.index0}} .all-products p
+  {
+  font-family: {{page.fonts.product-description-font}};
+  color: {{page.colors.product-description-color}};
+  }
+
+  #content-blocks-{{forloop.index0}} .stars p
+  {
+  color: {{page.colors.rating-color}};
+  }
+
+  #content-blocks-{{forloop.index0}} .product-price
+    {
+    background-color: {{page.colors.price-background-color}};
+    color: {{page.colors.product-price-color}}
+    }
+
+  #content-blocks-{{forloop.index0}} .compare-at-price
+   {
+   background-color: {{page.colors.discounted-price-background-color}};
+   color: {{page.colors.discounted-price-color}};
+   }
+</style>
+
+
+<section id="content-blocks-{{forloop.index0}}">
+  <section class="shop-background-color center grid padded-top">
+    <div class="col-12 padded">
+      <h2> {{page.heading}}</h2>
+    </div>
+  </section>
+  <section class="padded-sides grid-center all-products">
+    <div class="blog-loop blog-masonry padded-1">
+      {% assign all_products = site.products | where: 'all_products', true %}
+      {% for shop in all_products %}
+      <div class="masonry-item ">
+        <a class="padded"href="{{shop.url}}">
+          <div class="hover-container" style="background-image:url('{{shop.shop-hero.product-image}}')">
+            <div class="blog-hover-overlay">
+              <div class="hover-inner center">
+                <h5 class=""> {{shop.shop-hero.cta}} </h5>
+              </div>
+            </div>
+          </div>
+          <div class="shop-bump left grid">
+            <h3>{{shop.shop-hero.product-name}}</h3>
+            <p class=""><span class="product-price"> {{shop.shop-hero.price}}</span> <span class="compare-at-price">{{shop.shop-hero.discounted-price}} </span></p>
+            <p>{{shop.shop-hero.product-description-summery}}</p>
+            <div class="stars">
+              <p>{{shop.shop-hero.product-rating}}</p>
+            </div>
+          </div>
+        </a>
+      </div> 
+      {% endfor %}
+    </div>
+   </section> 
+</section>

@@ -109,7 +109,6 @@ font-family: 'Cardo', serif;*/
   font-style: normal;
   font-weight: 400;
   color: #4c4c4c;
-  text-align: center; 
   line-height: 2;
   overflow-x: hidden;
   margin: 0;
@@ -212,8 +211,7 @@ font-family: 'Cardo', serif;*/
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     font-style: normal;
     font-weight: 400;
-    font-size: 3.8rem;
-    text-align: center; 
+    font-size: 3.8rem; 
     font-family: 'Shrikhand', cursive;
     }
   
@@ -230,10 +228,12 @@ font-family: 'Cardo', serif;*/
   p   { font-size: 1rem;  }
   
   p, ul 
-    {
-    margin-top: 0;  
-    margin-bottom: 0.8rem;
-    }
+  {
+  margin-top: 0;  
+  margin-bottom: 0.8rem;
+  }
+
+ul {margin-left: 15px;}
   
   a {color: inherit;
      text-decoration: none;
@@ -649,6 +649,125 @@ border-bottom: 1px solid black;
   background-repeat: no-repeat;
   }
 
+  /* -------SHOP---- */
+  
+  .shopify-button 
+    {
+    display: inline-block;
+    position: fixed;
+    line-height: 0.5;
+    bottom: 3rem;
+    right: 0%;
+    left: 0%;
+    z-index: 2;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    }
+
+    .shop-button
+    {
+    position: fixed;
+    z-index: 10;
+    }
+
+  .all-products .compare-at-price 
+  {font-size: 1.3rem;}
+
+  .all-products .product-price
+  {font-size: 1.3rem;}
+
+  .all-products h3 
+  {
+    font-size: 1.3rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #2F3E39;
+    text-shadow: none;
+    margin: 0px 0px 10px
+  }
+
+  .product-price 
+  {
+  color: #9b4851;
+  font-size: 1.7rem;
+  padding: 0.2rem 0.5rem;
+  margin-right: -5px
+  }
+
+  .compare-at-price 
+  {
+  text-decoration: line-through;
+  color: #748672;
+  padding: 0.2rem 0.5rem;
+  font-size: 1.7rem;
+  }
+
+  .shop-bump
+  {
+  margin-left: 2rem;
+  margin-top: -3rem;
+  z-index: 3;
+  position: relative;
+  padding: 5%;
+  } 
+
+  .stars p
+  {font-size: 1.2rem;}
+
+  .shop-padded { padding-right: 5%;}
+
+  .shop h1 
+  {
+  margin: 0px;
+  font-size: 2.5rem;
+  }
+
+  .shop h2 
+  {
+  margin: 0px;
+  font-size: 2.3rem;
+  }
+
+  .shop h3
+  {font-size: 2rem;}
+
+  .shop h4
+  {font-size: 1.8rem;}
+
+  .shop h5
+  {font-size: 1.6rem;}
+
+  .shop h6
+  {font-size: 1.4rem;}
+
+  .right-image  
+  {
+  padding-bottom:60%;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 4rem;
+  margin-right: -2rem;
+  }
+
+  .left-image  
+  {
+  padding-bottom:60%;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  border: 4px white solid;
+  margin-top: 4rem;
+  margin-left: -2rem;
+  }
+
+  .main-image  
+  {
+  padding-bottom: 70%;
+  background-size: cover;
+  background-position: center;
+  margin-top: -7rem;
+  z-index: 1;
+  }
 
 
 /*------------------ HEADER ----------------*/
@@ -891,6 +1010,7 @@ input[type=submit]
   border: 1px solid #CE967A;
   }
 
+
 .shop-button
   {
   position: fixed;
@@ -917,6 +1037,7 @@ option
   border: none;
   color: rgb(120,120,125);
   }
+
 select {padding: 0.7rem 0 0.5rem}
 :focus-visible {
   outline: -webkit-focus-ring-color auto 0px;
@@ -1046,7 +1167,37 @@ footer {
   .blog-banner-mobile h1 {font-size: 1.7rem;}
   
 
+/* -------SHOP----- */
+  .shop-padded { padding-right: 0%;}
 
+  .bg-image 
+  {
+  padding-bottom: 82%;
+  }
+
+  .flex-flip 
+  { 
+  display: flex;
+  flex-direction: column-reverse; 
+  }
+
+  .right-image  
+  {
+  margin-bottom: 2rem;
+  margin-right: -1rem;
+  }
+
+  .left-image  
+  {
+  margin-top: 3rem;
+  margin-left: -1rem;
+  }
+
+  .main-image  
+  {
+  margin-top: -4rem;
+  }
+ 
 
 /* -------MEDIA KIT---------   */
 
@@ -1146,6 +1297,35 @@ display: none;
    .radius-leaf {border-radius: 100px 0px 100px 0px;}
    .carousel-symbols-color {font-size: 1.5rem;}
    .carousel-subheading-font {font-size: 1.5rem;}
+
+   /* ----SHOP--- */
+
+   .shop-padded {padding-right: 0%;}
+
+   .shop h1 {font-size: 2rem;} 
+   .shop h2 {font-size: 1.9rem;}
+   .shop h3 {font-size: 1.7rem;} 
+   .shop h4 {font-size: 1.5rem;} 
+   .shop h5 {font-size: 1.3rem;} 
+   .shop h6 {font-size: 1.1rem;}
+   
+   .right-image  
+   {
+   margin-bottom: 2rem;
+   margin-right: -1rem;
+   }
+ 
+   .left-image  
+   {
+   margin-top: 3rem;
+   margin-left: -1rem;
+   }
+ 
+   .main-image  
+   {
+   margin-top: -4rem;
+   }
+
 
    /* -----------MEDIA-KIT---------- */
    .media-kit img 

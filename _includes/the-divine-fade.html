@@ -1,0 +1,115 @@
+<style>
+
+  #content-block-{{forloop.index0}} .background-color 
+  {background-color: {{item.colors.background-color}};}
+
+  #content-block-{{forloop.index0}} .right-image
+  {
+  border: 4px solid {{item.right-image.border-color}}; 
+  border-radius: {{item.right-image.border-radius.top-left-corner}} {{item.right-image.border-radius.top-right-corner}} {{item.right-image.border-radius.bottom-right-corner}} {{item.right-image.border-radius.bottom-left-corner}}; 
+  }
+
+  #content-block-{{forloop.index0}} .left-image
+  {
+  border: 4px solid {{item.left-image.border-color}}; 
+  border-radius: {{item.left-image.border-radius.top-left-corner}} {{item.left-image.border-radius.top-right-corner}} {{item.left-image.border-radius.bottom-right-corner}} {{item.left-image.border-radius.bottom-left-corner}}; 
+  }
+
+  #content-block-{{forloop.index0}} .main-image
+  {
+  border: 4px solid {{item.bottom-image.border-color}}; 
+  border-radius: {{item.bottom-image.border-radius.top-left-corner}} {{item.bottom-image.border-radius.top-right-corner}} {{item.bottom-image.border-radius.bottom-right-corner}} {{item.bottom-image.border-radius.bottom-left-corner}}; 
+  }
+
+  #content-block-{{forloop.index0}} h1 
+  {
+  color: {{item.colors.heading-color}};
+  font-family: {{item.fonts.heading-font}};
+  }
+
+  #content-block-{{forloop.index0}} h2 
+  {
+  color: {{item.colors.subheading-color}};
+  font-family: {{item.fonts.subheading-font}};
+  }
+
+  #content-block-{{forloop.index0}} h3
+  {
+  color: {{item.colors.subheading-color}};
+  font-family: {{item.fonts.subheading-font}};
+  }
+
+  #content-block-{{forloop.index0}} h4 
+  {
+  color: {{item.colors.subheading-color}};
+  font-family: {{item.fonts.subheading-font}};
+  }
+
+  #content-block-{{forloop.index0}} h5
+  {
+  color: {{item.colors.subheading-color}};
+  font-family: {{item.fonts.subheading-font}};
+  }
+
+  #content-block-{{forloop.index0}} h6 
+  {
+  color: {{item.colors.subheading-color}};
+  font-family: {{item.fonts.subheading-font}};
+  }
+
+  #content-block-{{forloop.index0}} p
+  {
+  color: {{item.colors.text-color}};
+  font-family: {{item.fonts.text-font}};
+  }
+
+  #content-blocks-{{forloop.index0}} li
+    {
+    font-family: {{item.fonts.text-font}};
+    color: {{item.colors.text-color}};
+    }
+
+  #content-block-{{forloop.index0}} .button-solid
+  {
+  background-color: {{item.colors.button-color}};
+  border: 1px solid {{item.colors.button-color}};
+  }
+
+  #content-block-{{forloop.index0}} .button-solid:hover
+  {
+  background-color: {{item.colors.button-hover-color}};
+  border: 1px solid {{item.colors.button-text-hover-color}};
+  color: {{item.colors.button-text-hover-color}};
+  }
+
+  #content-block-{{forloop.index0}} .button-solid
+  {
+  color: {{item.colors.button-text-color}};
+  font-family: {{item.fonts.button-font}};
+  font-size: 1.1rem;
+  }
+
+</style>  
+
+<section id="content-block-{{forloop.index0}}"> 
+  <section class="shop padded background-color">
+    <div class="padded-top grid-center">
+      <div class="grid-center col-6_sm-12">
+        <div class="right-image reveal fade-left col-6" style="background-image:url('{{item.right-image.image}}')"></div>
+        <div class="left-image reveal fade-right col-6" style="background-image:url('{{item.left-image.image}}')"></div>
+        <div class="main-image reveal fade-up col-8" style="background-image:url('{{item.bottom-image. image}}')"></div>
+      </div>
+      <div class="col-6_sm-12 grid-middle padded">
+        <div class="left reveal fade-up col-12">
+          {{item.text.first-textarea_html}}
+        <div class="left reveal fade-up col-12">
+          {{item.text.second-textarea_html}}
+        </div>
+          <div class="grid-left padded-top center" >
+            <p class=" left reveal fade-up col-12"> <a class="button-solid" href="{{item.button.button-link}}"> {{item.button.button-name}}</a></p>
+        </div>
+      </div>
+      </div>
+     </div> 
+  </section>
+</section>

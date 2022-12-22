@@ -101,7 +101,7 @@
 <section id="content-blocks-{{forloop.index0}}">
   <section class="grid-center padded carousel-background-color banner" style="background-image: url('{{item.background_image}}');">
     <div class="col-9_sm-11 textarea-background-color" id="{{item.content-block-link}}">
-      <h2 class="heading-color heading-font">{{item.heading}}</h2>
+      <h2 class="heading-color center heading-font">{{item.heading}}</h2>
     </div>
     <div class=" grid col-9_sm-11 padded-sides one-time">
       {% for carousel in item.carousel %}
@@ -109,7 +109,7 @@
         <div class="grid-center padded ">
           <div class = "col-9_xs-12 padded text-color text-font ">
             <p class="text-color text-font">{{carousel.textarea_html}} <br />
-              <span class="carousel-symbols-color"> {{carousel.symbols}} </span>
+              <span class="carousel-symbols-color center"> {{carousel.symbols}} </span>
             </p>
             <p class="centered carousel-subheading-font carousel-subheading-color"> {{carousel.ending}} </p>
           </div>
