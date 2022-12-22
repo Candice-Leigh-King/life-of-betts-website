@@ -14,6 +14,17 @@
       font-family: {{item.fonts.text-font}};
       color: {{item.colors.text-color}};
       }
+
+    #content-blocks-{{forloop.index0}} a
+      {
+      color: {{item.colors.link-color}};
+      }
+
+  #content-blocks-{{forloop.index0}} a:hover
+    {
+    color: {{item.colors.link-hover-color}};
+    }
+
   
         
     #content-blocks-{{forloop.index0}} h1 

@@ -427,6 +427,8 @@ _array_structures:
             text-color:
             heading-color: 
             subheading-color: 
+            link-color:
+            link-hover-color:
           fonts:
             heading-font: 
             subheading-font: 
