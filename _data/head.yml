@@ -4,5 +4,5 @@ frist-script-to-go-in-the-head: >-
   <script>   window.dataLayer = window.dataLayer || [];   function
   gtag(){dataLayer.push(arguments);}   gtag('js', new Date());    gtag('config',
   'G-ZMLEDGE6W0'); </script>
-second-script-to-go-in-the-head:
+second-script-to-go-in-the-head: <meta name="p:domain_verify" content="d87947dd5d94451d91fe84653ffe3ffb"/>
 thrid-script-to-go-in-the-head:
