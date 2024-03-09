@@ -1,0 +1,129 @@
+---
+layout: posts
+seo:
+  title: 🌟 Escape the ordinary and embrace the extraordinary in the Eastern Cape 🌟
+  description: >-
+    🌿 Experience luxury in the heart of the Eastern Cape bush at Rockdell
+    Lodge! 🦒✨ Wake up to wildlife views from your window, indulge in delicious
+    cuisine, and unwind in our spacious accommodations. With easy access from
+    East London, adventure awaits at Rockdell Lodge. Book your escape today! 🌟
+  keywords: >-
+    Rockdell Lodge Eastern Cape Safari getaway Luxury accommodations Wildlife
+    viewing Outdoor showers Family-friendly Adventure retreat Culinary
+    experience Easy access East London Tranquil escape Nature lovers Spacious
+    rooms Bush retreat
+  social-alt: >-
+    Escape to the heart of the Eastern Cape wilderness at Rockdell Lodge! 🌿
+    Discover luxury accommodations, wildlife adventures, and breathtaking views.
+    Book your safari getaway now! 🦒✨ #RockdellLodge #SafariEscape
+  url: >-
+    /travel/2024/02/15/exploring-paradise-keelooma-island-hopping-tours-from-el-nido-to-coron-copy.html
+  social-share_image: /uploads/img-2917.jpg
+title: 🌟 Escape the ordinary and embrace the extraordinary in the Eastern Cape 🌟
+author: Ruth Betts
+symbols: 🦏🦏🦏
+categories:
+  - travel
+colors:
+  heading-color: '#ffffff'
+  text-color: '#706b66'
+  blog-title-card-color: '#dcd3cc'
+  blog-title-card-border-color: '#ffffff'
+  social-share-text-color: '#706b66'
+  social-share-icons-color: '#706b66'
+  social-share-icons-hover-color: '#dcd3cc'
+fonts:
+  heading-font: Lovelace
+  text-font: Poppins, sans-serif
+  social-share-text-font: Cardo, serif
+cta: Read More →
+blog-summary: >-
+  🌿 Experience luxury in the heart of the Eastern Cape bush at Rockdell Lodge!
+  🦒✨ Wake up to wildlife views from your window, indulge in delicious cuisine,
+  and unwind in our spacious accommodations. With easy access from East London,
+  adventure awaits at Rockdell Lodge. Book your escape today! 🌟
+blog_image: /uploads/img-2917-1.jpg
+date: 2024-02-15 00:00:00
+content-blocks:
+  - _section-type: space-block
+  - _section-type: newsletter-script
+    insert-script-here: "<!-- Begin Mailchimp Signup Form --> <link href=\"//cdn-images.mailchimp.com/embedcode/classic-071822.css\" rel=\"stylesheet\" type=\"text/css\"> <style type=\"text/css\"> \t#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif;  width:600px;} \t/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block. \t   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */ </style> <div id=\"mc_embed_signup\">     <form action=\"https://gmail.us21.list-manage.com/subscribe/post?u=6c32e11ef54f2aedfc8d2b235&amp;id=903e81d472&amp;f_id=00b2c0e1f0\" method=\"post\" id=\"mc-embedded-subscribe-form\" name=\"mc-embedded-subscribe-form\" class=\"validate\" target=\"_blank\" novalidate>         <div id=\"mc_embed_signup_scroll\">         <h2>NEVER MISS A POST -</h2>         <div class=\"indicates-required\"><span class=\"asterisk\">*</span> indicates required</div> <div class=\"mc-field-group\"> \t<label for=\"mce-EMAIL\">Email Address  <span class=\"asterisk\">*</span> </label> \t<input type=\"email\" value=\"\" name=\"EMAIL\" class=\"required email\" id=\"mce-EMAIL\" required> \t<span id=\"mce-EMAIL-HELPERTEXT\" class=\"helper_text\"></span> </div> <div class=\"mc-field-group\"> \t<label for=\"mce-FNAME\">First Name </label> \t<input type=\"text\" value=\"\" name=\"FNAME\" class=\"\" id=\"mce-FNAME\"> \t<span id=\"mce-FNAME-HELPERTEXT\" class=\"helper_text\"></span> </div> \t<div id=\"mce-responses\" class=\"clear foot\"> \t\t<div class=\"response\" id=\"mce-error-response\" style=\"display:none\"></div> \t\t<div class=\"response\" id=\"mce-success-response\" style=\"display:none\"></div> \t</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->     <div style=\"position: absolute; left: -5000px;\" aria-hidden=\"true\"><input type=\"text\" name=\"b_6c32e11ef54f2aedfc8d2b235_903e81d472\" tabindex=\"-1\" value=\"\"></div>         <div class=\"optionalParent\">             <div class=\"clear foot\">                 <input type=\"submit\" value=\"Subscribe\" name=\"subscribe\" id=\"mc-embedded-subscribe\" class=\"button\">                 <p class=\"brandingLogo\"><a href=\"http://eepurl.com/ifBcan\" title=\"Mailchimp - email marketing made easy and fun\"><img src=\"https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg\"></a></p>             </div>         </div>     </div> </form> </div> <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script> <!--End mc_embed_signup-->"
+  - _section-type: text-and-image
+    image: /uploads/img-2877.jpg
+    textarea_html: >-
+      <p>Rockdell Lodge is a hidden gem nestled in the heart of the Eastern Cape
+      bush, offering an unforgettable safari experience. Just 100km from East
+      London, with Stutterheim (35km) and Komga (50km) as the closest towns,
+      Rockdell Lodge is your gateway to nature's wonders.</p>
+    colors:
+      background-color: '#ffffff'
+      text-color: '#2f3031'
+      heading-color: '#706b66'
+      subheading-color: '#dcd3cc'
+      link-color: '#dcd3cc'
+      link-hover-color: '#000000'
+    fonts:
+      heading-font: Lovelace
+      subheading-font: Cardo, serif
+      text-font: Poppins, sans-serif
+  - _section-type: blog-article
+    textarea_html: >-
+      <p>🦓🦒 Picture this: stunning accommodations complete with outdoor
+      showers, luxury bathtubs, and game viewing right from your bed! It's a
+      wildlife enthusiast's dream come true. 🌿</p><p><img
+      src="/uploads/img-2711-2.jpg" /></p><p><img src="/uploads/img-2639.jpg"
+      /></p><p>💫 Intimate and cosy, Rockdell offers a personal touch to your
+      bush getaway. Step onto the spacious veranda and sip on a cuppa while
+      observing giraffes, buffaloes, and more grazing just a stone's throw away.
+      It's pure tranquillity, away from the hustle and bustle of everyday life.
+      🍃</p><p><img src="/uploads/img-2798.jpg" /></p><p>🏡 Choose from the
+      selection of beautifully appointed rooms, tailored to accommodate your
+      every need. Whether you're seeking a romantic retreat, a family adventure,
+      or a corporate gathering, Rockdell Lodge has you covered. With three
+      family rooms and two double rooms, it can host up to 16 guests
+      comfortably.</p><p><img src="/uploads/dji-0550.jpg" /></p><p>🍽️ Indulge
+      in delicious cuisine during your stay at Rockdell Lodge. Opt for a
+      self-catered experience and make use of the fully equipped kitchen
+      facilities, or let the dedicated team pamper you with mouthwatering meals.
+      Don't forget to add a memorable game drive to your itinerary for the
+      ultimate safari experience! 🚙</p><p><img src="/uploads/img-2977.jpg"
+      /></p><p>🛣️ Please note, access to Rockdell Lodge requires a
+      high-clearance vehicle, and when it rains, a 4x4 is recommended for safe
+      passage. But trust us, the journey is worth it once you arrive at this
+      slice of paradise in the Eastern Cape. 🌄</p><p><img
+      src="/uploads/img-2802.jpg" /></p>
+    colors:
+      background-color: '#dcd3cc'
+      text-color: '#2f3031'
+      heading-color: '#ffffff'
+      subheading-color: '#ffffff'
+      link-color: '#ffffff'
+      link-hover-color: '#000000'
+    fonts:
+      heading-font: Lovelace
+      subheading-font: Cardo, serif
+      text-font: Poppins, sans-serif
+  - _section-type: signature
+    signature: Much love, Ruth Betts
+    signature-color: '#2f3031'
+    signature-font: Brushwell
+    background-color: '#dcd3cc'
+  - _section-type: space-block
+    background-color: '#ffffff'
+  - _section-type: recent-blogs
+    heading: See more blogs
+    colors:
+      background-color: '#ffffff'
+      heading-color: '#706b66'
+      blog-title-card-color: '#dcd3cc'
+      blog-title-card-border-color: '#ffffff'
+      blog-hover-overlay-color: rgba(220, 211, 204, 0.5)
+      text-color: '#706b66'
+      subheading-color: '#ffffff'
+      cta-color: '#ffffff'
+    fonts:
+      text-font: Poppins, sans-serif
+      heading-font: Lovelace
+      subheading-font: Cardo, serif
+      cta-font: Cardo, serif
+---
