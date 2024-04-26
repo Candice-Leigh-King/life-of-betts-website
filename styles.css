@@ -35,12 +35,12 @@ font-family: 'Cardo', serif;*/
   box-sizing: border-box;
   }
   
-  html 
-    {
-    scroll-behavior: smooth; /* this enables smooth scrolling between internal links */
-    overflow-x: hidden;
-    touch-action: manipulation;
-    }
+html 
+  {
+  scroll-behavior: smooth; /* this enables smooth scrolling between internal links */
+  overflow-x: hidden;
+  touch-action: manipulation;
+  }
   
   img {
     max-width: 100%; /* this ensures images never break their container */
@@ -1110,7 +1110,7 @@ footer {
     }
 
 .desktop-hide {display: none;}
-
+.desktop-and-tablet-hide {display: none;}
 /* ---------READ MORE--------- */
 
 .read-more-button span::after {content: "more";}
