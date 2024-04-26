@@ -587,6 +587,8 @@ border-top: 1px solid black;
 border-bottom: 1px solid black;  
 }
 
+.category-padded p {padding: 0% 1.5% 0% 1.5%};
+
 .blog-nav 
  {
   overflow-x: scroll;
