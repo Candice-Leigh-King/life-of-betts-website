@@ -1,13 +1,14 @@
 ---
 layout: default
-textarea: >-
-  <a href="/blog-categories/blogs">All</a>
-  <p>●</p>
-  <a href="/blog-categories/travel">Travel</a>
-  <p>●</p>
-  <a href="/blog-categories/van-life"> Van Life</a>
-  <p>●</p>
-  <a href="/blog-categories/life-hacks"> Life Hacks</a>
+blog-category-bar:
+  textarea: >-
+    <a href="/blog-categories/blogs">All</a>
+    <p>●</p>
+    <a href="/blog-categories/travel">Travel</a>
+    <p>●</p>
+    <a href="/blog-categories/van-life"> Van Life</a>
+    <p>●</p>
+    <a href="/blog-categories/life-hacks"> Life Hacks</a>
 ---
 <style>
     .blog-background-color
@@ -98,8 +99,7 @@ textarea: >-
 
   <section class="grid-center border-top border-bottom blog-nav editable category-padded center padded-2">
     <div class="categories">
-      {{page.textarea}}
-      </p>
+      {{page.blog-category-bar.textarea}}
   </div>
 </div>
 <p class="col-12 centered desktop-and-tablet-hide blog-arrow">⟵</p>
