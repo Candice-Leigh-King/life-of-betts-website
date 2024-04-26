@@ -587,6 +587,25 @@ border-top: 1px solid black;
 border-bottom: 1px solid black;  
 }
 
+.blog-nav 
+ {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  border-top: solid 1px;
+  padding: 20px;
+  z-index: 1;
+  }
+  
+   .blog-arrow
+    {
+    transform: rotate(-180deg);
+    font-size: 1.5rem;
+    margin-bottom: -34px;
+    font-family: NeueMontreal-Light;
+    color: #0E697C;
+    }
+
 
 
   /* ----------MEDIA KIT---------- */
