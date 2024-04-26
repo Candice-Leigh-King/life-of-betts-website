@@ -1128,6 +1128,8 @@ footer {
 
 .mob-hide
   {display: none;}
+  
+.desktop-and-tablet-hide {display: inline;}
 
 .desktop-hide {display: inline;}
 
