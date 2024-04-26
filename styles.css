@@ -597,6 +597,8 @@ border-bottom: 1px solid black;
 
 .blog-nav 
  {
+  padding-top: 10px;
+  padding-bottom: 10px;
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
