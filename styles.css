@@ -597,14 +597,14 @@ border-bottom: 1px solid black;
   z-index: 1;
   }
   
-   .blog-arrow
-    {
-    transform: rotate(-180deg);
-    font-size: 1.5rem;
-    margin-bottom: -34px;
-    font-family: NeueMontreal-Light;
-    color: #0E697C;
-    }
+.blog-arrow
+  {
+  transform: rotate(-180deg);
+  font-size: 1.5rem;
+  margin-bottom: -34px;
+  font-family: NeueMontreal-Light;
+  color: #0E697C;
+  }
 
 
 
