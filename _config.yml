@@ -550,7 +550,12 @@ _array_structures:
             heading-font: 
             subheading-font: 
             text-font: 
-            button-font:  
+            button-font:
+      - label: New Category
+        icon: category
+        value: 
+          _section-type: new-category
+          category:
 fonts:
 _select_data:
   fonts:
