@@ -56,31 +56,6 @@ layout: default
     {
     color: {{page.colors.cta-color}};
     }
-    
-    .blog-nav p
-    {
-    font-size: 1.3rem;
-    font-family: {{page.fonts.categories-font}};
-    color: {{page.colors.categories-color}};
-    }
-    
-     .blog-nav a
-    {
-    font-size: 1.3rem;
-    padding-left: 15px;
-    padding-right: 15px;
-    font-family: {{page.fonts.categories-font}};
-    color: {{page.colors.categories-color}};
-    }
-    
-    .blog-nav a:hover
-    {color: {{page.colors.categories-hover-color}};}
-    
-    .blog-arrow
-    {
-    font-family: {{page.fonts.categories-font}};
-    color: {{page.colors.categories-color}};
-    }
 
     .categories p
     {
@@ -92,32 +67,162 @@ layout: default
     .categories a:hover 
     {color: {{page.colors.categories-hover-color}};}
     
-    @media(max-width:576px) 
-    {
-    
-      h3
-      {
-      font-size: 1.9rem;
-      }
+    .menu {
+    display: flex;
+    justify-content: space-between;
+    border-top: solid 1.2px #dcd3cc;
+    border-bottom: solid 1.2px #dcd3cc;
+    padding: 10px;
+  }
 
-      .categories p 
-      {
-      font-size: 1rem;  
-      }
-      
-    }
+  .container {
+  display: flex;
+  justify-content: space-between; /* Distribute items evenly */
+  width: 100%; /* Full width */
+}
 
-  </style> 
-<section class="blog-background-color">
+/* Apply styles to anchor elements */
+.container a {
+  text-decoration: none; /* Remove underline */
+  color: #333; /* Text color */
+  padding: 10px 30px; /* Adjust padding as needed */
+}
+
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    z-index: 1;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+    min-width: 190px;
+    top: 3.2rem;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+
+  /* Style for sub-dropdowns */
+  .sub-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 2;
+    left: 100%;
+    top: 0;
+  }
+
+  .sub-dropdown-content a {
+   border-bottom: solid 1px {{page.colors.categories-color}};
+  }
+</style>
+
+<section class="blog-background-color ">
   <section class="grid padded-top">
     <h2 class="brown-text col-12 center padded">{{page.heading}}</h2>
   </section>
+<section class="grid  ">
+  <div class="menu centered grid col-12 padded-sides">
+    <div class="container grid">
+      <div class="dropdown grid-middle">
+        <a href="#" class="destinations"   data-target="CountryDropdown">Destinations</a>
+        <div class="dropdown-content" id="CountryDropdown">
+          
+          <a href="/blog-categories/south-africa" class="" >South Africa 
+            <span> <a href="#" class="countries-dropdown" data-target="SouthAfricaDropdown">︾</a></span>
+          </a> 
+          <div class=" sub-dropdown-content" id="SouthAfricaDropdown">
+            <a href="/blog-categories/western-cape">Western Cape</a>
+            <a href="/blog-categories/kwazulu-natal">KwaZulu Natal</a>
+            <a href="/blog-categories/eastern-cape">Eastern Cape</a>
+            <a href="/blog-categories/northern-cape">Northern Cape</a>
+            <a href="/blog-categories/gauteng">Gauteng</a>
+            <a href="/blog-categories/limpopo">Limpopo</a>
+            <a href="/blog-categories/mpumalanga">Mpumalanga</a>
+          </div>
+          
+          <a href="/blog-categories/thailand" class="">Thailand 
+            <span> <a href="#" class="countries-dropdown" data-target="ThailandDropdown">︾</a></span></a> 
+          </a>
+          <div class=" sub-dropdown-content" id="ThailandDropdown">
+            <a href="/blog-categories/northen-thailand">Northern Thailand</a>
+            <a href="/blog-categories/southern-thailand">Southern Thailand</a>
+          </div>
 
-  <section class="grid-center border-top border-bottom category-padded center">
-    <div class="col-12-center-middle blog-nav editable">
-       <p class="col-12 centered blog-arrow">⟵</p>
-      <p><a href="/blog-categories/blogs.html"><strong><u>All </u></strong></a><strong> ● </strong><a href="/blog-categories/travel.html"><strong><u>Travel</u></strong></a><strong> ● </strong><a href="/blog-categories/van-life.html"><strong><u>Van Life</u></strong></a><strong> ● </strong><a href="/blog-categories/life-hacks.html"><strong><u>Life Hacks</u></strong></a><strong> ● </strong><a href="/blog-categories/south-africa.html"><strong><u>South Africa</u></strong></a>&nbsp;● <a href="/blog-categories/kwazulu-natal.html"><em>KwaZulu Natal</em></a>&nbsp; &nbsp; ●&nbsp; &nbsp;&nbsp;<a href="/blog-categories/western-cape.html"><em>Western Cape</em>&nbsp;</a> &nbsp; ●&nbsp; &nbsp; <a href="/blog-categories/eastern-cape.html"><em>Eastern Cape</em></a><em>&nbsp; &nbsp; ●&nbsp; &nbsp; </em><a href="/blog-categories/northern-cape.html"><em>Northern Cape&nbsp;</em></a><em> &nbsp; ●&nbsp; &nbsp; </em><a href="/blog-categories/gauteng.html"><em>Gauteng&nbsp; </em></a><em>&nbsp; ●&nbsp; &nbsp; &nbsp;</em><a href="/blog-categories/limpopo.html"><em>Limpopo&nbsp;</em></a><em> &nbsp; ●&nbsp; &nbsp; </em><a href="/blog-categories/mpumalanga.html"><em>Mpumalanga</em></a>&nbsp; &nbsp;●&nbsp;<a href="/blog-categories/thailand.html"><strong><u>Thailand</u></strong></a>●&nbsp; <a href="/blog-categories/northern-thailand.html"><em>Northern Thailand</em></a><em>&nbsp; &nbsp;</em>●&nbsp; &nbsp; &nbsp;<a href="/blog-categories/southern-thailand.html"><em>Southern Thailand</em></a><em>&nbsp;</em>● <strong><u>Malaysia</u></strong>&nbsp; &nbsp; ●&nbsp; &nbsp;<em>Penang</em></p>
+          <a href="/blog-categories/malaysia" class="">Malaysia
+            <span> <a href="#" class="countries-dropdown" data-target="MalaysiaDropdown">︾</a></span>
+          </a>
+          <div class=" sub-dropdown-content" id="MalaysiaDropdown">
+            <a href="/blog-categories/penang">Penang</a>
+          </div>
+
+          <a href="/blog-categories/philippines" class="">Philippines 
+            <span> <a href="#" class="countries-dropdown" data-target="{{Philippines}}"></a></span>
+          </a>
+          <div class=" sub-dropdown-content" id="{{Philippines}}">
+            <a href="/blog-categories/"></a>
+          </div>
+
+          <a href="/blog-categories/new-zealand" class="">New Zealand 
+            <span> <a href="#" class="countries-dropdown" data-target="{{NewZealand}}"></a></span>
+          </a> 
+
+          <div class=" sub-dropdown-content" id="{{NewZealand}}">
+            <a href="#"></a>
+          </div>
+          
+          <!-- Add similar links for other countries -->
+        </div>
+      </div>
+      <a href="/blog-categories/blogs">All</a>
+      <a href="/blog-categories/travel">Travel</a>
+      <a href="/blog-categories/van-life">Van Life</a>
+      <a href="/blog-categories/life-hacks">Life Hacks</a>
+      
     </div>
-  </section>
+  </div>
 
-{{content}}</section>
+</section>
+
+  <!-- Add similar divs for other countries -->
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const countriesDropdowns = document.querySelectorAll(".countries-dropdown");
+    countriesDropdowns.forEach(function(dropdown) {
+      dropdown.addEventListener("click", function(event) {
+        event.preventDefault();
+        const targetId = this.getAttribute("data-target");
+        const targetDropdown = document.getElementById(targetId);
+        // Hide other sub-dropdowns
+        document.querySelectorAll(".sub-dropdown-content").forEach(function(el) {
+          if (el.id !== targetId) {
+            el.style.display = "none";
+          }
+        });
+        if (targetDropdown) {
+          targetDropdown.style.display = (targetDropdown.style.display === "block") ? "none" : "block";
+        }
+      });
+    });
+  });
+</script>
+
+{{content}}
