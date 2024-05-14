@@ -136,41 +136,37 @@ layout: default
   <section class="grid padded-top">
     <h2 class="brown-text col-12 center padded">{{page.heading}}</h2>
   </section>
-<section class="grid">
+<section class="grid  ">
   <div class="menu centered grid col-12 padded-sides">
     <div class="container grid">
       <div class="dropdown grid-middle">
-        <a href="#" class="destinations" data-target="CountryDropdown">{{ site.data.destinations.dropdown-name }}</a>
+        <a href="#" class="destinations"   data-target="CountryDropdown">{{site.data.blogs.destination-name}}</a>
         <div class="dropdown-content" id="CountryDropdown">
-          {% for destinations in site.data.destinations %}
-            <a href="/blog-categories/{{ destinations.slug }}">
-              {{ destinations.country }}
-              {% if destinations.dropdown_enabled %}
-                <span><a href="#" class="countries-dropdown" data-target="{{ destinations.slug }}Dropdown">︾</a></span>
-              {% endif %}
-            </a>
+          {% for destinations in site.data.blogs.destinations %}
+          <a href="{{destinations.url}}" class="" >{{destinations.name}}
             {% if destinations.dropdown_enabled %}
-              <div class="sub-dropdown-content" id="{{ destinations.slug }}Dropdown">
-                {% for province in site.data.destinations.provinces %}
-                  <a href="/blog-categories/{{ province.slug }}" class="{{ province.type }}">{{ province.name }}</a>
-                {% endfor %}
-              </div>
+            <span> <a href="#" class="countries-dropdown" data-target="{{destinations.camel}}Dropdown">︾</a></span>
             {% endif %}
+          </a> 
+          {% if destinations.dropdown_enabled %}
+          <div class="sub-dropdown-content" id="{{destinations.camel}}Dropdown">
+            {% for province in destinations.provinces %}
+                <a href="{{province.url}}">{{province.name}}</a>
+            {% endfor %}
+          </div>
+          {% endif %}
           {% endfor %}
+          
+          <!-- Add similar links for other countries -->
         </div>
       </div>
+      {% for category in site.data.blogs.category %}
+      <a href="{{category.url}}">{{category.name}}</a>
+      {% endfor %}
     </div>
   </div>
+
 </section>
-
-<!-- Separate loop for categories -->
-<div class="container grid">
-  {% for category in site.data.category %}
-    <a href="{{ category.url }}">{{ category.name }}</a>
-  {% endfor %}
-</div>
-
-  
 
   <!-- Add similar divs for other countries -->
 
