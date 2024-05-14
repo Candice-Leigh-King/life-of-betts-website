@@ -32,7 +32,7 @@ destinations:
     dropdown_enabled: true
     provinces:
       - name: Penang
-        slug: 
+        slug: penang
         
   - country: Philippines
     slug: philippines
