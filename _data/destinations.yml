@@ -16,7 +16,7 @@ destinations:
       - name: Limpopo
         slug: /limpopo
       - name: Mpumalanga
-      slug: /mpumalanga
+        slug: /mpumalanga
       
   - country: Thailand
     slug: thailand
