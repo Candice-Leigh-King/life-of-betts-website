@@ -1,7 +1,9 @@
 dropdown-name: Destinations 
+
 category:
   - name: All
     url: /blog-categories/blogs
+    
 destinations:
   - country: South Africa
     slug: south-africa
