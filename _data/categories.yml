@@ -1,0 +1,8 @@
+dropdown-name: Destinations
+category:
+  - name: All
+    url: /blog-categories/blogs
+  - name: Travel
+    url: /blog-categories/travel
+  - name: ''
+    url: ''
