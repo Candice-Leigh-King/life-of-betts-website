@@ -151,7 +151,7 @@ layout: default
             </a>
             {% if destinations.dropdown_enabled %}
               <div class="sub-dropdown-content" id="{{ destinations.slug }}Dropdown">
-                {% for province in destinations.provinces %}
+                {% for province in site.data.destinations.provinces %}
                   <a href="/blog-categories/{{ province.slug }}" class="{{ province.type }}">{{ province.name }}</a>
                 {% endfor %}
               </div>
@@ -166,7 +166,7 @@ layout: default
 <!-- Separate loop for categories -->
 <div class="container grid">
   {% for category in site.data.categories %}
-    <a href="{{ site.data.categories.category.url }}">{{ site.data.categories.category.name }}</a>
+    <a href="{{ category.url }}">{{ category.name }}</a>
   {% endfor %}
 </div>
 
