@@ -1,9 +1,11 @@
 dropdown-name: Destinations
-
 category:
   - name: All
     url: /blog-categories/blogs
-
+  - name: Travel
+    url: /blog-categories/travel
+  - name: ''
+    url: ''
 destinations:
   - country: South Africa
     slug: south-africa
@@ -23,7 +25,6 @@ destinations:
         slug: /limpopo
       - name: Mpumalanga
         slug: /mpumalanga
-
   - country: Thailand
     slug: thailand
     dropdown_enabled: true
@@ -32,19 +33,16 @@ destinations:
         slug: /northern-thailand
       - name: Southern Thailand
         slug: /southern-thailand
-
   - country: Malaysia
     slug: malaysia
     dropdown_enabled: true
     provinces:
       - name: Penang
         slug: /penang
-
   - country: Philippines
     slug: philippines
     dropdown_enabled: false
     provinces: []
-
   - country: New Zealand
     slug: new-zealand
     dropdown_enabled: false
