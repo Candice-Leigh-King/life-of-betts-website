@@ -25,7 +25,7 @@ destinations:
       - name: Northern Thailand
         slug: /northern-thailand
       - name: Southern Thailand
-      slug: /southern-thailand
+        slug: /southern-thailand
       
   - country: Malaysia
     slug: malaysia
@@ -37,9 +37,6 @@ destinations:
   - country: Philippines
     slug: philippines
     dropdown_enabled: false
-    provinces:
-      - name: 
-        slug: 
         
   - country: New Zealand
     slug: new-zealand
