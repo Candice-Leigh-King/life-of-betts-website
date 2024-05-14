@@ -561,7 +561,7 @@ color: white;
 margin-left: 2rem;
 margin-top: -4rem;
 background-color: #BCCACA;
-z-index: -2;
+z-index: 0;
 position: relative;
 padding: 5%;
 }
