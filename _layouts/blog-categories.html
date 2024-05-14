@@ -166,7 +166,7 @@ layout: default
 <!-- Separate loop for categories -->
 <div class="container grid">
   {% for category in site.data.categories %}
-    <a href="{{ category.url }}">{{ category.name }}</a>
+    <a href="{{ site.data.categories.category.url }}">{{ site.data.categories.category.name }}</a>
   {% endfor %}
 </div>
 
