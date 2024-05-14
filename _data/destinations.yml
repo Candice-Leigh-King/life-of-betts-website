@@ -3,19 +3,19 @@ destinations:
     slug: south-africa
     dropdown_enabled: true
     provinces:
-    - name: Western Cape
-      slug: /western-cape
-    - name: KwaZulu Natal
-      slug: /kwazulu-natal
-    - name: Eastern Cape
-      slug: /eastern-cape
-    - name: Northern Cape
-      slug: /northern-cape
-    - name: Gauteng
-      slug: /gauteng
-    - name: Limpopo
-      slug: /limpopo
-    - name: Mpumalanga
+      - name: Western Cape
+        slug: /western-cape
+      - name: KwaZulu Natal
+        slug: /kwazulu-natal
+      - name: Eastern Cape
+        slug: /eastern-cape
+      - name: Northern Cape
+        slug: /northern-cape
+      - name: Gauteng
+        slug: /gauteng
+      - name: Limpopo
+        slug: /limpopo
+      - name: Mpumalanga
       slug: /mpumalanga
       
   - country: Thailand
