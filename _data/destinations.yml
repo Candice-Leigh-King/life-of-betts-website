@@ -18,29 +18,29 @@ destinations:
     - name: Mpumalanga
       slug: /mpumalanga
       
-- country: Thailand
-  slug: thailand
-  dropdown_enabled: true
-  provinces:
-    - name: Northern Thailand
-      slug: /northern-thailand
-    - name: Southern Thailand
+  - country: Thailand
+    slug: thailand
+    dropdown_enabled: true
+    provinces:
+      - name: Northern Thailand
+        slug: /northern-thailand
+      - name: Southern Thailand
       slug: /southern-thailand
       
-- country: Malaysia
-  slug: malaysia
-  dropdown_enabled: true
-  provinces:
-    - name: Penang
-      slug: 
-      
-- country: Philippines
-  slug: philippines
-  dropdown_enabled: false
-  provinces:
-    - name: 
-      slug: 
-      
-- country: New Zealand
-  slug: new-zealand
-  dropdown_enabled: false
+  - country: Malaysia
+    slug: malaysia
+    dropdown_enabled: true
+    provinces:
+      - name: Penang
+        slug: 
+        
+  - country: Philippines
+    slug: philippines
+    dropdown_enabled: false
+    provinces:
+      - name: 
+        slug: 
+        
+  - country: New Zealand
+    slug: new-zealand
+    dropdown_enabled: false
