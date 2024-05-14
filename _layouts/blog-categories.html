@@ -136,68 +136,36 @@ layout: default
   <section class="grid padded-top">
     <h2 class="brown-text col-12 center padded">{{page.heading}}</h2>
   </section>
-<section class="grid  ">
-  <div class="menu centered grid col-12 padded-sides">
-    <div class="container grid">
-      <div class="dropdown grid-middle">
-        <a href="#" class="destinations"   data-target="CountryDropdown">Destinations</a>
-        <div class="dropdown-content" id="CountryDropdown">
-          
-          <a href="/blog-categories/south-africa" class="" >South Africa 
-            <span> <a href="#" class="countries-dropdown" data-target="SouthAfricaDropdown">︾</a></span>
-          </a> 
-          <div class=" sub-dropdown-content" id="SouthAfricaDropdown">
-            <a href="/blog-categories/western-cape">Western Cape</a>
-            <a href="/blog-categories/kwazulu-natal">KwaZulu Natal</a>
-            <a href="/blog-categories/eastern-cape">Eastern Cape</a>
-            <a href="/blog-categories/northern-cape">Northern Cape</a>
-            <a href="/blog-categories/gauteng">Gauteng</a>
-            <a href="/blog-categories/limpopo">Limpopo</a>
-            <a href="/blog-categories/mpumalanga">Mpumalanga</a>
+  <section class="grid">
+    <div class="menu centered grid col-12 padded-sides">
+      <div class="container grid">
+        <div class="dropdown grid-middle">
+          <a href="#" class="destinations" data-target="CountryDropdown">{{site.data.destinations.dropdown-name}}</a>
+          <div class="dropdown-content" id="CountryDropdown">
+            {% for destination in site.data.destinations %}
+              <a href="/blog-categories/{{ destination.slug }}">
+                {{ destination.name }}
+                {% if destination.dropdown_enabled %}
+                  <span><a href="#" class="countries-dropdown" data-target="{{ destination.slug }}Dropdown">︾</a></span>
+                {% endif %}
+              </a>
+              {% if destination.dropdown_enabled %}
+                <div class="sub-dropdown-content" id="{{ destination.slug }}Dropdown">
+                  {% for province in destination.provinces %}
+                    <a href="/blog-categories/{{ province.slug }}" class="{{ province.type }}">{{ province.name }}</a>
+                  {% endfor %}
+                </div>
+              {% endif %}
+            {% endfor %}
           </div>
-          
-          <a href="/blog-categories/thailand" class="">Thailand 
-            <span> <a href="#" class="countries-dropdown" data-target="ThailandDropdown">︾</a></span></a> 
-          </a>
-          <div class=" sub-dropdown-content" id="ThailandDropdown">
-            <a href="/blog-categories/northen-thailand">Northern Thailand</a>
-            <a href="/blog-categories/southern-thailand">Southern Thailand</a>
-          </div>
-
-          <a href="/blog-categories/malaysia" class="">Malaysia
-            <span> <a href="#" class="countries-dropdown" data-target="MalaysiaDropdown">︾</a></span>
-          </a>
-          <div class=" sub-dropdown-content" id="MalaysiaDropdown">
-            <a href="/blog-categories/penang">Penang</a>
-          </div>
-
-          <a href="/blog-categories/philippines" class="">Philippines 
-            <span> <a href="#" class="countries-dropdown" data-target="{{Philippines}}"></a></span>
-          </a>
-          <div class=" sub-dropdown-content" id="{{Philippines}}">
-            <a href="/blog-categories/"></a>
-          </div>
-
-          <a href="/blog-categories/new-zealand" class="">New Zealand 
-            <span> <a href="#" class="countries-dropdown" data-target="{{NewZealand}}"></a></span>
-          </a> 
-
-          <div class=" sub-dropdown-content" id="{{NewZealand}}">
-            <a href="#"></a>
-          </div>
-          
-          <!-- Add similar links for other countries -->
         </div>
+        {% for category in site.data.destinations %}
+        <a href="{{ category.url }}">{{ category.name }}</a>
+        {% endfor %}
       </div>
-      <a href="/blog-categories/blogs">All</a>
-      <a href="/blog-categories/travel">Travel</a>
-      <a href="/blog-categories/van-life">Van Life</a>
-      <a href="/blog-categories/life-hacks">Life Hacks</a>
-      
     </div>
-  </div>
-
-</section>
+  </section>
+  
 
   <!-- Add similar divs for other countries -->
 

@@ -1,43 +1,50 @@
+dropdown-name: Destinations 
+category:
+  name: All
+  url: /blog-categories/blogs
 destinations:
   - country: South Africa
     slug: south-africa
     dropdown_enabled: true
-    provinces:
-      - name: Western Cape
-        slug: /western-cape
-      - name: KwaZulu Natal
-        slug: /kwazulu-natal
-      - name: Eastern Cape
-        slug: /eastern-cape
-      - name: Northern Cape
-        slug: /northern-cape
-      - name: Gauteng
-        slug: /gauteng
-      - name: Limpopo
-        slug: /limpopo
-      - name: Mpumalanga
-        slug: /mpumalanga
+  provinces:
+    - name: Western Cape
+      slug: /western-cape
+    - name: KwaZulu Natal
+      slug: /kwazulu-natal
+    - name: Eastern Cape
+      slug: /eastern-cape
+    - name: Northern Cape
+      slug: /northern-cape
+    - name: Gauteng
+      slug: /gauteng
+    - name: Limpopo
+      slug: /limpopo
+    - name: Mpumalanga
+      slug: /mpumalanga
       
-  - country: Thailand
-    slug: thailand
-    dropdown_enabled: true
-    provinces:
-      - name: Northern Thailand
-        slug: /northern-thailand
-      - name: Southern Thailand
-        slug: /southern-thailand
+- country: Thailand
+  slug: thailand
+  dropdown_enabled: true
+  provinces:
+    - name: Northern Thailand
+      slug: /northern-thailand
+    - name: Southern Thailand
+      slug: /southern-thailand
       
-  - country: Malaysia
-    slug: malaysia
-    dropdown_enabled: true
-    provinces:
-      - name: Penang
-        slug: penang
-        
-  - country: Philippines
-    slug: philippines
-    dropdown_enabled: false
-        
-  - country: New Zealand
-    slug: new-zealand
-    dropdown_enabled: false
+- country: Malaysia
+  slug: malaysia
+  dropdown_enabled: true
+  provinces:
+    - name: Penang
+      slug: 
+      
+- country: Philippines
+  slug: philippines
+  dropdown_enabled: false
+  provinces:
+    - name: 
+      slug: 
+      
+- country: New Zealand
+  slug: new-zealand
+  dropdown_enabled: false
