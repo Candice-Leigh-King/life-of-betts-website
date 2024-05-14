@@ -144,9 +144,9 @@ layout: default
         <div class="dropdown-content" id="CountryDropdown">
           {% for destination in site.data.destinations %}
             <a href="/blog-categories/{{ destination.slug }}">
-              {{ site.data.destination.country }}
+              {{ site.data.destinations.destination.country }}
               {% if destination.dropdown_enabled %}
-                <span><a href="#" class="countries-dropdown" data-target="{{ destination.slug }}Dropdown">︾</a></span>
+                <span><a href="#" class="countries-dropdown" data-target="{{ site.data.destinations.destination.slug }}Dropdown">︾</a></span>
               {% endif %}
             </a>
             {% if destination.dropdown_enabled %}
