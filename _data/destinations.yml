@@ -1,5 +1,5 @@
 dropdown-name: Destinations
-destination:
+destinations:
   - country: South Africa
     slug: south-africa
     dropdown_enabled: true

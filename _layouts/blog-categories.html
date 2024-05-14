@@ -145,11 +145,11 @@ layout: default
           {% for destinations in site.data.destinations %}
             <a href="/blog-categories/{{ destination.slug }}">
               {{ site.data.destinations.destinations.country }}
-              {% if destination.dropdown_enabled %}
+              {% if destinations.dropdown_enabled %}
                 <span><a href="#" class="countries-dropdown" data-target="{{ site.data.destinations.destinations.slug }}Dropdown">︾</a></span>
               {% endif %}
             </a>
-            {% if destination.dropdown_enabled %}
+            {% if destinations.dropdown_enabled %}
               <div class="sub-dropdown-content" id="{{ destination.slug }}Dropdown">
                 {% for province in destination.provinces %}
                   <a href="/blog-categories/{{ province.slug }}" class="{{ province.type }}">{{ province.name }}</a>
