@@ -6,7 +6,7 @@ category:
   - name: Van Life
     url: /blog-categories/van-life
   - name: Life Hacks
-    url:  /blog-categories/life-hacks
+    url: /blog-categories/life-hacks
 destination-name: Destinations
 destinations:
   - name: South Africa
@@ -40,16 +40,16 @@ destinations:
   - name: Malaysia
     url: /blog-categories/malaysia
     camel: MalaysiaDropdown
-    dropdown_enabled: true 
+    dropdown_enabled: true
     provinces:
       - name: Penang
         url: /blog-categories/penang
   - name: Philippines
-    url: /blog-categories/Philippine
+    url: /blog-categories/philippines.html
     camel: PhilippinesDropdown
     dropdown_enabled: true
     provinces:
-      - name:  Moalboal
+      - name: Moalboal
         url: /blog-categories/moalboal
       - name: Cebu
         url: /blog-categories/cebu
@@ -62,10 +62,9 @@ destinations:
     provinces:
       - name: Bali
         url: /blog-categories/Bali
-  - name: New Zealand 
-    url: /blog-categories/new-zealand 
-    camel: NewZealandDropdown 
-    dropdown_enabled: false  
+  - name: New Zealand
+    url: /blog-categories/new-zealand
+    camel: NewZealandDropdown
+    dropdown_enabled: false
 dropdown:
-  textarea_html: >-
-     <p><a>All</a></p>
+  textarea_html: <p><a>All</a></p>
