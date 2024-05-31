@@ -56,14 +56,14 @@ destinations:
       - name: El Nido
         url: /blog-categories/elnido
   - name: Indonesia
-    url: /blog-categories/Indonesia
+    url: /blog-categories/indonesia.html
     camel: IndonesiaDropdown
     dropdown_enabled: true
     provinces:
       - name: Bali
         url: /blog-categories/Bali
   - name: New Zealand
-    url: /blog-categories/new-zealand
+    url: /blog-categories/new-zealand.html
     camel: NewZealandDropdown
     dropdown_enabled: false
 dropdown:
