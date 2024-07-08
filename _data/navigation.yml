@@ -48,7 +48,7 @@ dropdown:
       - name: New Zealand
         url: /blog-categories/new-zealand
   - name: Travel
-    url: /blog-categories/south-africa
+    url: /blog-categories/blogs
     camel: travel
     dropdown_enabled: true
     categories:
