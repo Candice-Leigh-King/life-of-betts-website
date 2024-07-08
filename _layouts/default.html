@@ -3,25 +3,25 @@ layout: connect-tree
 ---
 
 <style>
-    .blog-background-color
+    .navigation .blog-background-color
       {background-color: {{page.colors.background-color}};}
 
-    .blog-hover-overlay:hover 
+     .navigation .blog-hover-overlay:hover 
      {background-color: {{page.colors.blog-hover-overlay-color}};}
 
-    .bump 
+    .navigation .bump 
      {
      background-color: {{page.colors.blog-title-card-color}};
      border-top: solid 4px {{page.colors.blog-title-card-border-color}};
      border-left: solid 4px {{page.colors.blog-title-card-border-color}};
      }
     
-    .border-top
+    .navigation .border-top
     {
     border-top: 1px solid {{page.colors.categories-color}};  
     }
 
-    .border-bottom
+   .navigation  .border-bottom
     {
     border-bottom: 1px solid {{page.colors.categories-color}};  
     }
@@ -53,22 +53,22 @@ layout: connect-tree
     font-family: {{page.fonts.cta-font}};
     }
 
-    .blog-hover-overlay:hover
+    .navigation .blog-hover-overlay:hover
     {
     color: {{page.colors.cta-color}};
     }
 
-    .categories p
+   .navigation  .categories p
     {
     font-size: 1.3rem;
     font-family: {{page.fonts.categories-font}};
     color: {{page.colors.categories-color}};
     }
 
-    .categories a:hover 
+     .navigation .categories a:hover 
     {color: {{page.colors.categories-hover-color}};}
     
-    .menu {
+    .navigation .menu {
     display: flex;
     justify-content: space-between;
     border-top: solid 1.2px #dcd3cc;
@@ -76,49 +76,49 @@ layout: connect-tree
     padding: 10px;
   }
 
-  .container {
+   .navigation .container {
   display: flex;
   justify-content: space-between; /* Distribute items evenly */
   width: 100%; /* Full width */
 }
 
 /* Apply styles to anchor elements */
-.container a {
+ .navigation .container a {
   text-decoration: none; /* Remove underline */
   color: #333; /* Text color */
   padding: 10px 30px; /* Adjust padding as needed */
 }
 
-  .dropdown {
+  .navigation .dropdown {
     position: relative;
   }
 
-  .dropdown-content {
+  .navigation .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
     z-index: 1;
   }
 
-  .dropdown:hover .dropdown-content {
+  .navigation .dropdown:hover .dropdown-content {
     display: inline-block;
     width: 212px;
     top: 1.6rem;;
   }
 
-  .dropdown-content a {
+   .navigation .dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: inline-grid;
   }
 
-  .dropdown-content a:hover {
+   .navigation .dropdown-content a:hover {
     background-color: #f1f1f1;
   }
 
   /* Style for sub-dropdowns */
-  .sub-dropdown-content {
+   .navigation .sub-dropdown-content {
     display: none;
     background-color: #f9f9f9;
     min-width: 160px;
@@ -126,7 +126,7 @@ layout: connect-tree
     top: 0;
   }
 
-  .sub-dropdown-content a {
+   .navigation .sub-dropdown-content a {
    border-bottom: solid 1px {{page.colors.categories-color}};
   }
 </style>
@@ -153,7 +153,7 @@ layout: connect-tree
             <a href="/" class="logo center grow col-12-middle exit"> 
               <img src="{{site.data.general.basics.logo_image}}" alt="{{site.data.general.basics.logo-alt}}" />
             </a>
-            <div class="col-12 padded-sides text-med navigation-links">
+            <div class="col-12 padded-sides  navigation text-med navigation-links">
               <p>{{site.data.navigation.textarea_html}}</p>
               <div class="dropdown grid-middle-center">
                 <a href="#" class="destinations"   data-target="CountryDropdown">{{site.data.navigation.dropdown-name}}</a>
