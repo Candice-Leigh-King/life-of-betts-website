@@ -1,8 +1,7 @@
 textarea_html: >-
   <p><a href="/shop-categories/shop">shop</a></p>
-  <p><a href="/blog-categories/blogs.html">blogs</a></p><p><a
-  href="/#services">what we do</a></p><p><a href="/#reviews">review</a></p><p><a
-  href="/#gallery">gallery</a></p><p><a href="/#contact">contact</a></p>
+  <p><a href="/#services">what we do</a></p><p><a href="/#reviews">review</a></p>
+  <p><a href="/#gallery">gallery</a></p><p><a href="/#contact">contact</a></p>
 colors:
   hamburger-color: '#ffffff'
   background-color: '#dcd3cc'
@@ -29,3 +28,31 @@ icons-border-radius:
   top-right-corner: 0px
   bottom-left-corner: 0px
   bottom-right-corner: 0%
+dropdown-name: blogs
+dropdown:
+  - name: Destinations
+    url: /blog-categories/south-africa
+    camel: countries
+    dropdown_enabled: true
+    categories:
+      - name: South Africa
+        url: /blog-categories/south-africa
+      - name: Thailand
+        url: /blog-categories/thailand
+      - name: Malaysia 
+        url: /blog-categories/malaysia
+      - name: Philippines 
+        url: /blog-categories/philippines
+      - name: Indonesia
+        url: /blog-categories/indonesia
+      - name: New Zealand 
+        url: /blog-categories/new-zealand
+  - name: Travel
+    url: /blog-categories/south-africa
+    camel: travel
+    dropdown_enabled: true
+    categories:
+      - name: Van Life
+        url: /blog-categories/van-life
+      - name: Travel Hacks
+        url: /blog-categories/travel-hacks

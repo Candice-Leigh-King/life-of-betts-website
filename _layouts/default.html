@@ -2,6 +2,134 @@
 layout: connect-tree 
 ---
 
+<style>
+    .blog-background-color
+      {background-color: {{page.colors.background-color}};}
+
+    .blog-hover-overlay:hover 
+     {background-color: {{page.colors.blog-hover-overlay-color}};}
+
+    .bump 
+     {
+     background-color: {{page.colors.blog-title-card-color}};
+     border-top: solid 4px {{page.colors.blog-title-card-border-color}};
+     border-left: solid 4px {{page.colors.blog-title-card-border-color}};
+     }
+    
+    .border-top
+    {
+    border-top: 1px solid {{page.colors.categories-color}};  
+    }
+
+    .border-bottom
+    {
+    border-bottom: 1px solid {{page.colors.categories-color}};  
+    }
+    
+    p
+    {
+    font-family: {{page.fonts.text-font}};
+    color: {{page.colors.text-color}};
+    }
+  
+        
+    h2 
+    {
+    font-size: 3rem;
+    font-family: {{page.fonts.heading-font}};
+    color: {{page.colors.heading-color}};
+    }
+  
+    h3 
+    {
+    font-size: 2rem;
+    font-family: {{page.fonts.subheading-font}};
+    color: {{page.colors.subheading-color}};
+    }
+    
+    h5
+    {
+    font-size: 2rem;
+    font-family: {{page.fonts.cta-font}};
+    }
+
+    .blog-hover-overlay:hover
+    {
+    color: {{page.colors.cta-color}};
+    }
+
+    .categories p
+    {
+    font-size: 1.3rem;
+    font-family: {{page.fonts.categories-font}};
+    color: {{page.colors.categories-color}};
+    }
+
+    .categories a:hover 
+    {color: {{page.colors.categories-hover-color}};}
+    
+    .menu {
+    display: flex;
+    justify-content: space-between;
+    border-top: solid 1.2px #dcd3cc;
+    border-bottom: solid 1.2px #dcd3cc;
+    padding: 10px;
+  }
+
+  .container {
+  display: flex;
+  justify-content: space-between; /* Distribute items evenly */
+  width: 100%; /* Full width */
+}
+
+/* Apply styles to anchor elements */
+.container a {
+  text-decoration: none; /* Remove underline */
+  color: #333; /* Text color */
+  padding: 10px 30px; /* Adjust padding as needed */
+}
+
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    z-index: 1;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: inline-block;
+    width: 212px;
+    top: 3.2rem;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: inline-grid;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+
+  /* Style for sub-dropdowns */
+  .sub-dropdown-content {
+    display: none;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 2;
+    top: 0;
+  }
+
+  .sub-dropdown-content a {
+   border-bottom: solid 1px {{page.colors.categories-color}};
+  }
+</style>
   <body>
     <header class="grid-center">
       <div class=" col-11 center mob-hide" style="z-index: 100;">
@@ -15,21 +143,40 @@ layout: connect-tree
         </p>
         <div class=" textarea-background-color radius-arch banner col-12 grid-middle" style="background-image: url('{{site.data.colors.navigation-colors.navigation-arch-background_image}}');">
          
-          <div class=" col-12 grid-center  ">
-            <a href="/" class="logo center grow col-12-middle exit"> 
-              <img src="{{site.data.general.basics.logo_image}}" alt="{{site.data.general.basics.logo-alt}}" />
-            </a>
-            <div class="col-12 padded-sides text-med exit navigation-links">
-              <p>{{site.data.navigation.textarea_html}}</p>
-            </div>
-            <div class=" col-6_xs-9 grid-center navigation-socials">
+          <div class=" col-12 grid-top  ">
+            <!-- <div class=" col-6_xs-9 grid-center navigation-socials">
               <a class="padded-s" href="{{site.data.general.social-links.instagram}}"><span class="iconify" data-icon="ph:instagram-logo-fill"></span></a>
               <a class="padded-s" href="{{site.data.general.social-links.tiktok}}"><span class="iconify" data-icon="simple-icons:tiktok"></span></a>
               <a class="padded-s" href="{{site.data.general.social-links.facebook}}"><span class="iconify" data-icon="brandico:facebook"></span></a>
               <a class="padded-s" href="{{site.data.general.social-links.youtube}}"><span class="iconify" data-icon="dashicons:youtube"></span></a> 
-
-          </div>
-            
+           </div> -->
+            <a href="/" class="logo center grow col-12-middle exit"> 
+              <img src="{{site.data.general.basics.logo_image}}" alt="{{site.data.general.basics.logo-alt}}" />
+            </a>
+            <div class="col-12 padded-sides text-med navigation-links">
+              <p>{{site.data.navigation.textarea_html}}</p>
+              <div class="dropdown grid-middle-center">
+                <a href="#" class="destinations"   data-target="CountryDropdown">{{site.data.navigation.dropdown-name}}</a>
+                <div class="dropdown-content" id="CountryDropdown">
+                  {% for dropdown in site.data.navigation.dropdown %}
+                  <a href="{{dropdown.url}}" class="" >{{dropdown.name}}
+                    {% if dropdown.dropdown_enabled %}
+                    <span> <a href="#" class="countries-dropdown" data-target="{{dropdown.camel}}Dropdown">︾</a></span>
+                    {% endif %}
+                  </a> 
+                  {% if dropdown.dropdown_enabled %}
+                  <div class="sub-dropdown-content" id="{{dropdown.camel}}Dropdown">
+                    {% for categories in dropdown.categories %}
+                        <a href="{{categories.url}}">{{categories.name}}</a>
+                    {% endfor %}
+                  </div>
+                  {% endif %}
+                  {% endfor %}
+                  
+                  <!-- Add similar links for other countries -->
+                </div>
+              </div>
+            </div>            
            </div>
         </div>
       </nav>
@@ -68,4 +215,26 @@ layout: connect-tree
 
       <script src="/main.js" type="text/javascript"></script>
       <script src="/slick/slick.min.js"></script>
+      
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          const countriesDropdowns = document.querySelectorAll(".countries-dropdown");
+          countriesDropdowns.forEach(function(dropdown) {
+            dropdown.addEventListener("click", function(event) {
+              event.preventDefault();
+              const targetId = this.getAttribute("data-target");
+              const targetDropdown = document.getElementById(targetId);
+              // Hide other sub-dropdowns
+              document.querySelectorAll(".sub-dropdown-content").forEach(function(el) {
+                if (el.id !== targetId) {
+                  el.style.display = "none";
+                }
+              });
+              if (targetDropdown) {
+                targetDropdown.style.display = (targetDropdown.style.display === "block") ? "none" : "inline-grid";
+              }
+            });
+          });
+        });
+      </script>
   </div></body>
