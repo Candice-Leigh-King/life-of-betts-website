@@ -172,26 +172,4 @@ layout: default
 
 
 
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const countriesDropdowns = document.querySelectorAll(".countries-dropdown");
-    countriesDropdowns.forEach(function(dropdown) {
-      dropdown.addEventListener("click", function(event) {
-        event.preventDefault();
-        const targetId = this.getAttribute("data-target");
-        const targetDropdown = document.getElementById(targetId);
-        // Hide other sub-dropdowns
-        document.querySelectorAll(".sub-dropdown-content").forEach(function(el) {
-          if (el.id !== targetId) {
-            el.style.display = "none";
-          }
-        });
-        if (targetDropdown) {
-          targetDropdown.style.display = (targetDropdown.style.display === "block") ? "none" : "block";
-        }
-      });
-    });
-  });
-</script>
-
 {{content}}
