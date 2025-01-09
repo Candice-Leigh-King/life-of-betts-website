@@ -144,8 +144,8 @@ fonts:
 
 <section id="content-blocks-{{forloop.index0}}">
     <section class="shop-background-color padded-sides grid-left all-products">
-        {% assign learning = site.products | where: 'learning', true %}
-        {% for shop in learning %}
+        {% assign learning_products = site.products | where: 'learning_products', true %}
+        {% for shop in learning_products %}
         <div class="padded-1 col-4_sm-6_xs-12">
           <a class="padded" href="{{shop.url}}">
             <div class="hover-container" style="background-image:url('{{shop.shop-hero.product-image}}')">
