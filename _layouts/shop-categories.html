@@ -1,0 +1,117 @@
+---
+layout: default
+---
+
+<style>
+
+  #content-blocks-{{forloop.index0}} h2 
+    {
+    color: {{page.colors.heading-color}};
+    font-family: {{page.fonts.heading-font}};
+    }
+
+  #content-blocks-{{forloop.index0}} .shop-background-color 
+    {background-color: {{page.colors.shop-background-color}};}
+
+  #content-blocks-{{forloop.index0}}  .blog-hover-overlay:hover 
+    {
+    background-color: {{page.colors.product-hover-overlay-color}};
+    color: {{page.colors.cta-color}};
+    }
+
+  #content-blocks-{{forloop.index0}} .shop-bump
+    {
+    border-top: 4px solid {{page.colors.border-color}};
+    border-left: 4px solid {{page.colors.border-color}};
+    background-color: {{page.colors.product-description-background-color}};
+    }
+  
+  #content-blocks-{{forloop.index0}} .all-products h3
+    {
+    font-family: {{page.fonts.product-title-font}};
+    color: {{page.colors.product-title-color}};
+    }
+
+  #content-blocks-{{forloop.index0}} .all-products h5
+    {
+    font-family: {{page.fonts.cta-font}};
+    }
+
+
+  #content-blocks-{{forloop.index0}} .all-products p
+  {
+  font-family: {{page.fonts.product-description-font}};
+  color: {{page.colors.product-description-color}};
+  }
+
+  #content-blocks-{{forloop.index0}} .stars p
+  {
+  color: {{page.colors.rating-color}};
+  }
+
+  #content-blocks-{{forloop.index0}} .product-price
+    {
+    background-color: {{page.colors.price-background-color}};
+    color: {{page.colors.product-price-color}}
+    }
+
+  #content-blocks-{{forloop.index0}} .compare-at-price
+   {
+   background-color: {{page.colors.discounted-price-background-color}};
+   color: {{page.colors.discounted-price-color}};
+   }
+
+  #content-blocks-{{forloop.index0}} .categories
+   {
+   border-top: 1px solid {{page.colors.category-bar-color}};
+   border-bottom: 1px solid {{page.colors.category-bar-color}};
+   color: {{page.colors.category-text-color}};
+   font-family: {{page.fonts.category-font}};
+   padding-top: 1%;
+   padding-bottom: 1%;
+   }
+
+   #content-blocks-{{forloop.index0}} .categories p {font-size: 1.5rem;}
+
+  #content-blocks-{{forloop.index0}} a:hover
+   {color: {{page.colors.category-text-hover-color}};}
+
+  #content-blocks-{{forloop.index0}} .dot
+  {
+  color: {{page.colors.category-dot-color}}
+  }
+
+</style>
+
+<section id="content-blocks-{{forloop.index0}}"> 
+  <section class="shop-background-color center grid padded-top">
+    <div class="col-12 padded">
+      <h2> {{page.heading}}</h2>
+    </div>
+  </section>
+
+  <section class="grid-center center centered padded-2 categories lighter-bg shop">
+    <div class="col-3">
+     <p class="">
+        <a class="" href="{{page.category-1.link}}"> {{page.category-1.heading}} </a> 
+     </p>
+    </div>
+    <div class="col-1 dot ">
+     <p class=" ">{{page.category-symbol}}</p>
+    </div>
+    <div class="col-3-center"> 
+     <p class=" ">  
+        <a class="" href="{{page.category-2.link}}"> {{page.category-2.heading}} </a> 
+     </p>
+    </div>
+    <div class="col-1 dot ">
+      <p class=" ">{{page.category-symbol}}</p>
+     </div>
+     <div class="col-3-center"> 
+      <p class=" ">  
+         <a class="" href="{{page.category-3.link}}"> {{page.category-3.heading}} </a> 
+      </p>
+     </div>
+</section> 
+
+{{content}}
