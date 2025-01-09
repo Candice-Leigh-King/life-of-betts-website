@@ -13,10 +13,10 @@ category-1:
   link: /shop-categories/shop
 category-2: 
   heading: Travel
-  link: /shop-categories/favorites
+    link: /shop-categories/shop-travel
 category-3: 
   heading: Learn
-  link: /shop-categories/ebooks
+  link: /shop-categories/shop-learning
 category-symbol: •
 colors:
  heading-color: '#353535'
@@ -144,8 +144,8 @@ fonts:
 
 <section id="content-blocks-{{forloop.index0}}">
     <section class="shop-background-color padded-sides grid-left all-products">
-        {% assign all_products = site.products | where: 'all_products', true %}
-        {% for shop in all_products %}
+        {% assign travel = site.products | where: 'travel', true %}
+        {% for shop in travel %}
         <div class="padded-1 col-4_sm-6_xs-12">
           <a class="padded" href="{{shop.url}}">
             <div class="hover-container" style="background-image:url('{{shop.shop-hero.product-image}}')">
