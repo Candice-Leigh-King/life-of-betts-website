@@ -47,39 +47,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const data = await response.json();
 
-            console.log(data);
-            
-
             if (data.errors) {
+                // These are GraphQL server-level errors (e.g., syntax error in query, network issue)
                 console.error('GraphQL Errors:', data.errors);
-                loginErrorElement.textContent = 'An unexpected error occurred.' + data[0].message;
+                const errorMessage = data.errors.map(err => err.message).join(', ');
+                // Assuming 'loginErrorElement' is an element to display errors for the forgot password form
+                loginErrorElement.textContent = 'An unexpected error occurred: ' + errorMessage;
                 loginErrorElement.style.display = 'block';
-                return;
+                return { success: false, errors: data.errors }; // Return for function caller
             }
 
             // Check for specific customerUserErrors from Shopify's business logic
             if (data.data && data.data.customerRecover && data.data.customerRecover.customerUserErrors.length > 0) {
                 console.error("Shopify Customer User Errors:", data.data.customerRecover.customerUserErrors);
-                return { success: false, errors: data.data.customerRecover.customerUserErrors };
-            }
-
-            if (data.data?.customerAccessTokenCreate?.customerAccessToken) {
-                const accessToken = data.data.customerAccessTokenCreate.customerAccessToken.accessToken;
-                localStorage.setItem('shopifyCustomerAccessToken', accessToken);
-                setTimeout(() => {
-                    window.location.href = 'home.html';
-                }, 2000);
-            }
-            else if (data.data?.customerAccessTokenCreate?.customerUserErrors?.length > 0) {
-                const errorMessage = data.data.customerAccessTokenCreate.customerUserErrors
+                const shopifyErrorMessage = data.data.customerRecover.customerUserErrors
                     .map(error => error.message)
                     .join(', ');
-                loginErrorElement.textContent = errorMessage;
+                loginErrorElement.textContent = shopifyErrorMessage;
                 loginErrorElement.style.display = 'block';
-            } else {
-                loginErrorElement.textContent = 'Login failed. Please check your credentials.';
-                loginErrorElement.style.display = 'block';
+                return { success: false, errors: data.data.customerRecover.customerUserErrors }; // Return for function caller
             }
+
+            // If we reach here, no errors were returned, meaning the request was successful
+            // Shopify will often send the email even if the account doesn't exist, to prevent enumeration.
+            // So, the success message should be generic.
+            loginErrorElement.textContent = "If an account exists for that email, a password reset link has been sent.";
+            loginErrorElement.style.display = 'block';
+            return { success: true, message: "Password reset email sent." };
+
         } catch (error) {
             console.error('Error during login:', error);
             loginErrorElement.textContent = 'Network error during login.';

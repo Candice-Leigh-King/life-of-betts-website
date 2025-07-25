@@ -64,37 +64,45 @@ document.addEventListener('DOMContentLoaded', () => {
             const data = await response.json();
 
             console.log(data);
-            
 
             if (data.errors) {
                 console.error('GraphQL Errors:', data.errors);
-                loginErrorElement.textContent = 'An unexpected error occurred.';
+                const errorMessage = data.errors.map(err => err.message).join(', ');
+                // Assuming 'loginErrorElement' is for the reset password form
+                loginErrorElement.textContent = 'An unexpected error occurred: ' + errorMessage;
                 loginErrorElement.style.display = 'block';
-                return;
+                return { success: false, errors: data.errors };
             }
 
-            // Check for customerUserErrors from the Shopify API
+            // Check for specific customerUserErrors from Shopify's business logic
             if (data.data && data.data.customerResetByUrl && data.data.customerResetByUrl.customerUserErrors.length > 0) {
                 console.error("Shopify Customer User Errors:", data.data.customerResetByUrl.customerUserErrors);
-            }
-
-            if (data.data?.customerAccessTokenCreate?.customerAccessToken) {
-                const accessToken = data.data.customerAccessTokenCreate.customerAccessToken.accessToken;
-                localStorage.setItem('shopifyCustomerAccessToken', accessToken);
-                setTimeout(() => {
-                    window.location.href = 'login.html';
-                }, 2000);
-            }
-            else if (data.data?.customerAccessTokenCreate?.customerUserErrors?.length > 0) {
-                const errorMessage = data.data.customerAccessTokenCreate.customerUserErrors
+                const shopifyErrorMessage = data.data.customerResetByUrl.customerUserErrors
                     .map(error => error.message)
                     .join(', ');
-                loginErrorElement.textContent = errorMessage;
+                loginErrorElement.textContent = shopifyErrorMessage;
                 loginErrorElement.style.display = 'block';
-            } else {
-                loginErrorElement.textContent = 'Password Reset failed. Please try again.';
-                loginErrorElement.style.display = 'block';
+                return { success: false, errors: data.data.customerResetByUrl.customerUserErrors };
             }
+
+            // Check for successful password reset (customer ID returned)
+            if (data.data && data.data.customerResetByUrl && data.data.customerResetByUrl.customer && data.data.customerResetByUrl.customer.id) {
+                console.log("Password successfully reset for customer ID:", data.data.customerResetByUrl.customer.id);
+                loginErrorElement.textContent = "Your password has been successfully reset. You can now log in.";
+                loginErrorElement.style.display = 'block';
+                // Optionally redirect to login page after a short delay
+                setTimeout(() => {
+                    window.location.href = 'login.html'; // Or your main login page
+                }, 2000);
+                return { success: true, customerId: data.data.customerResetByUrl.customer.id, message: "Password reset successful." };
+            } else {
+                // Fallback for unexpected successful response without customer data
+                console.error("Unexpected successful response for password reset.");
+                loginErrorElement.textContent = "Password reset failed due to an unexpected issue. Please try again.";
+                loginErrorElement.style.display = 'block';
+                return { success: false, errors: [{ message: "An unexpected error occurred." }] };
+            }
+
         } catch (error) {
             console.error('Error during login:', error);
             loginErrorElement.textContent = 'Network error during login.';
