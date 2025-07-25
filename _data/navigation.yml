@@ -2,7 +2,7 @@ textarea_html: >-
   <p><a href="/shop-categories/shop">shop</a></p> <p><a href="/#services">what
   we do</a></p><p><a href="/#reviews">review</a></p> <p><a
   href="/#gallery">gallery</a></p><p><a href="/#contact">contact</a></p>
-  <p><a href="/customerPortal/">Customer Portal</a></p>
+  <p><a href="/customerPortal/">Login</a></p>
 colors:
   hamburger-color: '#ffffff'
   background-color: '#dcd3cc'
