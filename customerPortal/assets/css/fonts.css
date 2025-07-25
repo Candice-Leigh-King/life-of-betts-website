@@ -1,0 +1,93 @@
+
+* {
+    font-family: 'Brushwell';
+}
+
+h1,h2,h3 {
+    font-family: 'Brushwell';
+}
+
+/* FONTS  */
+@font-face 
+  {
+  font-family: Cyrene;
+  src: url(../../../fonts/cyrene.otf);
+  }
+
+@font-face 
+  {
+  font-family: La Obrige;
+  src: url(../../../fonts/la-obrige.otf);
+  }
+
+@font-face 
+  {
+  font-family: Lineal Simples;
+  src: url(../../../fonts/lineal-simples.ttf);
+  }
+
+@font-face 
+  {
+  font-family: Maglony;
+  src: url(../../../fonts/maglony.otf);
+  }
+
+@font-face 
+  {
+  font-family: Mak;
+  src: url(../../../fonts/mak.otf);
+  }
+
+@font-face 
+  {
+  font-family: lovelace;
+  src: url(../../../fonts/lovelace.ttf);
+  }
+
+@font-face 
+  {
+  font-family: Misto;
+  src: url(../../../fonts/misto.ttf);
+  }
+
+
+@font-face 
+  {
+  font-family: Dream Avenue;
+  src: url(../../../fonts/dream-avenue.otf);
+  }
+
+@font-face 
+  {
+  font-family: Brushwell;
+  src: url(../../../fonts/brushwell.otf);
+  }
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+h2, h3 {font-family: 'Shrikhand', cursive;}    
+h4, h5, h6 {font-family: 'Brushwell';}
+
+h1 {
+    font-family: 'Shrikhand', cursive;
+}
+
+button{
+    font-family: 'Brushwell';
+}
+
+input,
+textarea,
+select,
+option,
+label,
+a
+  {
+    font-family: 'Poppins', sans-serif;
+  }
+
+/* end of fonts */
