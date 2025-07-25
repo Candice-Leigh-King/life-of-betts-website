@@ -29,11 +29,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         `;
+        
 
         const variables = {
-            input: {
-                email: email
-            },
+            email: email
         };
 
         try {
@@ -48,11 +47,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const data = await response.json();
 
+            console.log(data);
+            
+
             if (data.errors) {
                 console.error('GraphQL Errors:', data.errors);
-                loginErrorElement.textContent = 'An unexpected error occurred.';
+                loginErrorElement.textContent = 'An unexpected error occurred.' + data[0].message;
                 loginErrorElement.style.display = 'block';
                 return;
+            }
+
+            // Check for specific customerUserErrors from Shopify's business logic
+            if (data.data && data.data.customerRecover && data.data.customerRecover.customerUserErrors.length > 0) {
+                console.error("Shopify Customer User Errors:", data.data.customerRecover.customerUserErrors);
+                return { success: false, errors: data.data.customerRecover.customerUserErrors };
             }
 
             if (data.data?.customerAccessTokenCreate?.customerAccessToken) {

@@ -11,11 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     loginForm.addEventListener('submit', async (event) => {
         event.preventDefault();
-
         
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
-        const resetUrl = urlParams.get('reset_url');
+        const resetUrlString = urlParams.get('reset_url');        
         
         const password1 = document.getElementById('password1').value;
         const password2 = document.getElementById('password2').value;
@@ -26,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        if (!password1 !== !password2) {
+        if (password1 !== password2) {
             loginErrorElement.textContent = 'Please enter the same password in both fields.';
             loginErrorElement.style.display = 'block';
             return;
@@ -48,10 +47,8 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
 
         const variables = {
-            input: {
-                resetUrl: resetUrl,
-                password: password1
-            },
+            resetUrl: resetUrlString,
+            password: password1
         };
 
         try {
@@ -66,11 +63,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const data = await response.json();
 
+            console.log(data);
+            
+
             if (data.errors) {
                 console.error('GraphQL Errors:', data.errors);
                 loginErrorElement.textContent = 'An unexpected error occurred.';
                 loginErrorElement.style.display = 'block';
                 return;
+            }
+
+            // Check for customerUserErrors from the Shopify API
+            if (data.data && data.data.customerResetByUrl && data.data.customerResetByUrl.customerUserErrors.length > 0) {
+                console.error("Shopify Customer User Errors:", data.data.customerResetByUrl.customerUserErrors);
             }
 
             if (data.data?.customerAccessTokenCreate?.customerAccessToken) {
@@ -87,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 loginErrorElement.textContent = errorMessage;
                 loginErrorElement.style.display = 'block';
             } else {
-                loginErrorElement.textContent = 'Login failed. Please check your credentials.';
+                loginErrorElement.textContent = 'Password Reset failed. Please try again.';
                 loginErrorElement.style.display = 'block';
             }
         } catch (error) {
