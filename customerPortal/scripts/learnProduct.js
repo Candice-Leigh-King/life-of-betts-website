@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const productImgDiv = document.getElementById('productImg');
     const extraResourceDiv = document.getElementById('extraResourceDiv');
 
+    const uploadsUrl = 'https://rose-waves.cloudvent.net/uploads/'
+
     let product = {};
     let extraResourceLinks = [];
 
@@ -91,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
             product.metafields.map( (metaF )=>{                
 
                 if(metaF && metaF.key === "pdflink") {
-                    iframe.src = metaF.value;
+                    iframe.src = uploadsUrl+metaF.value;
                 }
                 else if(metaF && metaF.key === "videolink") {
                     videoDiv.src = metaF.value;

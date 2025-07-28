@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const customerAccessToken = localStorage.getItem('shopifyCustomerAccessToken');
     const productHandle = JSON.parse(localStorage.getItem('productHandle'));
 
+    const uploadsUrl = 'https://rose-waves.cloudvent.net/uploads/'
+
     let product = {};
 
     // check if logged in
@@ -85,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
             product.metafields.map( (metaF )=>{                
 
                 if(metaF && metaF.key === "pdflink") {
-                    iframe.src = metaF.value;
+                    iframe.src = uploadsUrl+metaF.value;
                 }
                 else {
                     // console.log('not a required metaField');
