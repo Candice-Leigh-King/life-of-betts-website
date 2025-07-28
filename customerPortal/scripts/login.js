@@ -5,41 +5,92 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const loginForm = document.getElementById('loginForm');
     const loginErrorElement = document.getElementById('loginError');
-    
 
-    loginForm.addEventListener('submit', async (event) => {
-        event.preventDefault();
+    const urlParams = new URLSearchParams(window.location.search);
+    let activationUrl = urlParams.get('activation_url');
+
+    const CUSTOMER_ACCESS_TOKEN_CREATE =
+        `mutation customerAccessTokenCreate($input: CustomerAccessTokenCreateInput!) {
+            customerAccessTokenCreate(input: $input) {
+                customerAccessToken {
+                    accessToken
+                    expiresAt
+                }
+                customerUserErrors {
+                    field
+                    message
+                }
+            }
+        }
+    `;
+
+    // GraphQL Mutation for Customer Activation by URL
+    const CUSTOMER_ACTIVATE_BY_URL_MUTATION = `
+        mutation customerActivateByUrl($activationUrl: URL!, $password: String!) {
+            customerActivateByUrl(activationUrl: $activationUrl, password: $password) {
+                customer {
+                    id
+                    firstName
+                    lastName
+                    email
+                }
+                customerAccessToken {
+                    accessToken
+                    expiresAt
+                }
+                customerUserErrors {
+                    code
+                    field
+                    message
+                }
+            }
+        }
+    `;
+
+    async function login() {
 
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
+
+        let variables, mutation;
 
         if (!email || !password) {
             loginErrorElement.textContent = 'Please enter both email and password.';
             loginErrorElement.style.display = 'block';
             return;
+        }        
+
+        if(activationUrl) {
+
+            console.log('Activation');
+            console.log(activationUrl);            
+            console.log(typeof(password));            
+            console.log(password);            
+            
+
+            // activating account (first time login)
+            variables = {
+                activationUrl: activationUrl,
+                password: password
+            };
+
+            mutation = CUSTOMER_ACTIVATE_BY_URL_MUTATION;
+    
         }
+        else{
 
-        const mutation =
-            `mutation customerAccessTokenCreate($input: CustomerAccessTokenCreateInput!) {
-                customerAccessTokenCreate(input: $input) {
-                    customerAccessToken {
-                        accessToken
-                        expiresAt
-                    }
-                    customerUserErrors {
-                        field
-                        message
-                    }
-                }
-            }
-        `;
+            // standard login
+            variables = {
+                input: {
+                    email: email,
+                    password: password,
+                },
+            };
 
-        const variables = {
-            input: {
-                email: email,
-                password: password,
-            },
-        };
+            mutation = CUSTOMER_ACCESS_TOKEN_CREATE;
+
+
+        }
 
         try {
             const response = await fetch(graphqlEndpoint, {
@@ -53,6 +104,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const data = await response.json();
 
+            console.log(data);
+            
+
             if (data.errors) {
                 console.error('GraphQL Errors:', data.errors);
                 loginErrorElement.textContent = 'An unexpected error occurred.';
@@ -60,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
 
-            if (data.data?.customerAccessTokenCreate?.customerAccessToken) {
+            if (data.data?.customerAccessTokenCreate?.customerAccessToken || data.data?.customerActivateByUrl?.customerAccessToken) {
                 const accessToken = data.data.customerAccessTokenCreate.customerAccessToken.accessToken;
                 localStorage.setItem('shopifyCustomerAccessToken', accessToken);
                 setTimeout(() => {
@@ -73,7 +127,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     .join(', ');
                 loginErrorElement.textContent = errorMessage;
                 loginErrorElement.style.display = 'block';
-            } else {
+            }
+            else if (data.data?.customerActivateByUrl?.customerUserErrors?.length > 0) {
+                    const errorMessage = data.data.customerActivateByUrl.customerUserErrors
+                    .map(error => error.message)
+                    .join(', ');
+                loginErrorElement.textContent = errorMessage;
+                loginErrorElement.style.display = 'block';
+
+                if(data.data.customerActivateByUrl.customerUserErrors[0].code === "ALREADY_ENABLED") {
+                    activationUrl = "";
+                    login();
+                }
+
+            }
+            else {
                 loginErrorElement.textContent = 'Login failed. Please check your credentials.';
                 loginErrorElement.style.display = 'block';
             }
@@ -82,8 +150,12 @@ document.addEventListener('DOMContentLoaded', () => {
             loginErrorElement.textContent = 'Network error during login.';
             loginErrorElement.style.display = 'block';
         }
+
+    }
+
+    loginForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        login();        
     });
-
-
 
 });
