@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const customerAccessToken = localStorage.getItem('shopifyCustomerAccessToken');
     const productHandle = JSON.parse(localStorage.getItem('productHandle'));
 
-    const uploadsUrl = 'https://rose-waves.cloudvent.net/customerPortal/pdfs/'
+    const uploadsUrl = 'https://rose-waves.cloudvent.net/uploads/'
 
     let product = {};
 
