@@ -60,13 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }        
 
-        if(activationUrl) {
-
-            console.log('Activation');
-            console.log(activationUrl);            
-            console.log(typeof(password));            
-            console.log(password);            
-            
+        if(activationUrl) {    
 
             // activating account (first time login)
             variables = {
@@ -89,7 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             mutation = CUSTOMER_ACCESS_TOKEN_CREATE;
 
-
         }
 
         try {
@@ -103,8 +96,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             const data = await response.json();
-
-            console.log(data);
             
 
             if (data.errors) {
