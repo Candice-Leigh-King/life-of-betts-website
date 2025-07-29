@@ -69,11 +69,12 @@ body {
     
 }
 
-h2, h3 {font-family: 'Shrikhand', cursive;}    
+/* h2, h3 {font-family: 'Shrikhand', cursive;}     */
+h2, h3 {font-family: 'Brushwell';}    
 h4, h5, h6 {font-family: 'Brushwell';}
 
 h1 {
-    font-family: 'Shrikhand', cursive;
+    font-family: 'Brushwell';
 }
 
 button{

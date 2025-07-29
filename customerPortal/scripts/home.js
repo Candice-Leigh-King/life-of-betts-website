@@ -382,8 +382,6 @@ document.addEventListener('DOMContentLoaded', () => {
         title.classList.add('productTitle');
         title.textContent = product.title;
 
-
-
         productCard.appendChild(img);
         productCard.appendChild(title);
 
@@ -393,7 +391,9 @@ document.addEventListener('DOMContentLoaded', () => {
             buyNowButton.classList.add('buyNowButton');
             buyNowButton.textContent = 'Buy Now';
             buyNowButton.addEventListener('click', () => {
-                let buyNowLinkURL = product.metafields.filter(metaData => metaData.key == "buynowlink")
+                let buyNowLinkURL = product.metafields.filter(metaData => {
+                    if(metaData && metaData.key == "buynowlink") return metaData;
+                })
                 window.open(buyNowLinkURL[0].value, '_blank', 'noopener,noreferrer');
             });
             productCard.appendChild(buyNowButton);
