@@ -35,10 +35,8 @@ collections:
    output: true
    icon: shopping_cart
 
-source_editor:
-  - path: ""
-    label: "Files"
-    icon: folder
+_enabled_editors:
+  - data
 
 _inputs:
   textarea_html:
