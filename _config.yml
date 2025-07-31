@@ -36,7 +36,7 @@ collections:
    icon: shopping_cart
 
 _enabled_editors:
-  - data
+ - data
 
 _inputs:
   textarea_html:
