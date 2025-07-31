@@ -59,8 +59,10 @@ collection_groups:
   - heading: P
     collections:
       -
-_enabled_editors:
-  - data
+source_editor:
+  - path: ""
+    label: "Site Files"
+    icon: folder
 _inputs:
   textarea_html:
     type: auto
