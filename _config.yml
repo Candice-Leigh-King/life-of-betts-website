@@ -36,13 +36,13 @@ collections:
    icon: shopping_cart
 
 source_editor:
- path: /uploads
+  path: /uploads
   label: Uploads
   icon: file_upload
- path: /images
+  path: /images
   label: Images
   icon: image
- path: /downloads
+  path: /downloads
   label: Downloads
   icon: folder
 
