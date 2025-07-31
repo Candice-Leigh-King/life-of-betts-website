@@ -36,7 +36,7 @@ collections:
    icon: shopping_cart
 
 source_editor:
-  - path: "files"
+  - path: ""
     label: "Files"
     icon: folder
 
