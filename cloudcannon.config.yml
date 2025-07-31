@@ -14,10 +14,10 @@ collections_config:
   data:
     path: _data
     icon: notes
-    output: false
+    output: true
     disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
+    disable_add_folder: true
+    disable_file_actions: true
   posts:
     path: _posts
     icon: notes
@@ -25,34 +25,34 @@ collections_config:
     create:
       path: >-
         [relative_base_path]/{date|year}-{date|month}-{date|day}-{title|slugify}.[ext]
-    disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
+    disable_add: true
+    disable_add_folder: true
+    disable_file_actions: true
   drafts:
     path: _drafts
     icon: notes
-    output: false
+    output: true
     create:
       path: ''
       publish_to: posts
-    disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
+    disable_add: true
+    disable_add_folder: true
+    disable_file_actions: true
   pages:
     path: ''
     icon: notes
     output: true
     filter: strict
-    disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
+    disable_add: true
+    disable_add_folder: true
+    disable_file_actions: true
   products:
     path: _products
     icon: shopping_cart
     output: true
-    disable_add: false
-    disable_add_folder: false
-    disable_file_actions: false
+    disable_add: true
+    disable_add_folder: true
+    disable_file_actions: true
 collection_groups:
   - heading:
     collections:
@@ -63,6 +63,19 @@ source_editor:
   - path: /
     label: "Site Files"
     icon: folder
+  - path: "uploads"
+    label: "Uploads"
+    icon: file_upload
+  - path: "images"
+    label: "Images"
+    icon: image
+  - path: "downloads"
+    label: "Downloads"
+    icon: folder
+  - path: "assets"
+    label: "Assets"
+    icon: source
+
 _inputs:
   textarea_html:
     type: auto
