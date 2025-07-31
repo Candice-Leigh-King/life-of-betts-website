@@ -835,7 +835,6 @@ _snippets:
         comment: Enter the post name or path.
         cascade: true
         text: Post
-base_url: '" "'
 editor:
   default_path:
 timezone: Etc/UTC
