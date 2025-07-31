@@ -35,8 +35,10 @@ collections:
    output: true
    icon: shopping_cart
 
-_enabled_editors:
- - data
+source_editor:
+  - path: ""
+    label: "Site Files"
+    icon: folder
 
 _inputs:
   textarea_html:
