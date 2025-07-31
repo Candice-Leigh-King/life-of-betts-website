@@ -1,5 +1,5 @@
 _schema: _schema
-source: /images/
+source: /
 paths:
   uploads: uploads
   uploads_use_relative_path: false
