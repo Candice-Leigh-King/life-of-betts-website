@@ -840,4 +840,7 @@ _snippets:
         text: Post
 editor:
   default_path:
-timezone: Etc/UTC
+source_editor:
+  tab_size: 2
+  theme: monokai
+  show_gutter: true
