@@ -34,10 +34,11 @@ collections:
    enabled: true
    output: true
    icon: shopping_cart
- files:
-   enabled: true
-   output: true
-   icon: folder
+
+source_editor:
+  - path: "files"
+    label: "Files"
+    icon: folder
 
 _inputs:
   textarea_html:
