@@ -1,5 +1,5 @@
 _schema: _schema
-source: /
+source: /images/
 paths:
   uploads: uploads
   uploads_use_relative_path: false
@@ -60,7 +60,7 @@ collection_groups:
     collections:
       -
 source_editor:
-  - path: ""
+  - path: "/"
     label: "Site Files"
     icon: folder
 _inputs:
