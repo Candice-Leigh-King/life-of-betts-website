@@ -60,7 +60,7 @@ collection_groups:
     collections:
       -
 source_editor:
-  - path: "/"
+  - path: /
     label: "Site Files"
     icon: folder
 _inputs:
