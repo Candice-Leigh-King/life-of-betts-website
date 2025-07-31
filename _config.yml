@@ -39,6 +39,19 @@ source_editor:
   - path: ""
     label: "Site Files"
     icon: folder
+  - path: "uploads"
+    label: "Uploads"
+    icon: file_upload
+  - path: "images"
+    label: "Images"
+    icon: image
+  - path: "downloads"
+    label: "Downloads"
+    icon: folder
+  - path: "assets"
+    label: "Assets"
+    icon: source
+
 
 _inputs:
   textarea_html:
