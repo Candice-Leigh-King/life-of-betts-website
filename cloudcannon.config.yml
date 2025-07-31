@@ -1,4 +1,5 @@
 _schema: _schema
+source: /
 paths:
   uploads: uploads
   uploads_use_relative_path: false
@@ -55,6 +56,8 @@ collections_config:
 collection_groups:
   - heading:
     collections:
+_enabled_editors:
+  - data
 _inputs:
   textarea_html:
     type: auto
