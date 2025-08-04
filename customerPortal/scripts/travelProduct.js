@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const customerAccessToken = localStorage.getItem('shopifyCustomerAccessToken');
     const productHandle = JSON.parse(localStorage.getItem('productHandle'));
 
-    const uploadsUrl = 'https://rose-waves.cloudvent.net/customerPortal/assets/pdfs/';
+    const uploadsUrl = 'http://localhost:8000/customerPortal/assets/pdfs/';
 
     let product = {};
 
@@ -106,17 +106,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set essential attributes for the iframe
     iframe.title = "Dynamic Content Frame"; // Always add a descriptive title for accessibility
     iframe.width = "100%"; // Make iframe responsive to its container width
-    iframe.height = "100vh"; // Set a default height
+    iframe.height = "90vh"; // Set a default height
     iframe.frameBorder = "0"; // Remove default border
-    iframe.allow = "clipboard-write"; // Allow clipboard access if needed (be cautious with this)
+    // iframe.allow = "clipboard-write"; // Allow clipboard access if needed (be cautious with this)
+    iframe.allowfullscreen = true;
+    iframe.id="travelIframe"
 
     // Add some basic styling for the iframe using Tailwind-like classes (or actual Tailwind if you generate them)
     iframe.style.cssText = `
         border-radius: 0.5rem; /* rounded-lg */
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
         display: block; /* Remove extra space below iframe */
-        max-width: 100%; /* Ensure it fits container */
-        height: 100vh;
+        max-width: 1400px; /* Ensure it fits container */
+        
     `;
 
     // Optional: Add a loading indicator
@@ -146,6 +148,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // back btn
     document.getElementById('backBtn').addEventListener('click', async (event) => {
         window.history.back();
+    });
+
+    // Fullscreen btn
+    document.getElementById('fullScreenBtn').addEventListener('click', async (event) => {
+        // going fullscreen
+        if (iframe.requestFullscreen) {
+            iframe.requestFullscreen();
+        } else if (iframe.mozRequestFullScreen) { /* Firefox */
+            iframe.mozRequestFullScreen();
+        } else if (iframe.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+            iframe.webkitRequestFullscreen();
+        } else if (iframe.msRequestFullscreen) { /* IE/Edge */
+            iframe.msRequestFullscreen();
+        }
     });
 
     getProduct()

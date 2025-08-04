@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const productImgDiv = document.getElementById('productImg');
     const extraResourceDiv = document.getElementById('extraResourceDiv');
 
-    const uploadsUrl = 'https://rose-waves.cloudvent.net/customerPortal/assets/pdfs/';
+    const uploadsUrl = 'http://localhost:8000/customerPortal/assets/pdfs/';
 
     let product = {};
     let extraResourceLinks = [];

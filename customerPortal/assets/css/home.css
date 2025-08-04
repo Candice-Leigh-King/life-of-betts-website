@@ -395,6 +395,45 @@ body {
     border: 1px solid #4c4c4c;
 }
 
+.fullScreenWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
+    width: 100%;
+}
+
+#fullScreenBtn {
+    background-color: #4c4c4c;
+    border: 1px solid #4c4c4c;
+    color: #efeae7;
+    padding: 8px 12px;
+    cursor: pointer;
+    opacity: 1; /* Ensure it's visible even when the card is greyed out */
+
+    transition: background-color 0.3s ease-in-out; /* Added transition */
+
+}
+
+#fullScreenBtn:hover {
+    background-color: #f9f8f6;
+    color: #4c4c4c;
+    border: 1px solid #4c4c4c;
+}
+
+.pdfContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#travelIframe {
+    width: 100%;
+    height: 90vh;
+}
+
 @media (min-width: 1600px) {
 
     #productList {
@@ -419,4 +458,14 @@ body {
   .productCard:only-child {
     grid-column: auto; /* Let auto-placement handle it */
   }
+
+  #travelIframe {
+    width: 80%;
+    height: 67vh;
+  }
+
+  .fullScreenWrapper { 
+    display: none;
+  }
+
 }

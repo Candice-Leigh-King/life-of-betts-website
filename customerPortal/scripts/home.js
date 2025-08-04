@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (collectionsData.data?.collections?.edges) {
 
                     collectionsData.data.collections.edges.map( collection => { 
-                        if(collection.node.handle !== "frontpage") formattedCollections[collection.node.handle] = collection.node.products.edges 
+                        if(collection.node.handle !== "frontpage" || collection.node.handle !== "learn" ) formattedCollections[collection.node.handle] = collection.node.products.edges 
                     } )
                     
 
@@ -249,8 +249,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // check if user has only learn or only travel products
         if(formattedCollections['learn'].length === 0 || formattedCollections['travel'].length === 0 ) {
-            let sectionType = document.querySelector('body div.productsContainer .purchasedProductsWrapper .productSection .sectionType');
-            sectionType.style.width = '100%';
+            let purchasedSectionType = document.querySelector('body div.productsContainer .purchasedProductsWrapper .productSection .sectionType');
+            purchasedSectionType.style.width = '100%';
+            let nonpurchasedSectionType = document.querySelector('body div.productsContainer .nonpurchasedProductsWrapper .productSection .sectionType');
+            nonpurchasedSectionType.style.width = '100%';
         }
 
     }
