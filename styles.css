@@ -48,11 +48,11 @@ font-family: 'Cardo', serif;*/
   }
 
   /* FONTS  */
-@font-face 
+/* @font-face 
   {
   font-family: Cyrene;
   src: url(/fonts/cyrene.otf);
-  }
+  } */
 
 @font-face 
   {
@@ -78,11 +78,11 @@ font-family: 'Cardo', serif;*/
   src: url(/fonts/mak.otf);
   }
 
-@font-face 
+/* @font-face 
   {
   font-family: lovelace;
   src: url(/fonts/lovelace.ttf);
-  }
+  } */
 
 @font-face 
   {
@@ -97,11 +97,11 @@ font-family: 'Cardo', serif;*/
   src: url(/fonts/dream-avenue.otf);
   }
 
-@font-face 
+/* @font-face 
   {
   font-family: Brushwell;
   src: url(/fonts/brushwell.otf);
-  }
+  } */
   
   body {
   font-family: 'Poppins', sans-serif;
