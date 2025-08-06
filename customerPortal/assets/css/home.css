@@ -427,6 +427,7 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    min-height: 100px;
 }
 
 #travelIframe {

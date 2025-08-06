@@ -8,7 +8,7 @@ h1,h2,h3 {
 }
 
 /* FONTS  */
-@font-face 
+/* @font-face 
   {
   font-family: Cyrene;
   src: url(../../../fonts/cyrene.otf);
@@ -55,17 +55,17 @@ h1,h2,h3 {
   {
   font-family: Dream Avenue;
   src: url(../../../fonts/dream-avenue.otf);
-  }
+  } */
 
 @font-face 
   {
-  font-family: Brushwell;
-  src: url(../../../fonts/brushwell.otf);
+    font-family: Brushwell;
+    src: url(../../../fonts/brushwell.otf);
   }
 
 body {
 
-    font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
     
 }
 
@@ -74,11 +74,11 @@ h2, h3 {font-family: 'Brushwell';}
 h4, h5, h6 {font-family: 'Brushwell';}
 
 h1 {
-    font-family: 'Brushwell';
+  font-family: 'Brushwell';
 }
 
 button{
-    font-family: 'Brushwell';
+  font-family: 'Brushwell';
 }
 
 input,

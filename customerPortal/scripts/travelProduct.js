@@ -8,9 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const customerAccessToken = localStorage.getItem('shopifyCustomerAccessToken');
     const productHandle = JSON.parse(localStorage.getItem('productHandle'));
 
-    const uploadsUrl = 'https://rose-waves.cloudvent.net//customerPortal/assets/pdfs/';
+    const uploadsUrl = 'https://rose-waves.cloudvent.net/customerPortal/assets/pdfs/';
 
-    let product = {};
+    let productURL = "";
 
     // check if logged in
     if (!customerAccessToken) {
@@ -23,6 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Create the iframe element
     const iframe = document.createElement('iframe');
+
+    // Create a new anchor element
+    const link = document.createElement('a');
 
     async function shopifyGraphQLRequest(query, variables = {}) {
         try {
@@ -82,12 +85,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         product = productData.data.productByHandle;        
 
-        if(product.metafields) {            
+        if(product.metafields) {             
 
             product.metafields.map( (metaF )=>{                
 
                 if(metaF && metaF.key === "pdflink") {
                     iframe.src = uploadsUrl+metaF.value;
+                    link.href = uploadsUrl+metaF.value;
+                    link.innerText = product.title
                 }
                 else {
                     // console.log('not a required metaField');
@@ -98,10 +103,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         }
 
-    }
-
-
+    }  
     
+    // Set target="_blank" to open the PDF in a new tab/window.
+    // This is crucial for triggering the native PDF viewer on iOS.
+    link.target = '_blank';
 
     // Set essential attributes for the iframe
     iframe.title = "Dynamic Content Frame"; // Always add a descriptive title for accessibility
@@ -145,6 +151,27 @@ document.addEventListener('DOMContentLoaded', () => {
         pdfContainer.appendChild(errorMsg);
     };    
 
+    function isIOSSafari() {
+        const userAgent = navigator.userAgent;
+
+        // 1. Check for iOS device
+        const isIPad = /iPad/i.test(userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+        const isIPhone = /iPhone/i.test(userAgent);
+        const isIPod = /iPod/i.test(userAgent);
+        const isIOSDevice = isIPad || isIPhone || isIPod;
+
+        // 2. Check for Safari browser (excluding other browsers on iOS)
+        const isSafariBrowser = /Safari/i.test(userAgent) &&
+                                !/CriOS/i.test(userAgent) &&
+                                !/FxiOS/i.test(userAgent) &&
+                                !/OPiOS/i.test(userAgent) &&
+                                !/Edge/i.test(userAgent) &&
+                                !/EdgiOS/i.test(userAgent) &&
+                                !/Chrome/i.test(userAgent); // Exclude desktop Chrome as well
+
+        return isIOSDevice && isSafariBrowser;
+    }
+
     // back btn
     document.getElementById('backBtn').addEventListener('click', async (event) => {
         window.history.back();
@@ -165,8 +192,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     getProduct()
-    // Append the iframe to the container
-    pdfContainer.appendChild(iframe);
+    
+
+    if(isIOSSafari()) {
+        // Append the link to the container
+        pdfContainer.appendChild(link);
+        loadingIndicator.textContent = '';
+    }
+    else {
+        // Append the iframe to the container
+        pdfContainer.appendChild(iframe);
+    }
 
 
 });
