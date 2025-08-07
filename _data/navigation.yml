@@ -1,8 +1,8 @@
 textarea_html: >-
   <p><a href="/shop-categories/shop">shop</a></p> <p><a href="/#services">what
   we do</a></p><p><a href="/#reviews">review</a></p> <p><a
-  href="/#gallery">gallery</a></p><p><a href="/#contact">contact</a></p>
-  <p><a href="/customerPortal/">member login</a></p>
+  href="/#gallery">gallery</a></p><p><a href="/#contact">contact</a></p> <p><a
+  href="/customerPortal/">member login</a></p>
 colors:
   hamburger-color: '#ffffff'
   background-color: '#dcd3cc'
@@ -18,7 +18,6 @@ border-radius:
   bottom-left-corner: 0%
   bottom-right-corner: 0%
 fonts:
-  # link-font: Shrikhand, cursive;
 social-link-colors:
   icon-color: '#2f3031'
   background-color: '#ede6e0'
@@ -31,7 +30,7 @@ icons-border-radius:
   bottom-right-corner: 0%
 dropdown-name: blogs
 dropdown:
-  - name: Destinations
+  - name: destinations
     url: /blog-categories/blogs
     camel: countries
     dropdown_enabled: true
