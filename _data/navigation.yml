@@ -20,10 +20,10 @@ border-radius:
 fonts:
   - Cardo, serif
 social-link-colors:
-  icon-color: '#2f3031'
-  background-color: '#ede6e0'
+  icon-color: '#2c3424'
+  background-color: '#768064'
   border-color: '#2f3031'
-  icon-hover-color: '#dcd3cc'
+  icon-hover-color: '#768064'
 icons-border-radius:
   top-left-corner: 0%
   top-right-corner: 0px
