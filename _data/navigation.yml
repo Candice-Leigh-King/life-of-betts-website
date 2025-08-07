@@ -8,12 +8,12 @@ textarea_html: >-
   
 colors:
   hamburger-color: '#ffffff'
-  background-color: '#dcd3cc'
-  textarea-background-color: '#ede6e0'
-  border-color: rgba(0, 0, 0, 0)
-  link-color: '#2f3031'
+  background-color: '#2c3424'
+  textarea-background-color: '#768064'
+  border-color: '#768064'
+  link-color: '#daded8'
   hover-link-color: '#ffffff'
-  exit-color: '#2f3031'
+  exit-color: '#daded8'
   exit-hover-color: '#ffffff'
 border-radius:
   top-left-corner: 0%
@@ -21,12 +21,12 @@ border-radius:
   bottom-left-corner: 0%
   bottom-right-corner: 0%
 fonts:
-  # link-font: Shrikhand, cursive;
+  - Cardo, serif
 social-link-colors:
-  icon-color: '#2f3031'
-  background-color: '#ede6e0'
+  icon-color: '#2c3424'
+  background-color: '#768064'
   border-color: '#2f3031'
-  icon-hover-color: '#dcd3cc'
+  icon-hover-color: '#768064'
 icons-border-radius:
   top-left-corner: 0%
   top-right-corner: 0px
@@ -34,7 +34,7 @@ icons-border-radius:
   bottom-right-corner: 0%
 dropdown-name: blogs
 dropdown:
-  - name: Destinations
+  - name: destinations
     url: /blog-categories/blogs
     camel: countries
     dropdown_enabled: true
@@ -51,7 +51,7 @@ dropdown:
         url: /blog-categories/indonesia
       - name: New Zealand
         url: /blog-categories/new-zealand
-  - name: Travel
+  - name: travel
     url: /blog-categories/blogs
     camel: travel
     dropdown_enabled: true
