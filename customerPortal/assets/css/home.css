@@ -16,9 +16,29 @@
 /* ---------- end ---------------- */
 
 
+/* new colours and styles 07-08-2025 */
+
+    /* #2C3424 - moss
+    #4C583E - cypress
+    #959581 - cedar
+    #768064 - olive
+    #DADED8 - Aloe */
+
+/*  */
+
+:root {
+  --moss: #2C3424;
+  --cypress: #4C583E;
+  --cedar: #959581;
+  --olive: #768064;
+  --aloe: #DADED8;
+}
+
+
 
 body {
-    background-color: #dcd3cc;
+    /* background-color: #dcd3cc; */
+    background-color: var(--cypress);
     margin: 0px;
     
 }
@@ -46,8 +66,8 @@ body {
 }
 
 .productCard {
-    border: 1px solid #fff;
-    background-color: #f9f8f6;
+    border: 1px solid var(--olive);
+    background-color: var(--olive);
     padding: 15px;
     text-align: center;
     position: relative;
@@ -63,7 +83,7 @@ body {
 }
 
 .productCard.not-owned {
-    opacity: 0.6; 
+    /* opacity: 0.6;  */
     cursor: auto;
 }
 
@@ -75,13 +95,13 @@ body {
 .productTitle {
     font-weight: bold;
     margin-bottom: 20px;
-    color: #4c4c4c;
+    color: var(--aloe);
 }
 
 .buyNowButton {
-    background-color: #4c4c4c;
-    border: 1px solid #4c4c4c;
-    color: #efeae7;
+    background-color: var(--moss);
+    border: 1px solid var(--moss);
+    color: var(--aloe);
     padding: 8px 12px;
     cursor: pointer;
     opacity: 1; /* Ensure it's visible even when the card is greyed out */
@@ -94,18 +114,18 @@ body {
 }
 
 .buyNowButton:hover {
-    background-color: #f9f8f6;
-    color: #4c4c4c;
-    border: 1px solid #4c4c4c;
+    background-color: var(--aloe);
+    color: var(--olive);
+    border: 1px solid var(--aloe);
 }
 
 /* Top Banner */
 
 .topBanner {
-    background-color: #fff3e3; /* Light grey background */
+    background-color: var(--cypress); /* Light grey background */
     padding: 15px 0; /* Add some vertical padding */
     text-align: center; /* Initially center content for fallback */
-    border-bottom: 1px solid #e9ecef; /* Optional bottom border */
+    border-bottom: 1px solid var(--moss); /* Optional bottom border */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -115,7 +135,7 @@ body {
 /* Footer */
 
 .bottomBanner {
-    background-color: #fff; /* Light grey background */
+    background-color: var(--cypress); /* Light grey background */
     padding: 15px 0; /* Add some vertical padding */
     text-align: center; /* Initially center content for fallback */
     display: flex;
@@ -174,7 +194,7 @@ body {
     justify-content: center;
     width: 100%;
     font-size: 0.8em;
-    color: #4c4c4c;
+    color: var(--aloe);
 }
 
 .wdhTag {
@@ -211,9 +231,9 @@ body {
 }
 
 #logoutBtn {
-    background-color: #4c4c4c;
-    border: 1px solid #4c4c4c;
-    color: #efeae7;
+    background-color: var(--olive);
+    border: 1px solid var(--olive);
+    color: var(--aloe);
     padding: 8px 12px;
     cursor: pointer;
     opacity: 1; /* Ensure it's visible even when the card is greyed out */
@@ -222,9 +242,9 @@ body {
 }
 
 #logoutBtn:hover {
-    background-color: #f9f8f6;
-    color: #4c4c4c;
-    border: 1px solid #4c4c4c;
+    background-color: var(--aloe);
+    color: var(--olive);
+    border: 1px solid var(--aloe);
 }
 
 /* loader */
@@ -312,9 +332,9 @@ body {
 }
 
 .pdfButton {
-    background-color: #4c4c4c;
-    border: 1px solid #4c4c4c;
-    color: #efeae7;
+    background-color: var(--moss);
+    border: 1px solid var(--moss);
+    color: var(--aloe);
     padding: 8px 12px;
     cursor: pointer;
     opacity: 1; /* Ensure it's visible even when the card is greyed out */
@@ -323,45 +343,48 @@ body {
 }
 
 .pdfButton:hover {
-    background-color: #f9f8f6;
-    color: #4c4c4c;
-    border: 1px solid #4c4c4c;
+    background-color: var(--aloe);
+    color: var(--olive);
+    border: 1px solid var(--aloe);
 }
 
 .sectionTitle {
     text-align: center;
+    color: var(--aloe);
 }
 
 .purchasedProductsHeading {
     text-align: center;
+    color: var(--aloe);
 }
 
 .nonpurchasedProductsHeading {
     text-align: center;
+    color: var(--aloe);
 }
 
-.openButton {
+/* .openButton {
     background-color: #4c4c4c;
     border: 1px solid #4c4c4c;
     color: #efeae7;
     padding: 8px 12px;
     cursor: pointer;
-    opacity: 1; /* Ensure it's visible even when the card is greyed out */
+    opacity: 1; 
 
-    transition: background-color 0.3s ease-in-out; /* Added transition */
+    transition: background-color 0.3s ease-in-out;
 }
 
 .openButton:hover {
     background-color: #f9f8f6;
     color: #4c4c4c;
     border: 1px solid #4c4c4c;
-}
+} */
 
 #backToWebsiteBtn {
 
-    background-color: #4c4c4c;
-    border: 1px solid #4c4c4c;
-    color: #efeae7;
+    background-color: var(--olive);
+    border: 1px solid var(--olive);
+    color: var(--aloe);
     padding: 8px 12px;
     cursor: pointer;
     opacity: 1; /* Ensure it's visible even when the card is greyed out */
@@ -371,16 +394,16 @@ body {
 }
 
 #backToWebsiteBtn:hover {
-    background-color: #f9f8f6;
-    color: #4c4c4c;
-    border: 1px solid #4c4c4c;
+    background-color: var(--aloe);
+    color: var(--olive);
+    border: 1px solid var(--aloe);
 }
 
 #backBtn {
 
-    background-color: #4c4c4c;
-    border: 1px solid #4c4c4c;
-    color: #efeae7;
+    background-color: var(--olive);
+    border: 1px solid var(--olive);
+    color: var(--aloe);
     padding: 8px 12px;
     cursor: pointer;
     opacity: 1; /* Ensure it's visible even when the card is greyed out */
@@ -390,49 +413,9 @@ body {
 }
 
 #backBtn:hover {
-    background-color: #f9f8f6;
-    color: #4c4c4c;
-    border: 1px solid #4c4c4c;
-}
-
-.fullScreenWrapper{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 0px;
-    width: 100%;
-}
-
-#fullScreenBtn {
-    background-color: #4c4c4c;
-    border: 1px solid #4c4c4c;
-    color: #efeae7;
-    padding: 8px 12px;
-    cursor: pointer;
-    opacity: 1; /* Ensure it's visible even when the card is greyed out */
-
-    transition: background-color 0.3s ease-in-out; /* Added transition */
-
-}
-
-#fullScreenBtn:hover {
-    background-color: #f9f8f6;
-    color: #4c4c4c;
-    border: 1px solid #4c4c4c;
-}
-
-.pdfContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    min-height: 100px;
-}
-
-#travelIframe {
-    width: 100%;
-    height: 90vh;
+    background-color: var(--aloe);
+    color: var(--olive);
+    border: 1px solid var(--aloe);
 }
 
 @media (min-width: 1600px) {
@@ -458,15 +441,6 @@ body {
   }
   .productCard:only-child {
     grid-column: auto; /* Let auto-placement handle it */
-  }
-
-  #travelIframe {
-    width: 80%;
-    height: 67vh;
-  }
-
-  .fullScreenWrapper { 
-    display: none;
   }
 
 }

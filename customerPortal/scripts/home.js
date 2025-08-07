@@ -273,7 +273,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 purchasedSection.classList.add('purchasedProductsWrapper');
 
                 const purchasedTitle = document.createElement('h2');
-                purchasedTitle.textContent = 'Your Products';
+                purchasedTitle.textContent = 'Your Product Dashboard';
                 purchasedTitle.classList.add('purchasedProductsHeading');
                 purchasedSection.appendChild(purchasedTitle);
 
@@ -314,7 +314,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 nonPurchasedSection.classList.add('nonpurchasedProductsWrapper');
 
                 const nonPurchasedTitle = document.createElement('h2');
-                nonPurchasedTitle.textContent = 'Our Other Products';
+                nonPurchasedTitle.textContent = 'Check Out Our Other Products';
                 nonPurchasedTitle.classList.add('nonpurchasedProductsHeading');
                 nonPurchasedSection.appendChild(nonPurchasedTitle);
 
@@ -392,7 +392,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const buyNowButton = document.createElement('button');
             buyNowButton.classList.add('buyNowButton');
             buyNowButton.textContent = 'Buy Now';
-            buyNowButton.addEventListener('click', () => {
+            productCard.addEventListener('click', () => {
                 let buyNowLinkURL = product.metafields.filter(metaData => {
                     if(metaData && metaData.key == "buynowlink") return metaData;
                 })
@@ -405,7 +405,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const openProductButton = document.createElement('button');
             openProductButton.classList.add('pdfButton');
             openProductButton.textContent = 'Go to Product';
-            openProductButton.addEventListener('click', () => {
+            productCard.addEventListener('click', () => {
 
                 localStorage.setItem('productHandle', JSON.stringify(product.handle));
 

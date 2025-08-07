@@ -24,8 +24,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // Create the iframe element
     const iframe = document.createElement('iframe');
 
+    // IOS & SAFARI
+
     // Create a new anchor element
     const link = document.createElement('a');
+    link.classList.add('iosProduct');
+    // create a image of the product
+    const productImage = document.createElement('img');
+    productImage.classList.add('iosProductImage');
+    // create a image of the product
+    const productTitle = document.createElement('h3');
+    productTitle.classList.add('iosProductTitle');
+
+    // end of IOS
 
     async function shopifyGraphQLRequest(query, variables = {}) {
         try {
@@ -85,14 +96,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
         product = productData.data.productByHandle;        
 
-        if(product.metafields) {             
+        if(product.metafields) { 
+            
+            console.log(product);
+            
 
             product.metafields.map( (metaF )=>{                
 
                 if(metaF && metaF.key === "pdflink") {
                     iframe.src = uploadsUrl+metaF.value;
                     link.href = uploadsUrl+metaF.value;
-                    link.innerText = product.title
+                    productImage.src = product.featuredImage.url;
+                    link.append(productImage);
+                    productTitle.textContent = product.title;
+                    link.append(productTitle);
                 }
                 else {
                     // console.log('not a required metaField');
@@ -194,15 +211,20 @@ document.addEventListener('DOMContentLoaded', () => {
     getProduct()
     
 
-    if(isIOSSafari()) {
+    // if(isIOSSafari()) {
         // Append the link to the container
         pdfContainer.appendChild(link);
         loadingIndicator.textContent = '';
-    }
-    else {
-        // Append the iframe to the container
-        pdfContainer.appendChild(iframe);
-    }
+
+        // hide fullscreen btn on IOS
+        let fullscreenBtn = document.getElementsByClassName('fullScreenWrapper');
+        fullscreenBtn[0].style.display = 'none';
+        
+    // }
+    // else {
+    //     // Append the iframe to the container
+    //     pdfContainer.appendChild(iframe);
+    // }
 
 
 });
