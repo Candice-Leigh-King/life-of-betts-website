@@ -44,9 +44,9 @@
 }
 
 #fullScreenBtn {
-    background-color: #4c4c4c;
-    border: 1px solid #4c4c4c;
-    color: #efeae7;
+    background-color: var(--olive);
+    border: 1px solid var(--olive);
+    color: var(--aloe);
     padding: 8px 12px;
     cursor: pointer;
     opacity: 1; /* Ensure it's visible even when the card is greyed out */
@@ -56,9 +56,9 @@
 }
 
 #fullScreenBtn:hover {
-    background-color: #f9f8f6;
-    color: #4c4c4c;
-    border: 1px solid #4c4c4c;
+    background-color: var(--aloe);
+    color: var(--olive);
+    border: 1px solid var(--aloe);
 }
 
 .pdfContainer {

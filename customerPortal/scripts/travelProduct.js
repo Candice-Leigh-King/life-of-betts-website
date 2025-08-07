@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
     getProduct()
     
 
-    // if(isIOSSafari()) {
+    if(isIOSSafari()) {
         // Append the link to the container
         pdfContainer.appendChild(link);
         loadingIndicator.textContent = '';
@@ -220,11 +220,11 @@ document.addEventListener('DOMContentLoaded', () => {
         let fullscreenBtn = document.getElementsByClassName('fullScreenWrapper');
         fullscreenBtn[0].style.display = 'none';
         
-    // }
-    // else {
-    //     // Append the iframe to the container
-    //     pdfContainer.appendChild(iframe);
-    // }
+    }
+    else {
+        // Append the iframe to the container
+        pdfContainer.appendChild(iframe);
+    }
 
 
 });
