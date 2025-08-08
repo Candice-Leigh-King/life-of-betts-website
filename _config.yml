@@ -30,10 +30,10 @@ categories:
 - travel
 
 collections:
- products:
-   enabled: true
-   output: true
-   icon: shopping_cart
+  products:
+    enabled: true
+    output: true
+    icon: shopping_cart
 
 _inputs:
   textarea_html:
