@@ -3,5 +3,5 @@ colors:
   heading-color: '#ffffff'
   text-color: '#2c3424'
 fonts:
-  heading-font: Lovelace
-  text-font: Poppins, sans-serif
+  heading-font: Cardo, serif
+  text-font: Cardo, serif
