@@ -101,4 +101,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // backToWebsiteBtn btn
+    document.getElementById('backToWebsiteBtn').addEventListener('click', async (event) => {
+        window.location.href = '/';
+    });
+
 });

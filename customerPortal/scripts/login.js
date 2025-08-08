@@ -149,4 +149,9 @@ document.addEventListener('DOMContentLoaded', () => {
         login();        
     });
 
+    // backToWebsiteBtn btn
+    document.getElementById('backToWebsiteBtn').addEventListener('click', async (event) => {
+        window.location.href = '/';
+    });
+
 });
