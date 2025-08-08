@@ -57,7 +57,7 @@ layout: default
     color: {{page.colors.cta-color}};
     }
 
-    .categories p
+    .categories a
     {
     font-size: 1.3rem;
     font-family: {{page.fonts.categories-font}};
@@ -84,7 +84,6 @@ layout: default
 /* Apply styles to anchor elements */
 .container a {
   text-decoration: none; /* Remove underline */
-  color: #333; /* Text color */
   padding: 10px 30px; /* Adjust padding as needed */
 }
 
@@ -138,7 +137,7 @@ layout: default
   </section>
 <section class="grid  ">
   <div class="menu centered grid col-12 padded-sides">
-    <div class="container grid">
+    <div class="container categories grid">
       <div class="dropdown grid-middle">
         <a href="#" class="destinations"   data-target="CountryDropdown">{{site.data.blogs.destination-name}}</a>
         <div class="dropdown-content" id="CountryDropdown">
