@@ -147,7 +147,7 @@ input[type="password"] {
 
 .socials a {
     /* color: #f8dcc2; */
-    color: var(--cypress);
+    color: var(--aloe);
     /* background-color: #fae6d4; */
     border-radius: 90px;
     font-size: 2.3rem;
@@ -157,7 +157,7 @@ input[type="password"] {
 }
 
 .socials a:hover {
-    color: var(--moss);
+    color: var(--aloe);
     background-color: var(--cypress);
     border: solid var(--moss);
 }

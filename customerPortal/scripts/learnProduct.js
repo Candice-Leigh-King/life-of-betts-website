@@ -14,7 +14,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const productImgDiv = document.getElementById('productImg');
     const extraResourceDiv = document.getElementById('extraResourceDiv');
 
-    const uploadsUrl = 'https://rose-waves.cloudvent.net/customerPortal/assets/pdfs/';
+    // staging URL 
+    // const uploadsUrl = 'https://rose-waves.cloudvent.net/customerPortal/assets/pdfs/';
+
+    // LIVE URL 
+    const uploadsUrl = 'https://lifeofbetts.com/customerPortal/assets/pdfs/';
 
     let product = {};
     let extraResourceLinks = [];

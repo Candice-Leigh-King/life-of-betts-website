@@ -8,7 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const customerAccessToken = localStorage.getItem('shopifyCustomerAccessToken');
     const productHandle = JSON.parse(localStorage.getItem('productHandle'));
 
-    const uploadsUrl = 'https://rose-waves.cloudvent.net/customerPortal/assets/pdfs/';
+    // staging URL 
+    // const uploadsUrl = 'https://rose-waves.cloudvent.net/customerPortal/assets/pdfs/';
+
+    // LIVE URL 
+    const uploadsUrl = 'https://lifeofbetts.com/customerPortal/assets/pdfs/';
 
     let productURL = "";
 
