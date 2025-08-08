@@ -35,17 +35,6 @@ collections:
    output: true
    icon: shopping_cart
 
-source_editor:
-  path: /uploads
-  label: Uploads
-  icon: file_upload
-  path: /images
-  label: Images
-  icon: image
-  path: /downloads
-  label: Downloads
-  icon: folder
-
 _inputs:
   textarea_html:
     options:
