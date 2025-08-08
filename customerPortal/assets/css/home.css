@@ -26,16 +26,6 @@
 
 /*  */
 
-:root {
-  --moss: #2C3424;
-  --cypress: #4C583E;
-  --cedar: #959581;
-  --olive: #768064;
-  --aloe: #DADED8;
-}
-
-
-
 body {
     /* background-color: #dcd3cc; */
     background-color: var(--cypress);
@@ -157,21 +147,25 @@ body {
 
 .social-icons-color a {
     color: #fff;
-    background-color: #dcd3cc;
-    border: solid #dcd3cc;
+    background-color: var(--moss);
+    border: solid var(--cypress);
 }
 
 .socials a {
-    color: #fff;
+    /* color: #f8dcc2; */
+    color: var(--cypress);
+    /* background-color: #fae6d4; */
     border-radius: 90px;
     font-size: 2.3rem;
+    /* border: #FAE6D4 solid; */
+
     margin: 10px;
 }
 
 .socials a:hover {
-    color: #dcd3cc;
-    background-color: #fff;
-    border: solid #dcd3cc;
+    color: var(--moss);
+    background-color: var(--cypress);
+    border: solid var(--moss);
 }
 
 .ig {

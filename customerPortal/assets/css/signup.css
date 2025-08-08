@@ -2,19 +2,53 @@
 
 
 body {
-    background-color: #dcd3cc;
+    background-color: var(--cypress);
     margin: 0px;
 }
 
 .topBanner {
-    background-color: #fff3e3; /* Light grey background */
+    background-color: var(--cypress); /* Light grey background */
     padding: 15px 0; /* Add some vertical padding */
     text-align: center; /* Initially center content for fallback */
-    border-bottom: 1px solid #e9ecef; /* Optional bottom border */
+    border-bottom: 1px solid var(--moss); /* Optional bottom border */
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
+}
+
+#backToWebsiteBtn {
+
+    background-color: var(--olive);
+    border: 1px solid var(--olive);
+    color: var(--aloe);
+    padding: 8px 12px;
+    cursor: pointer;
+    opacity: 1; /* Ensure it's visible even when the card is greyed out */
+
+    transition: background-color 0.3s ease-in-out; /* Added transition */
+
+}
+
+#backToWebsiteBtn:hover {
+    background-color: var(--aloe);
+    color: var(--olive);
+    border: 1px solid var(--aloe);
+}
+
+.spaceHolder {
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoutBtnContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
 }
 
 .signupNoticeWrapper {
@@ -31,7 +65,7 @@ body {
     align-items: center;
     min-height: 80px;
     width: 60%;
-    color: #4c4c4c;
+    color: var(--aloe);
     text-align: center;
     font-size: 1.2em;
     padding: 10px;
@@ -42,12 +76,12 @@ body {
     width: 350px;
     margin: 30px auto;
     padding: 20px;
-    border: 1px solid #fff;
-    background-color: #f9f8f6;
+    border: 1px solid var(--olive);
+    background-color: var(--olive);
     /* border-radius: 5px; */
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
-    color: #4c4c4c;
+    color: var(--moss);
 }
 
 .form-group {
@@ -74,7 +108,7 @@ input[type="password"] {
 button[type="submit"] {
     padding: 10px 15px;
     /* background-color: #28a745; Green signup button */
-    background-color: #007bff;
+    background-color: var(--cypress);
     color: white;
     border: none;
     /* border-radius: 3px; */
@@ -101,14 +135,14 @@ button[type="submit"] {
 }
 
 .login-link a {
-    color: #007bff;
+    color: var(--aloe);
     text-decoration: none;
 }
 
 /* Footer */
 
 .bottomBanner {
-    background-color: #fff; /* Light grey background */
+    background-color: var(--cypress); /* Light grey background */
     padding: 15px 0; /* Add some vertical padding */
     text-align: center; /* Initially center content for fallback */
     display: flex;
@@ -130,13 +164,13 @@ button[type="submit"] {
 
 .social-icons-color a {
     color: #fff;
-    background-color: #dcd3cc;
-    border: solid #dcd3cc;
+    background-color: var(--moss);
+    border: solid var(--cypress);
 }
 
 .socials a {
     /* color: #f8dcc2; */
-    color: #fff;
+    color: var(--cypress);
     /* background-color: #fae6d4; */
     border-radius: 90px;
     font-size: 2.3rem;
@@ -146,9 +180,9 @@ button[type="submit"] {
 }
 
 .socials a:hover {
-    color: #dcd3cc;
-    background-color: #fff;
-    border: solid #dcd3cc;
+    color: var(--moss);
+    background-color: var(--cypress);
+    border: solid var(--moss);
 }
 
 .ig {
@@ -174,7 +208,7 @@ button[type="submit"] {
     justify-content: center;
     width: 100%;
     font-size: 0.8em;
-    color: #4c4c4c;
+    color: var(--aloe);
 }
 
 .wdhTag {

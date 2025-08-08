@@ -168,25 +168,15 @@ document.addEventListener('DOMContentLoaded', () => {
         pdfContainer.appendChild(errorMsg);
     };    
 
-    function isIOSSafari() {
-        const userAgent = navigator.userAgent;
+    function isIOS() {
+       const userAgent = navigator.userAgent;
 
-        // 1. Check for iOS device
+        // Check for iOS device
         const isIPad = /iPad/i.test(userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
         const isIPhone = /iPhone/i.test(userAgent);
         const isIPod = /iPod/i.test(userAgent);
-        const isIOSDevice = isIPad || isIPhone || isIPod;
 
-        // 2. Check for Safari browser (excluding other browsers on iOS)
-        const isSafariBrowser = /Safari/i.test(userAgent) &&
-                                !/CriOS/i.test(userAgent) &&
-                                !/FxiOS/i.test(userAgent) &&
-                                !/OPiOS/i.test(userAgent) &&
-                                !/Edge/i.test(userAgent) &&
-                                !/EdgiOS/i.test(userAgent) &&
-                                !/Chrome/i.test(userAgent); // Exclude desktop Chrome as well
-
-        return isIOSDevice && isSafariBrowser;
+        return isIPad || isIPhone || isIPod;
     }
 
     // back btn
@@ -211,7 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
     getProduct()
     
 
-    if(isIOSSafari()) {
+    if(isIOS()) {
         // Append the link to the container
         pdfContainer.appendChild(link);
         loadingIndicator.textContent = '';
