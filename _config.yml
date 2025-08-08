@@ -30,21 +30,10 @@ categories:
 - travel
 
 collections:
- products:
-   enabled: true
-   output: true
-   icon: shopping_cart
-
-source_editor:
-  path: /uploads
-  label: Uploads
-  icon: file_upload
-  path: /images
-  label: Images
-  icon: image
-  path: /downloads
-  label: Downloads
-  icon: folder
+  products:
+    enabled: true
+    output: true
+    icon: shopping_cart
 
 _inputs:
   textarea_html:
