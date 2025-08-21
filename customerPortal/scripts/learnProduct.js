@@ -7,18 +7,45 @@ document.addEventListener('DOMContentLoaded', () => {
     const productHandle = JSON.parse(localStorage.getItem('productHandle'));
 
     const overlay = document.getElementById('overlay');
-    const openButton = document.getElementById('openButton');
-    const iframe = document.getElementById('iframe');
     const videoDiv = document.getElementById('videoDiv');
-    const title = document.getElementById('productTitle');
-    const productImgDiv = document.getElementById('productImg');
     const extraResourceDiv = document.getElementById('extraResourceDiv');
+    const pdfContainer = document.getElementById('pdfContainer');
+
+    // local testing
+    // const uploadsUrl = './assets/pdfs/';
 
     // staging URL 
-    // const uploadsUrl = 'https://rose-waves.cloudvent.net/customerPortal/assets/pdfs/';
+    const uploadsUrl = 'https://rose-waves.cloudvent.net/customerPortal/assets/pdfs/';
 
     // LIVE URL 
-    const uploadsUrl = 'https://lifeofbetts.com/customerPortal/assets/pdfs/';
+    // const uploadsUrl = 'https://lifeofbetts.com/customerPortal/assets/pdfs/';
+
+    // get pdfLink to display
+    pdfContainer.innerHTML = ''; // Clear existing content
+
+    // Create the iframe element
+    const iframe = document.createElement('iframe');
+
+    // IOS & SAFARI
+
+    const openButton = document.createElement('button');
+    openButton.classList.add('backBtn');
+
+    // Create a new anchor element
+    const link = document.createElement('a');
+    link.classList.add('iosProduct');
+    // create a image of the product
+    const productImage = document.createElement('img');
+    productImage.classList.add('iosProductImage');
+    // create a image of the product
+    const productTitle = document.createElement('h3');
+    productTitle.classList.add('iosProductTitle');
+
+    // Set target="_blank" to open the PDF in a new tab/window.
+    // This is crucial for triggering the native PDF viewer on iOS.
+    link.target = '_blank';
+
+    // end of IOS
 
     let product = {};
     let extraResourceLinks = [];
@@ -86,11 +113,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const productData = await shopifyGraphQLRequest(getProductQuery, variables);
 
         product = productData.data.productByHandle;
-        
-
-        title.textContent = product.title;
-        productImgDiv.src = product.featuredImage.url;
-        productImgDiv.alt = product.featuredImage.alt;
+        productImage.src = product.featuredImage.url;
+        productTitle.textContent = product.title;
 
         if(product.metafields) {            
 
@@ -98,6 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if(metaF && metaF.key === "pdflink") {
                     iframe.src = uploadsUrl+metaF.value;
+                    link.href = uploadsUrl+metaF.value;                    
                 }
                 else if(metaF && metaF.key === "videolink") {
                     videoDiv.src = metaF.value;
@@ -118,39 +143,82 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
+    // Set essential attributes for the iframe
+    iframe.title = "Dynamic Content Frame"; // Always add a descriptive title for accessibility
+    iframe.width = "100%"; // Make iframe responsive to its container width
+    iframe.height = "90vh"; // Set a default height
+    iframe.frameBorder = "0"; // Remove default border
+    // iframe.allow = "clipboard-write"; // Allow clipboard access if needed (be cautious with this)
+    iframe.allowfullscreen = true;
+    iframe.id="travelIframe"
 
-    function openIframe () {
+    // Add some basic styling for the iframe using Tailwind-like classes (or actual Tailwind if you generate them)
+    iframe.style.cssText = `
+        border-radius: 0.5rem; /* rounded-lg */
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+        display: block; /* Remove extra space below iframe */
+        max-width: 1400px; /* Ensure it fits container */
+        height: 95vh
+    `;
 
-        // Push a new state to history when opening the overlay
-        // This creates a history entry that the back button can pop
-        if (history.pushState) {
-            history.pushState({ overlayOpen: true }, '', '#overlay-open');
+    // Optional: Add a loading indicator
+    const loadingIndicator = document.createElement('p');
+    loadingIndicator.textContent = 'Loading content...';
+    loadingIndicator.classList.add('text-gray-500', 'text-center', 'py-4');
+    pdfContainer.appendChild(loadingIndicator);
+
+    // Event listener for when the iframe content has loaded
+    iframe.onload = () => {
+        // Remove loading indicator once loaded
+        if (pdfContainer.contains(loadingIndicator)) {
+            pdfContainer.removeChild(loadingIndicator);
         }
-        
-        overlay.classList.add('visible'); // Make the overlay visible
-        document.body.style.overflow = 'hidden'; // Prevent scrolling the main page
+    };
 
-    }
-
-    function closeIframe () {
-
-        overlay.classList.remove('visible'); // Hide the overlay
-        document.body.style.overflow = ''; // Restore body scrolling
-        
-
-        // If the current history state indicates the overlay was open,
-        // go back one step to remove the '#overlay-open' from the URL.
-        // This prevents the user from having to press back twice to leave the page.
-        if (history.state && history.state.overlayOpen) {
-            history.back();
+    iframe.onerror = () => {
+        if (pdfContainer.contains(loadingIndicator)) {
+            pdfContainer.removeChild(loadingIndicator);
         }
+        const errorMsg = document.createElement('p');
+        errorMsg.textContent = 'Failed to load content. Please check the URL or content security policies.';
+        errorMsg.classList.add('text-red-600', 'text-center', 'py-4');
+        pdfContainer.appendChild(errorMsg);
+    };   
 
-    }
+    // function openIframe () {
+
+    //     // Push a new state to history when opening the overlay
+    //     // This creates a history entry that the back button can pop
+    //     if (history.pushState) {
+    //         history.pushState({ overlayOpen: true }, '', '#overlay-open');
+    //     }
+        
+    //     overlay.classList.add('visible'); // Make the overlay visible
+    //     document.body.style.overflow = 'hidden'; // Prevent scrolling the main page
+
+    // }
+
+    // function closeIframe () {
+
+    //     overlay.classList.remove('visible'); // Hide the overlay
+    //     document.body.style.overflow = ''; // Restore body scrolling
+        
+
+    //     // If the current history state indicates the overlay was open,
+    //     // go back one step to remove the '#overlay-open' from the URL.
+    //     // This prevents the user from having to press back twice to leave the page.
+    //     if (history.state && history.state.overlayOpen) {
+    //         history.back();
+    //     }
+
+    // }
 
     function setupExtraResources () {        
 
         for (const linkData of extraResourceLinks) {
         
+            const linkWrapper = document.createElement('div');
+            linkWrapper.classList.add('linkDiv');
             const link = document.createElement('a');
             link.innerHTML = linkData.linkText;
             link.href = linkData.source;
@@ -158,10 +226,11 @@ document.addEventListener('DOMContentLoaded', () => {
             link.rel = "noopener noreferrer";
 
             const extraText = document.createElement('p');
-            link.innerHTML = linkData.extraText;
+            extraText.innerHTML = linkData.extraText;
         
-            extraResourceDiv.append(link);
-            extraResourceDiv.append(extraText);
+            linkWrapper.append(link);
+            linkWrapper.append(extraText);
+            extraResourceDiv.append(linkWrapper);
         }        
 
     }
@@ -211,6 +280,55 @@ document.addEventListener('DOMContentLoaded', () => {
         window.history.back();
     });
 
-    getProduct()
+    // Fullscreen btn
+    document.getElementById('fullScreenBtn').addEventListener('click', async (event) => {
+        // going fullscreen
+        if (iframe.requestFullscreen) {
+            iframe.requestFullscreen();
+        } else if (iframe.mozRequestFullScreen) { /* Firefox */
+            iframe.mozRequestFullScreen();
+        } else if (iframe.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+            iframe.webkitRequestFullscreen();
+        } else if (iframe.msRequestFullscreen) { /* IE/Edge */
+            iframe.msRequestFullscreen();
+        }
+    });
+
+    function isIOS() {
+       const userAgent = navigator.userAgent;
+
+        // Check for iOS device
+        const isIPad = /iPad/i.test(userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+        const isIPhone = /iPhone/i.test(userAgent);
+        const isIPod = /iPod/i.test(userAgent);
+
+        return isIPad || isIPhone || isIPod;
+    }
+
+    getProduct().then(()=>{
+
+        if(isIOS()) {
+            // Append the link to the container
+            
+            link.append(productImage);
+            link.append(productTitle);
+            pdfContainer.appendChild(link);
+            loadingIndicator.textContent = '';
+
+            // hide fullscreen btn on IOS
+            let fullscreenBtn = document.getElementsByClassName('fullScreenWrapper');
+            fullscreenBtn[0].style.display = 'none';
+            
+        }
+        else {
+            // Append the iframe to the container
+            pdfContainer.appendChild(iframe);
+        }
+
+    });
+
+    
+
+    
 
 });
