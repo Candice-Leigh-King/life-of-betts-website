@@ -198,8 +198,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Ensure the collectionHandle is an own property of the object and not from its prototype chain.
                 if (Object.prototype.hasOwnProperty.call(formattedCollections, collectionHandle)) {
 
-                    // Ignore the "frontpage" collection as requested.
-                    if (collectionHandle === "frontpage") {
+                    // Ignore the "frontpage" & creator-course-bundle collection as requested.
+                    if (collectionHandle === "frontpage" || collectionHandle === "creator-course-bundle") {
                         continue; // Skip to the next collection
                     }                    
 
