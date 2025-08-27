@@ -436,4 +436,14 @@ h2 {
     display: none;
   }
 
+  .extraResourceDiv {
+    min-height: 500px;
+    padding: 10px;
+  }
+
+  .linkDiv {
+    flex-direction: column;
+
+  }
+
 }
