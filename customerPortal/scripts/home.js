@@ -198,8 +198,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Ensure the collectionHandle is an own property of the object and not from its prototype chain.
                 if (Object.prototype.hasOwnProperty.call(formattedCollections, collectionHandle)) {
 
-                    // Ignore the "frontpage" collection as requested.
-                    if (collectionHandle === "frontpage") {
+                    // Ignore the "frontpage" & creator-course-bundle collection as requested.
+                    if (collectionHandle === "frontpage" || collectionHandle === "creator-course-bundle") {
                         continue; // Skip to the next collection
                     }                    
 
@@ -228,9 +228,31 @@ document.addEventListener('DOMContentLoaded', () => {
                         nonPurchasedCollections[collectionHandle] = currentCollectionNonPurchasedProducts;
                     }
                 }
-            }
+            }            
             
-            displayProducts(purchasedCollections, nonPurchasedCollections);
+            // order the products
+            const sortedPurchasedCollections = Object.fromEntries(
+                Object.entries(purchasedCollections).map(([key, arr]) => [
+                    key,
+                    arr.sort((a, b) => {
+                        const aTitle = a?.node.title || "";
+                        const bTitle = b?.node.title || "";
+                        return aTitle.localeCompare(bTitle);
+                    })
+                ])
+            );
+            const sortedNonPurchasedCollections = Object.fromEntries(
+                Object.entries(nonPurchasedCollections).map(([key, arr]) => [
+                    key,
+                    arr.sort((a, b) => {
+                        const aTitle = a?.node.title || "";
+                        const bTitle = b?.node.title || "";
+                        return aTitle.localeCompare(bTitle);
+                    })
+                ])
+            );
+
+            displayProducts(sortedPurchasedCollections, sortedNonPurchasedCollections);
             stopLoading();
 
         } 

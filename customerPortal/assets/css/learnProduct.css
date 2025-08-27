@@ -17,8 +17,13 @@
 
 body {
     /* background-color: #f9f8f6; */
-    background-color: #dcd3cc;
+    background-color: var(--cypress);
+    color: var(--aloe);
     margin: 0px;
+}
+
+h2 {
+    color: var(--aloe);
 }
 
 .learnProductContainer {
@@ -36,10 +41,10 @@ body {
 /* Top Banner */
 
 .topBanner {
-    background-color: #fff3e3; /* Light grey background */
+    background-color: var(--cypress); /* Light grey background */
     padding: 15px 0; /* Add some vertical padding */
     text-align: center; /* Initially center content for fallback */
-    border-bottom: 1px solid #e9ecef; /* Optional bottom border */
+    border-bottom: 1px solid var(--moss); /* Optional bottom border */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -49,7 +54,7 @@ body {
 /* Footer */
 
 .bottomBanner {
-    background-color: #fff; /* Light grey background */
+    background-color: var(--cypress); /* Light grey background */
     padding: 15px 0; /* Add some vertical padding */
     text-align: center; /* Initially center content for fallback */
     display: flex;
@@ -71,13 +76,13 @@ body {
 
 .social-icons-color a {
     color: #fff;
-    background-color: #dcd3cc;
-    border: solid #dcd3cc;
+    background-color: var(--moss);
+    border: solid var(--cypress);
 }
 
 .socials a {
     /* color: #f8dcc2; */
-    color: #fff;
+    color: var(--aloe);
     /* background-color: #fae6d4; */
     border-radius: 90px;
     font-size: 2.3rem;
@@ -87,10 +92,11 @@ body {
 }
 
 .socials a:hover {
-    color: #dcd3cc;
-    background-color: #fff;
-    border: solid #dcd3cc;
+    color: var(--aloe);
+    background-color: var(--cypress);
+    border: solid var(--moss);
 }
+
 
 .ig {
     /* padding: 10px 18px; */
@@ -115,7 +121,7 @@ body {
     justify-content: center;
     width: 100%;
     font-size: 0.8em;
-    color: #4c4c4c;
+    color: #000;
 }
 
 .wdhTag {
@@ -153,9 +159,9 @@ body {
 }
 
 #logoutBtn {
-    background-color: #4c4c4c;
-    border: 1px solid #4c4c4c;
-    color: #efeae7;
+    background-color: var(--olive);
+    border: 1px solid var(--olive);
+    color: var(--aloe);
     padding: 8px 12px;
     cursor: pointer;
     opacity: 1; /* Ensure it's visible even when the card is greyed out */
@@ -164,9 +170,9 @@ body {
 }
 
 #logoutBtn:hover {
-    background-color: #f9f8f6;
-    color: #4c4c4c;
-    border: 1px solid #4c4c4c;
+    background-color: var(--aloe);
+    color: var(--olive);
+    border: 1px solid var(--aloe);
 }
 
 /* loader */
@@ -268,7 +274,7 @@ body {
 @media (min-width: 1201px) {
 
     .video-wrapper {
-        scale: 0.7;
+        scale: 0.8;
     }
 
 }
@@ -293,14 +299,10 @@ body {
 
     width: 80%;
     height: 200px;
-    border: 1px solid #4c4c4c;
-    background-color: #f9f8f6;
-    color: #4c4c4c;
+    border: 1px solid var(--moss);
+    background-color: var(--cypress);
+    color: #000;
 
-}
-
-.extraResourceDiv a {
-    margin-bottom: 20px;
 }
 
 .fbBanner {
@@ -333,9 +335,9 @@ body {
 
 #backBtn {
 
-    background-color: #4c4c4c;
-    border: 1px solid #4c4c4c;
-    color: #efeae7;
+    background-color: var(--olive);
+    border: 1px solid var(--olive);
+    color: var(--aloe);
     padding: 8px 12px;
     cursor: pointer;
     opacity: 1; /* Ensure it's visible even when the card is greyed out */
@@ -345,7 +347,93 @@ body {
 }
 
 #backBtn:hover {
-    background-color: #f9f8f6;
-    color: #4c4c4c;
-    border: 1px solid #4c4c4c;
+    background-color: var(--aloe);
+    color: var(--olive);
+    border: 1px solid var(--aloe);
+}
+
+/* all IOS styling */
+
+.iosProduct {
+
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+    border: 1px solid var(--olive);
+    background-color: var(--olive);
+    padding: 15px;
+    color: var(--cypress);
+
+}
+
+.iosProductImage {
+
+    height: 300px;
+    width: auto;
+
+}
+
+.iosProductTitle {
+
+    text-align: center;
+
+}
+
+
+/* end of IOS */
+
+.linkDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+.linkDiv a {
+    color: var(--cedar);
+}
+
+.linkDiv p {
+    color: var(--aloe);
+}
+
+#pdfContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+    width: 100%;
+}
+
+#fullScreenBtn {
+    background-color: var(--olive);
+    border: 1px solid var(--olive);
+    color: var(--aloe);
+    padding: 8px 12px;
+    cursor: pointer;
+    opacity: 1; /* Ensure it's visible even when the card is greyed out */
+
+    transition: background-color 0.3s ease-in-out; /* Added transition */
+}
+
+#fullScreenBtn:hover {
+    background-color: var(--aloe);
+    color: var(--olive);
+    border: 1px solid var(--aloe);
+}
+
+
+/* Media query for smaller screens */
+@media (max-width: 1200px) { /* Adjust this breakpoint as needed */
+
+  .fullScreenWrapper { 
+    display: none;
+  }
+
 }
