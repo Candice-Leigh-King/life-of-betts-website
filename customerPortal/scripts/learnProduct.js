@@ -213,7 +213,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // }
 
-    function setupExtraResources () {        
+    function setupExtraResources () { 
+        
+        if(!extraResourceLinks.length) {
+
+            extraResourceDiv.style.display = 'none';
+            return;
+
+        }
 
         for (const linkData of extraResourceLinks) {
         
