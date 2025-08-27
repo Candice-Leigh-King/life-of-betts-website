@@ -12,10 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // const uploadsUrl = './assets/pdfs/';
 
     // staging URL 
-    const uploadsUrl = 'https://rose-waves.cloudvent.net/customerPortal/assets/pdfs/';
+    // const uploadsUrl = 'https://rose-waves.cloudvent.net/customerPortal/assets/pdfs/';
 
     // LIVE URL 
-    // const uploadsUrl = 'https://lifeofbetts.com/customerPortal/assets/pdfs/';
+    const uploadsUrl = 'https://lifeofbetts.com/customerPortal/assets/pdfs/';
 
     let productURL = "";
 
