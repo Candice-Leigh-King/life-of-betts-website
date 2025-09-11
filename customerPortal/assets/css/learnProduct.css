@@ -315,24 +315,6 @@ h2 {
 
 }
 
-.fbGroupBtn {
-    background-color: #4c4c4c;
-    border: 1px solid #4c4c4c;
-    color: #efeae7;
-    padding: 8px 12px;
-    cursor: pointer;
-    opacity: 1; /* Ensure it's visible even when the card is greyed out */
-
-    transition: background-color 0.3s ease-in-out; /* Added transition */
-    text-decoration: none;
-}
-
-.fbGroupBtn:hover {
-    background-color: #f9f8f6;
-    color: #4c4c4c;
-    border: 1px solid #4c4c4c;
-}
-
 #backBtn {
 
     background-color: var(--olive);
@@ -426,6 +408,30 @@ h2 {
     background-color: var(--aloe);
     color: var(--olive);
     border: 1px solid var(--aloe);
+}
+
+.fbGroupBtn {
+
+    background-color: var(--olive);
+    border: 1px solid var(--olive);
+    color: var(--aloe);
+    padding: 8px 12px;
+    cursor: pointer;
+    opacity: 1; /* Ensure it's visible even when the card is greyed out */
+
+    transition: background-color 0.3s ease-in-out; /* Added transition */
+
+}
+
+.fbGroupBtn:hover {
+    background-color: var(--aloe);
+    color: var(--olive);
+    border: 1px solid var(--aloe);
+}
+
+.fbImg {
+    width: 100%;
+    max-width: 800px;
 }
 
 
